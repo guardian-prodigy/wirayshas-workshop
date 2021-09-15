@@ -1,0 +1,55 @@
+@use '../0-abstracts/mixins' as *;
+@use '../0-abstracts/variables' as*;
+////////////////// section-center logo
+.logo, .article-logo {
+    @include logo-article();
+  }
+  /////////////////// section-center logo
+  // header for elements
+.header-text {
+  color: $clr-primary-3;
+  font-family: $font-family-2;
+  text-align: center;
+  font-size: 3rem;
+}
+// end of header for elements
+// about text
+.about-text {
+  @include article-text();
+  .about-text-paragraph {
+    .about-text-link {
+      a {
+        @include article-text-a-link();
+      }
+    }
+  }
+  a {
+    background-color: linear-gradient(45deg, blue, red);
+    
+    -webkit-filter: brightness(200%);
+    filter: brightness(200%);
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+}
+// end of about text
+// article header
+.article-header {
+  margin-bottom: 1rem;
+  font-family: $font-family-1;
+  h3 {
+    color: $clr-primary-2;
+    text-align: center;
+    font-size: 2.5rem;
+    border-bottom: dotted;
+    width: 80%;
+    margin: 0 auto;
+    text-transform: capitalize;
+  }
+}
+// end of article header
+// footer
+.footer-p {
+  @include subpage-footer();
+}
+//end of footer

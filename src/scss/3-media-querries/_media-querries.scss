@@ -1,0 +1,61 @@
+@use '../0-abstracts/variables' as *;
+@media screen and (min-width: 600px) {
+    .sidebar {
+      .logo {
+        display: none;
+      }
+      .sidebar-btns {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 10rem;
+        .btn-sidebar {
+          margin: 1rem auto;
+          &:hover {
+            margin-left: 1.2rem;
+          }
+        }
+      }
+    }
+    .sidebar,
+    .sidebar::after {
+      max-width: 300px;
+      min-height: 100vh;
+      width: 40vw;
+      -webkit-clip-path: none;
+      clip-path: none;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .footer {
+      padding: 1rem;
+      .footer-text {
+        .icons li a .fab {
+          height: 2rem;
+          width: 2rem;
+          font-size: 1.5rem;
+        }
+      }
+    }
+    .section-center {
+      .sec-center {
+        ul {
+          transition: $transition;
+          .sec-logo {
+            font-size: 3rem;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    .section-center {
+      .sec-center {
+        ul {
+          transition: $transition;
+          .logo {
+            font-size: 4rem;
+          }
+        }
+      }
+    }
+  }

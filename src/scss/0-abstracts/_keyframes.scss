@@ -1,0 +1,46 @@
+@keyframes FaBars {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+        filter: contrast(150%);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes SlideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-5rem);
+    }
+    80% {
+        opacity: 1;transform: translateX(1rem);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes SlideInBottom{
+    0% {
+        opacity: 0;
+        transform: translateY(5rem);
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes SlideInRight{
+    0% {
+        opacity: 0;
+        transform: translateX(5rem);
+    }
+    80% {
+        opacity: 1;transform: translateX(-1rem);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}

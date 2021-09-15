@@ -1,0 +1,94 @@
+@use '../0-abstracts/variables' as *;
+@use '../0-abstracts/keyframes' as *;
+
+//  generic btn values
+.btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+//  end of  generic btn values
+
+// explore btn
+// main html explore btn
+.explore-btn {
+  color: $primary-aqua-3;
+  background: $clr-primary-3;
+  transition: $transition;
+  border-radius: $border-radius;
+  text-transform: capitalize;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  font-size: 1.4rem;
+  cursor: pointer;
+  padding: 0.5rem 0.25rem;
+  border: none;
+  -webkit-animation: SlideInRight 1s ease-in 0.2s 1 forwards;
+  animation: SlideInRight 1s ease-in 0.2s 1 forwards;
+  &:hover {
+    color: $primary-aqua-1;
+    background: $clr-primary-2;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+// end of main html explore btn
+// end of explore btn
+
+// bars btn for opening nav-items
+.fa-bars {
+  font-size: 2rem;
+  color: $primary-aqua-2;
+  -webkit-animation: FaBars 1.5s linear infinite forwards alternate;
+  animation: FaBars 1.5s linear infinite forwards alternate;
+}
+// end of bars btn for opening nav-items
+
+// times btn for closing elements
+.fa-times {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  z-index: 998;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  cursor: pointer;
+  width: fit-content;
+  font-size: 1.5rem;
+  color: $clr-red-dark;
+  transition: $transition;
+  &:hover {
+    color: $clr-red-light;
+    transform: rotate(360deg) scale(1.2);
+  }
+}
+//end of  times btn for closing elements
+
+//  sidebar btns
+.btn-sidebar {
+  z-index: 1005;
+  width: 10rem;
+  text-align: center;
+  padding: 0.25rem;
+  text-transform: uppercase;
+  border-radius: $border-radius;
+  margin: 0.5rem;
+  margin-left: 0.75rem;
+  transition: $transition;
+  background: linear-gradient(
+    -215deg,
+    rgba(0, 0, 0, 0.4),
+    transparent
+  );
+  border: 0.1rem solid rgba($primary-aqua-1, 0.3);
+  font-weight: 700;
+  color: $primary-grey-4;
+  font-size: 1.3rem;
+  font-family: $font-family-3;
+  &:hover {
+    margin-left: 1rem;
+  }
+}
+// end of sidebar btns 

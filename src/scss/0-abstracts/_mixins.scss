@@ -1,0 +1,73 @@
+@use './variables' as *;
+@use '../0-abstracts/keyframes' as *;
+@mixin logo-article {
+  background: linear-gradient(45deg, $primary-aqua-1 30%, rgba(0, 255, 0, 0.822));
+    background-clip: text;
+    color: transparent;
+    font-family: $font-family-3;
+    letter-spacing: $letter-spacing;
+    text-shadow: $text-shadow;
+    font-size: 2.5rem;
+    text-align: center;
+    -webkit-animation: SlideInLeft 1s ease-in 0.2s 1 forwards;
+    animation: SlideInLeft 1s ease-in 0.2s 1 forwards;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+@mixin FaBars {
+  font-size: 1.5rem;
+  color: $primary-aqua-4;
+  transition: $transition;
+  animation: FaBars 1.5s linear infinite forwards reverse;
+  &:hover {
+    color: $primary-aqua-1;
+  }
+}
+@mixin underline($width) {
+  height: 0.2rem;
+  background: $primary-aqua-1;
+  width: $width;
+  margin: 0 auto;
+}
+@mixin article-text {
+  font-family: $font-family-1;
+  color: $clr-primary-1;
+  text-transform: capitalize;
+  letter-spacing: $letter-spacing;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+@mixin article-text-a-link() {
+  color: $clr-primary-1;
+  filter: brightness(200%);
+  font-weight: 600;
+  text-transform: capitalize;
+}
+// shapes
+@mixin rhombus {
+  -webkit-clip-path: polygon(
+      50% 0%,
+      100% 7%,
+      100% 93%,
+      50% 100%,
+      0 93%,
+      0 7%
+    );
+    clip-path: polygon(50% 0%, 100% 7%, 100% 93%, 50% 100%, 0 93%, 0 7%);
+}
+@mixin circle {
+  -webkit-clip-path: circle(100% at 0% 0%);
+  clip-path: circle(100% at 0% 0%);
+}
+@mixin subpage-footer {
+  color: white;
+  text-align: center;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: transparent;
+  span {
+    color: rgb(255, 255, 255);
+    background: inherit;
+  }
+}
