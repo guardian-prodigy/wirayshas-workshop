@@ -117,10 +117,18 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../js/zodiac.js":[function(require,module,exports) {
+})({"../img/zodiac-pics/images.jpg":[function(require,module,exports) {
+module.exports = "/images.0a2663eb.jpg";
+},{}],"../js/zodiac.js":[function(require,module,exports) {
+"use strict";
+
+var _images = _interopRequireDefault(require("../img/zodiac-pics/images.jpg"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 var zodiacNames = ["aquarius", "pisces", "aries", "taurus", "gemini", "cancer", "leo", "scorpio", "virgo", "libra", "sagittarius ", "capricorn"];
 var prices = [50];
-var ZodiacImages = ["./img/zodiac-pics/images.jpg"];
+var ZodiacImages = [_images.default];
 var ZodiacText = ["Aquarius energy helps us innovate and unite for social justice"];
 var zodiacs = [{
   title: zodiacNames[0],
@@ -233,7 +241,7 @@ function ListItemsSidebar() {
     });
   });
 }
-},{}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"../img/zodiac-pics/images.jpg":"../img/zodiac-pics/images.jpg"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -261,7 +269,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51894" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59083" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

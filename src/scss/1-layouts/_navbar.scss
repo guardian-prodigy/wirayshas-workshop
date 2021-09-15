@@ -1,8 +1,20 @@
 @use '../0-abstracts/variables' as *;
+@use '../2-typography/2-typography' as *;
 // navbar main.html
 .navbar {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+.navbar-subpage {
+  padding: 1rem;
+  background: rgba($primary-aqua-5, 0.3);
+  .nav-center {
+    display: flex;
+    max-width: 1120px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
   }
-  // end of navbar
+}
+// end of navbar

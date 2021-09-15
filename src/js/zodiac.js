@@ -1,3 +1,5 @@
+import aquarius from '../img/zodiac-pics/images.jpg';
+
 const zodiacNames = [
   "aquarius",
   "pisces",
@@ -13,7 +15,7 @@ const zodiacNames = [
   "capricorn",
 ];
 const prices = [50];
-const ZodiacImages = ["./img/zodiac-pics/images.jpg"];
+const ZodiacImages = [aquarius];
 const ZodiacText = [
   "Aquarius energy helps us innovate and unite for social justice",
 ];

@@ -1,11 +1,12 @@
 @use '../0-abstracts/mixins' as *;
 @use '../0-abstracts/variables' as*;
 ////////////////// section-center logo
-.logo, .article-logo {
-    @include logo-article();
-  }
-  /////////////////// section-center logo
-  // header for elements
+.logo,
+.article-logo {
+  @include logo-article();
+}
+/////////////////// section-center logo
+// header for elements
 .header-text {
   color: $clr-primary-3;
   font-family: $font-family-2;
@@ -25,7 +26,7 @@
   }
   a {
     background-color: linear-gradient(45deg, blue, red);
-    
+
     -webkit-filter: brightness(200%);
     filter: brightness(200%);
     font-weight: 600;
@@ -48,8 +49,22 @@
   }
 }
 // end of article header
-// footer
-.footer-p {
-  @include subpage-footer();
+.article-info {
+  p {
+    @include article-text();
+    padding: 0.5rem;
+  }
+  span a {
+    @include article-text-a-link();
+  }
 }
-//end of footer
+.header {
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+// zodiac headerNames
+.underline {
+  @include underline(50%);
+}
+// end of zodiac headerNames

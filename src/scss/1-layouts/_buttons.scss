@@ -41,6 +41,7 @@
 .fa-bars {
   font-size: 2rem;
   color: $primary-aqua-2;
+  cursor: pointer;
   -webkit-animation: FaBars 1.5s linear infinite forwards alternate;
   animation: FaBars 1.5s linear infinite forwards alternate;
 }
