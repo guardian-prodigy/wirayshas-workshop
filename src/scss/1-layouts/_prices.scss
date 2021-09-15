@@ -1,0 +1,24 @@
+@use '../0-abstracts/0-abstracts' as *;
+@use '../2-typography/2-typography' as *;
+.prices-center {
+    background: linear-gradient(90deg, $primary-aqua-5, $clr-primary-2);
+    display: grid;
+    border-radius: 1rem;
+    width: min(90%, 400px);
+    margin: 2rem auto;
+    margin-bottom: 0;
+    box-shadow: $light-shadow;
+    place-items: center;
+    padding: 2rem;
+    @include message();
+    .price-center {
+        margin-bottom: 10rem;
+        position: relative;
+        padding: 0.5rem;
+        &::after {
+            @include BeforeAfter();
+            background: linear-gradient(45deg, rgba($primary-aqua-3, 0.4), rgba(0,0,0,0.1));
+            filter: blur(2px);
+        }
+    }
+}

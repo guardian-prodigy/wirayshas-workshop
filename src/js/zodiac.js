@@ -122,7 +122,7 @@ function zodiacDisplay(par) {
       (item) =>
         `<article class="article">
         <div class="header">
-          <h4 class="sec-logo">${item.title}</h4>
+          <h4 class="logo">${item.title}</h4>
           <div class="underline"></div>
         </div>
         <div class="img-container">

@@ -68,3 +68,47 @@
   @include underline(50%);
 }
 // end of zodiac headerNames
+
+// footer copyright text
+.footer-p {
+  @include subpage-footer-text();
+}
+// end of footer copyright text
+
+// prices header
+.price-header {
+  text-align: center;
+  border-radius: $border-radius;
+  color: $clr-primary-2;
+  font-family: $font-family-1;
+  text-transform: capitalize;
+  letter-spacing: $letter-spacing;
+  font-size: 3rem;
+}
+.price {
+  font-family: $font-family-2;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: $clr-grey-1;
+  letter-spacing: 1px;
+  border-bottom: dotted 2px rgba(255, 255, 0, 0.521);
+  text-align: center;
+  width: fit-content;
+  span {
+    color: $light-green;
+  }
+}
+// end of prices header
+// products header
+  .products-header {
+    margin-bottom: 3rem;
+    text-transform: capitalize;
+    font-size: 4rem;
+    letter-spacing: $letter-spacing;
+    font-family: $font-family-2;
+    color: $clr-primary-5;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+  }
+// end of products header

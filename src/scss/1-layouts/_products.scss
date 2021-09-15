@@ -77,6 +77,10 @@
 }
 // end of products main
 // main-center-subpage: zodiac,
+.products-subpage {
+  background: linear-gradient(180deg, rgba($clr-grey-1, 0.8), rgba($primary-aqua-1, 0.5));
+  min-height: 100vh;
+}
 .main-center-subpage {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));

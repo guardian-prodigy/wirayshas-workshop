@@ -1,3 +1,4 @@
+@use '../0-abstracts/variables' as a;
 @keyframes FaBars {
     0% {
         transform: scale(1);
@@ -42,5 +43,16 @@
     }
     100% {
         transform: translateX(0);
+    }
+}
+@keyframes navLinks {
+    0% {
+        border: 1px a.$primary-aqua-5 solid;
+    }
+    50% {
+        background: a.$primary-grey-1;
+    }
+    100% {
+        background: transparent;
     }
 }

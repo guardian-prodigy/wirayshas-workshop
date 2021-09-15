@@ -2,79 +2,74 @@
 @use '../2-typography/2-typography' as *;
 // sidebar
 .sidebar {
-    min-height: 100vh;
-    position: fixed;
-    max-width: 600px;
-    transform: translateY(-100%);
-    inset: 0;
-    border-radius: 50%;
-    transition: $transition;
-    z-index: 999;
-    width: 100%;
-    padding: 1rem;
-    .logo {
-      position: absolute;
-      z-index: 1000;
-      top: 1rem;
-      left: 0;
-      font-size: 2rem;
-      width: 80%;
-    }
-    .sidebar-btns {
-      position: absolute;
-      height: -webkit-fit-content;
-      height: -moz-fit-content;
-      height: fit-content;
-      top: 15%;
-      left: 0;
-      z-index: 1001;
-    }
-  }
-  .sidebar::after {
-    content: "";
+  min-height: 100vh;
+  position: fixed;
+  max-width: 600px;
+  transform: translateY(-100%);
+  inset: 0;
+  border-radius: 50%;
+  transition: $transition;
+  z-index: 999;
+  width: 100%;
+  padding: 1rem;
+  .logo {
     position: absolute;
-    overflow: hidden;
-    max-width: $fixed-width;
-    width: 100%;
-    height: 80%;
-    @include circle();
-    inset: 0;
-    background: linear-gradient(45deg, $clr-primary-1 30%, $clr-primary-5);
-    -webkit-filter: blur(5px);
-    filter: blur(5px);
-    z-index: 997;
+    z-index: 1000;
+    top: 1rem;
+    left: 0;
+    font-size: 2rem;
+    width: 80%;
   }
-  // end of sidebar
+  .sidebar-btns {
+    position: absolute;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    top: 15%;
+    left: 0;
+    z-index: 1001;
+  }
+}
+.sidebar::after {
+  @include BeforeAfter($height: 80%);
+  overflow: hidden;
+  max-width: $fixed-width;
+  @include circle();
+  background: linear-gradient(45deg, $clr-primary-1 30%, $clr-primary-5);
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  z-index: 997;
+}
+// end of sidebar
+
+// subpage sidebar 
 .sidebar-subpage {
   min-height: 100vh;
   position: fixed;
   max-width: $max-width-200;
-  transform: translate(-100%);
+  transform: translate(-100%, -100%);
   inset: 0;
   border-radius: 0 0 50rem 0;
   transition: $transition;
   z-index: 999;
   width: 40vw;
   padding: 1rem;
-
   .sidebar-btns {
     display: grid;
     margin-top: 5rem;
     .btn-sidebar {
-        width: 100%;
+      width: 100%;
+      background: rgba($color: #000000, $alpha: 0.35);
     }
   }
 }
 .sidebar-subpage::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  inset: 0;
+  @include BeforeAfter();
   border-radius: 0 0 50rem 0;
-  background: rgba($primary-aqua-5, 0.8);
+  background: rgba($primary-aqua-5, 0.95);
   z-index: 997;
 }
+// end of subpage sidebar 
 .show-sidebar {
   transform: translate(0);
 }

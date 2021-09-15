@@ -215,7 +215,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
 function zodiacDisplay(par) {
   var items = par.map(function (item) {
-    return "<article class=\"article\">\n        <div class=\"header\">\n          <h4 class=\"sec-logo\">".concat(item.title, "</h4>\n          <div class=\"underline\"></div>\n        </div>\n        <div class=\"img-container\">\n          <img src=").concat(item.img, " alt=\"\" />\n        </div>\n        <div class=\"price\">\n          <div>\n            <p>").concat(item.price, "Srd</p>\n            <a href=\"aquarius.html\"><i class=\"fas fa-info\"></i></a>\n          </div>\n          <div class=\"underline\"></div>\n        </div>\n        <p class=\"text\">\n          ").concat(item.text, "\n        </p>\n      </article>");
+    return "<article class=\"article\">\n        <div class=\"header\">\n          <h4 class=\"logo\">".concat(item.title, "</h4>\n          <div class=\"underline\"></div>\n        </div>\n        <div class=\"img-container\">\n          <img src=").concat(item.img, " alt=\"\" />\n        </div>\n        <div class=\"price\">\n          <div>\n            <p>").concat(item.price, "Srd</p>\n            <a href=\"aquarius.html\"><i class=\"fas fa-info\"></i></a>\n          </div>\n          <div class=\"underline\"></div>\n        </div>\n        <p class=\"text\">\n          ").concat(item.text, "\n        </p>\n      </article>");
   }).join("");
   mainSection.innerHTML = items;
 }
@@ -269,7 +269,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59083" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51969" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
