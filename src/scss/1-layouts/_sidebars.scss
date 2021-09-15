@@ -46,27 +46,28 @@
 .sidebar-subpage {
   min-height: 100vh;
   position: fixed;
-  max-width: $max-width-200;
+  max-width: $max-width-300;
   transform: translate(-100%, -100%);
   inset: 0;
   border-radius: 0 0 50rem 0;
   transition: $transition;
   z-index: 999;
-  width: 40vw;
+  width: 50vw;
   padding: 1rem;
   .sidebar-btns {
-    display: grid;
+    display: grid; 
+    grid-template-rows: repeat(3, 1fr);
     margin-top: 5rem;
+    z-index: 1000;
     .btn-sidebar {
-      width: 100%;
-      background: rgba($color: #000000, $alpha: 0.35);
+      background: rgba($color: #000000, $alpha: 0.25);
     }
   }
 }
 .sidebar-subpage::before {
   @include BeforeAfter();
   border-radius: 0 0 50rem 0;
-  background: rgba($primary-aqua-5, 0.95);
+  background: linear-gradient(45deg, rgba($primary-aqua-5, 0.99), rgba($clr-primary-3, 0.99));
   z-index: 997;
 }
 // end of subpage sidebar 
