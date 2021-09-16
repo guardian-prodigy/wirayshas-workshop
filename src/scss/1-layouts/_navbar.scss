@@ -6,9 +6,11 @@
   top: 1rem;
   right: 1rem;
 }
+// navbar subpage zodiac, letters
 .navbar-subpage {
   padding: 1rem;
   background: rgba($primary-aqua-5, 0.3);
+  box-shadow: $light-shadow;
   .nav-center {
     display: flex;
     max-width: 1120px;
@@ -20,4 +22,4 @@
     display: none;
   }
 }
-// end of navbar
+// letters nav 

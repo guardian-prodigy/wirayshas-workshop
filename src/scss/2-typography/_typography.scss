@@ -1,5 +1,16 @@
 @use '../0-abstracts/mixins' as *;
 @use '../0-abstracts/variables' as*;
+// social media icons
+.fab {
+  color: $primary-aqua-3;
+  font-size: large;
+}
+.fa-angle-left, .fa-angle-right {
+  font-size: 4rem;
+  cursor: pointer;
+  color: rgba($primary-grey-1, 0.9);
+}
+// end of social media icons
 ////////////////// section-center logo
 .logo,
 .article-logo {
@@ -96,6 +107,7 @@
   width: fit-content;
   span {
     color: $light-green;
+    font-size: 1.8rem;
   }
 }
 // end of prices header

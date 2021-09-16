@@ -96,6 +96,17 @@
       }
     }
   }
+  .main-center-letters {
+
+    .letters-subpage {
+       .letters-A-D {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      max-width: $max-width;
+    }
+    }
+  }
+ 
 }
 @media screen and (min-width: 1200px) {
   .section-center {
