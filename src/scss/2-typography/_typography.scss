@@ -119,7 +119,6 @@
 // end of prices header
 // products header
 .products-header {
-  // margin-bottom: 3rem;
   text-transform: capitalize;
   font-size: 4rem;
   letter-spacing: $letter-spacing;
@@ -136,5 +135,6 @@
 .header-letters {
   background: linear-gradient(45deg, rgba(255, 255, 0, 0.788), $light-green);
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
 }
