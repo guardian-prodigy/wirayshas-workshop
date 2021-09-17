@@ -287,7 +287,7 @@ require("../globalJs/sidebar-subpage");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var prices = [35, 37.50, 40, 45, 50];
+var prices = [35, '37.50', 40, 45, 50];
 var priceText = ["letter met glitter:<br><span>Srd ".concat(prices[0], "</span>"), "letter met bloemen:<br><span>Srd ".concat(prices[1], "</span>"), "letter met schelpen:<br><span>Srd ".concat(prices[2], "</span>"), "letter met steentjes:<br><span>Srd ".concat(prices[3], "</span>"), "letter met zilvere of goudkleurige foil:<br><span>Srd ".concat(prices[4], "</span>")];
 var priceArr = [{
   text: priceText[0]
@@ -407,7 +407,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49975" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60175" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
