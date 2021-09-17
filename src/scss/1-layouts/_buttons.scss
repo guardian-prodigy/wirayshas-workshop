@@ -68,9 +68,10 @@
 //end of  times btn for closing elements
 
 //  sidebar btns
-.btn-sidebar {
+.btn-sidebar  {
   z-index: 1005;
   width: 10rem;
+  cursor: pointer;
   text-align: center;
   padding: 0.25rem;
   text-transform: uppercase;
@@ -90,6 +91,38 @@
   font-family: $font-family-3;
   &:hover {
     margin-left: 1rem;
+    
+  }
+}
+.btn-sidebar-subpage {
+  z-index: 1005;
+  padding: 0.2rem;
+  a {
+    z-index: 1005;
+    display: inline-block;
+  width: 10rem;
+  cursor: pointer;
+  text-align: center;
+  padding: 0.3rem 1.5rem;
+  text-transform: uppercase;
+  border-radius: $border-radius;
+  margin: 0.5rem;
+  margin-left: 0.75rem;
+  transition: $transition;
+  background: linear-gradient(
+    -215deg,
+    rgba(0, 0, 0, 0.4),
+    transparent
+  );
+  border: 0.1rem solid rgba($primary-aqua-1, 0.3);
+  font-weight: 700;
+  color: $primary-grey-4;
+  font-size: 1.3rem;
+  font-family: $font-family-3;
+  &:hover {
+    margin-left: 1rem;
+    
+  }
   }
 }
 // end of sidebar btns 

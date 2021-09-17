@@ -177,6 +177,49 @@ module.exports = "/6th-name-letter.39905ac9.jpg";
 module.exports = "/7th-name-letter.43f2ebaf.jpg";
 },{}],"../img/letters/8th-name-letter.jpg":[function(require,module,exports) {
 module.exports = "/8th-name-letter.dba2f66b.jpg";
+},{}],"../js/globalJs/sidebar-subpage.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.sidebartoggle = sidebartoggle;
+exports.ListItemsSidebar = ListItemsSidebar;
+var btns = document.querySelectorAll(".btn-js");
+var sidebar = document.querySelector(".sidebar-subpage");
+var btnSidebar = document.querySelectorAll(".btn-sidebar-subpage");
+var priceCenter = document.querySelector('.prices-center');
+
+function sidebartoggle() {
+  btns.forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+      if (e.currentTarget.classList.contains("fa-bars")) {
+        sidebar.classList.toggle("show-sidebar");
+      } else if (e.currentTarget.classList.contains("fa-times")) {
+        sidebar.classList.remove("show-sidebar");
+      }
+    });
+  });
+}
+
+sidebartoggle();
+
+function ListItemsSidebar() {
+  btnSidebar.forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+      if (e.target) {
+        if (e.target.classList.contains('prices-js')) {
+          sidebar.classList.remove("show-sidebar");
+          priceCenter.classList.toggle('price-center-toggled');
+        }
+
+        sidebar.classList.remove("show-sidebar");
+      }
+    });
+  });
+}
+
+ListItemsSidebar();
 },{}],"../js/letters/letters.js":[function(require,module,exports) {
 "use strict";
 
@@ -240,14 +283,34 @@ var _thNameLetter4 = _interopRequireDefault(require("../../img/letters/7th-name-
 
 var _thNameLetter5 = _interopRequireDefault(require("../../img/letters/8th-name-letter.jpg"));
 
+require("../globalJs/sidebar-subpage");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var prices = [35, 37.5, 40, 45, 50];
+var priceText = ["letter met glitter:<br><span>Srd ".concat(prices[0], "</span>"), "letter met bloemen:<br><span>Srd ".concat(prices[1], "</span>"), "letter met schelpen:<br><span>Srd ".concat(prices[2], "</span>"), "letter met steentjes:<br><span>Srd ".concat(prices[3], "</span>"), "letter met zilvere of goudkleurige foil:<br><span>Srd ".concat(prices[4], "</span>")];
+var priceArr = [{
+  text: priceText[0]
+}, {
+  text: priceText[1]
+}, {
+  text: priceText[2]
+}, {
+  text: priceText[3]
+}, {
+  text: priceText[4]
+}];
 var imagesArr = [_E.default, _F.default, _G.default, _H.default, _I.default, _J.default, _K.default, _L.default, _M.default, _N.default, _O.default, _P.default, _Q.default, _R.default, _S.default, _T.default, _U.default, _V.default, _X.default, _Y.default, _W.default, _Z.default];
+var nameArr = [_stNameLetter.default, _ndNameLetter.default, _rdNameLetter.default, _thNameLetter.default, _thNameLetter2.default, _thNameLetter3.default, _thNameLetter4.default, _thNameLetter5.default];
 var LeftArrow = document.querySelector(".fa-angle-left");
 var RightArrow = document.querySelector(".fa-angle-right");
+var PriceCenter = document.querySelector(".price-center");
+var NamesArrowsRight = document.querySelector(".name-right");
+var NamesArrowsLeft = document.querySelector(".name-left");
+var imageNames = document.querySelector(".img-for-names");
 var img = document.querySelector(".img-for-E-D"); // functions
 
-function Arrows(arrow) {
+function ArrowsLetters() {
   var counter = 0;
   RightArrow.addEventListener("click", function (e) {
     counter++;
@@ -275,8 +338,48 @@ function Arrows(arrow) {
   });
 }
 
-Arrows();
-},{"../../img/letters/E.jpg":"../img/letters/E.jpg","../../img/letters/F.jpg":"../img/letters/F.jpg","../../img/letters/G.jpg":"../img/letters/G.jpg","../../img/letters/H.jpg":"../img/letters/H.jpg","../../img/letters/I.jpg":"../img/letters/I.jpg","../../img/letters/J.jpg":"../img/letters/J.jpg","../../img/letters/K.jpg":"../img/letters/K.jpg","../../img/letters/L.jpg":"../img/letters/L.jpg","../../img/letters/M.jpg":"../img/letters/M.jpg","../../img/letters/N.jpg":"../img/letters/N.jpg","../../img/letters/O.jpg":"../img/letters/O.jpg","../../img/letters/P.jpg":"../img/letters/P.jpg","../../img/letters/Q.jpg":"../img/letters/Q.jpg","../../img/letters/R.jpg":"../img/letters/R.jpg","../../img/letters/S.jpg":"../img/letters/S.jpg","../../img/letters/T.jpg":"../img/letters/T.jpg","../../img/letters/U.jpg":"../img/letters/U.jpg","../../img/letters/V.jpg":"../img/letters/V.jpg","../../img/letters/W.jpg":"../img/letters/W.jpg","../../img/letters/X.jpg":"../img/letters/X.jpg","../../img/letters/Y.jpg":"../img/letters/Y.jpg","../../img/letters/Z.jpg":"../img/letters/Z.jpg","../../img/letters/1st-name-letter.jpeg":"../img/letters/1st-name-letter.jpeg","../../img/letters/2nd-name-letter.jpeg":"../img/letters/2nd-name-letter.jpeg","../../img/letters/3rd-name-letter.jpg":"../img/letters/3rd-name-letter.jpg","../../img/letters/4th-name-letter.jpg":"../img/letters/4th-name-letter.jpg","../../img/letters/5th-name-letter.jpg":"../img/letters/5th-name-letter.jpg","../../img/letters/6th-name-letter.jpg":"../img/letters/6th-name-letter.jpg","../../img/letters/7th-name-letter.jpg":"../img/letters/7th-name-letter.jpg","../../img/letters/8th-name-letter.jpg":"../img/letters/8th-name-letter.jpg"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+ArrowsLetters();
+
+function ArrowsNames() {
+  var counter = 0;
+  imageNames.setAttribute("src", nameArr[counter]);
+  NamesArrowsRight.addEventListener("click", function (e) {
+    counter++;
+    imageNames.setAttribute("src", nameArr[counter]);
+    console.log(counter);
+
+    if (counter > nameArr.length - 1) {
+      counter = 0;
+      imageNames.setAttribute("src", nameArr[counter]);
+    }
+
+    return counter;
+  });
+  NamesArrowsLeft.addEventListener("click", function (e) {
+    counter--;
+    imageNames.setAttribute("src", nameArr[counter]);
+    console.log(counter);
+
+    if (counter < 0) {
+      counter = nameArr.length - 1;
+      imageNames.setAttribute("src", nameArr[counter]);
+    }
+
+    return counter;
+  });
+}
+
+ArrowsNames();
+
+function DisplayPrices() {
+  var Prices = priceArr.map(function (price) {
+    return "<ul class=\"prices\">\n    <li class=\"price\">".concat(price.text, "</li>\n  </ul>");
+  }).join("");
+  PriceCenter.innerHTML = Prices;
+}
+
+DisplayPrices();
+},{"../../img/letters/E.jpg":"../img/letters/E.jpg","../../img/letters/F.jpg":"../img/letters/F.jpg","../../img/letters/G.jpg":"../img/letters/G.jpg","../../img/letters/H.jpg":"../img/letters/H.jpg","../../img/letters/I.jpg":"../img/letters/I.jpg","../../img/letters/J.jpg":"../img/letters/J.jpg","../../img/letters/K.jpg":"../img/letters/K.jpg","../../img/letters/L.jpg":"../img/letters/L.jpg","../../img/letters/M.jpg":"../img/letters/M.jpg","../../img/letters/N.jpg":"../img/letters/N.jpg","../../img/letters/O.jpg":"../img/letters/O.jpg","../../img/letters/P.jpg":"../img/letters/P.jpg","../../img/letters/Q.jpg":"../img/letters/Q.jpg","../../img/letters/R.jpg":"../img/letters/R.jpg","../../img/letters/S.jpg":"../img/letters/S.jpg","../../img/letters/T.jpg":"../img/letters/T.jpg","../../img/letters/U.jpg":"../img/letters/U.jpg","../../img/letters/V.jpg":"../img/letters/V.jpg","../../img/letters/W.jpg":"../img/letters/W.jpg","../../img/letters/X.jpg":"../img/letters/X.jpg","../../img/letters/Y.jpg":"../img/letters/Y.jpg","../../img/letters/Z.jpg":"../img/letters/Z.jpg","../../img/letters/1st-name-letter.jpeg":"../img/letters/1st-name-letter.jpeg","../../img/letters/2nd-name-letter.jpeg":"../img/letters/2nd-name-letter.jpeg","../../img/letters/3rd-name-letter.jpg":"../img/letters/3rd-name-letter.jpg","../../img/letters/4th-name-letter.jpg":"../img/letters/4th-name-letter.jpg","../../img/letters/5th-name-letter.jpg":"../img/letters/5th-name-letter.jpg","../../img/letters/6th-name-letter.jpg":"../img/letters/6th-name-letter.jpg","../../img/letters/7th-name-letter.jpg":"../img/letters/7th-name-letter.jpg","../../img/letters/8th-name-letter.jpg":"../img/letters/8th-name-letter.jpg","../globalJs/sidebar-subpage":"../js/globalJs/sidebar-subpage.js"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -304,7 +407,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52116" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53387" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

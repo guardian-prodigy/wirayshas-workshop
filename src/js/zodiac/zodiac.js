@@ -1,5 +1,5 @@
-import aquarius from '../img/zodiac-pics/images.jpg';
-
+import aquarius from '../../img/zodiac-pics/images.jpg';
+import '../globalJs/sidebar-subpage';
 const zodiacNames = [
   "aquarius",
   "pisces",
@@ -106,14 +106,11 @@ const zodiacs = [
   },
 ];
 const mainSection = document.querySelector(".main-center-subpage");
-const btnSection = document.querySelector(".sidebar-btns");
-const btns = document.querySelectorAll(".btn-js");
-const sidebar = document.querySelector(".sidebar-subpage");
-const btnSidebar = document.querySelectorAll('.btn-sidebar')
+
 // event listeners
 window.addEventListener(
   "DOMContentLoaded",
-  () => zodiacDisplay(zodiacs), sidebartoggle(), ListItemsSidebar()
+  () => zodiacDisplay(zodiacs)
 );
 // functions
 function zodiacDisplay(par) {
@@ -142,25 +139,4 @@ function zodiacDisplay(par) {
     )
     .join("");
   mainSection.innerHTML = items;
-}
-function sidebartoggle() {
-  btns.forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      if (e.currentTarget.classList.contains("fa-bars")) {
-        sidebar.classList.toggle("show-sidebar");
-      }
-      else if (e.currentTarget.classList.contains("fa-times")) {
-        sidebar.classList.remove("show-sidebar");
-      }
-    });
-  });
-}
-function ListItemsSidebar() {
-  btnSidebar.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      if (e.target) {
-        sidebar.classList.remove('show-sidebar')
-      }
-    })
-  });
 }

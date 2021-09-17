@@ -68,6 +68,7 @@
   .footer-subpage-container {
     display: grid;
   grid-template-columns: auto 1fr;
+  align-items: center;
   max-width: $max-width;
   margin: 0 auto;
   }

@@ -119,10 +119,49 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"../img/zodiac-pics/images.jpg":[function(require,module,exports) {
 module.exports = "/images.0a2663eb.jpg";
+},{}],"../js/globalJs/sidebar-subpage.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.sidebartoggle = sidebartoggle;
+exports.ListItemsSidebar = ListItemsSidebar;
+var btns = document.querySelectorAll(".btn-js");
+var sidebar = document.querySelector(".sidebar-subpage");
+var btnSidebar = document.querySelectorAll(".btn-sidebar");
+
+function sidebartoggle() {
+  btns.forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+      if (e.currentTarget.classList.contains("fa-bars")) {
+        sidebar.classList.toggle("show-sidebar");
+      } else if (e.currentTarget.classList.contains("fa-times")) {
+        sidebar.classList.remove("show-sidebar");
+      }
+    });
+  });
+}
+
+sidebartoggle();
+
+function ListItemsSidebar() {
+  btnSidebar.forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+      if (e.target) {
+        sidebar.classList.remove("show-sidebar");
+      }
+    });
+  });
+}
+
+ListItemsSidebar();
 },{}],"../js/zodiac.js":[function(require,module,exports) {
 "use strict";
 
 var _images = _interopRequireDefault(require("../img/zodiac-pics/images.jpg"));
+
+require("./globalJs/sidebar-subpage");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -203,15 +242,11 @@ var zodiacs = [{
   price: prices[0],
   text: ZodiacText[0]
 }];
-var mainSection = document.querySelector(".main-center-subpage");
-var btnSection = document.querySelector(".sidebar-btns");
-var btns = document.querySelectorAll(".btn-js");
-var sidebar = document.querySelector(".sidebar-subpage");
-var btnSidebar = document.querySelectorAll('.btn-sidebar'); // event listeners
+var mainSection = document.querySelector(".main-center-subpage"); // event listeners
 
 window.addEventListener("DOMContentLoaded", function () {
   return zodiacDisplay(zodiacs);
-}, sidebartoggle(), ListItemsSidebar()); // functions
+}); // functions
 
 function zodiacDisplay(par) {
   var items = par.map(function (item) {
@@ -219,29 +254,7 @@ function zodiacDisplay(par) {
   }).join("");
   mainSection.innerHTML = items;
 }
-
-function sidebartoggle() {
-  btns.forEach(function (btn) {
-    btn.addEventListener("click", function (e) {
-      if (e.currentTarget.classList.contains("fa-bars")) {
-        sidebar.classList.toggle("show-sidebar");
-      } else if (e.currentTarget.classList.contains("fa-times")) {
-        sidebar.classList.remove("show-sidebar");
-      }
-    });
-  });
-}
-
-function ListItemsSidebar() {
-  btnSidebar.forEach(function (btn) {
-    btn.addEventListener('click', function (e) {
-      if (e.target) {
-        sidebar.classList.remove('show-sidebar');
-      }
-    });
-  });
-}
-},{"../img/zodiac-pics/images.jpg":"../img/zodiac-pics/images.jpg"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"../img/zodiac-pics/images.jpg":"../img/zodiac-pics/images.jpg","./globalJs/sidebar-subpage":"../js/globalJs/sidebar-subpage.js"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -269,7 +282,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52116" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58888" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

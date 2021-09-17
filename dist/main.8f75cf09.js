@@ -127,6 +127,32 @@ module.exports = "/letters.73a5ec5e.jpg";
 module.exports = "/animals.c016e7bf.jpg";
 },{}],"../img/imagesForProductsMain/zodiac.jpg":[function(require,module,exports) {
 module.exports = "/zodiac.d0e8e51b.jpg";
+},{}],"../js/globalJs/sidebar-main.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.sidebartoggle = sidebartoggle;
+var btns = document.querySelectorAll(".fas-js");
+var sidebar = document.querySelector(".sidebar");
+var sidebarHeader = document.querySelector(".sec-center");
+
+function sidebartoggle() {
+  btns.forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+      if (e.currentTarget.classList.contains("fa-bars")) {
+        sidebar.classList.toggle("show-sidebar");
+        sidebarHeader.style.visibility = "hidden";
+      } else if (e.currentTarget.classList.contains("fa-times")) {
+        sidebar.classList.remove("show-sidebar");
+        sidebarHeader.style.visibility = "visible";
+      }
+    });
+  });
+}
+
+sidebartoggle();
 },{}],"../js/main.js":[function(require,module,exports) {
 "use strict";
 
@@ -139,6 +165,8 @@ var _letters = _interopRequireDefault(require("../img/imagesForProductsMain/lett
 var _animals = _interopRequireDefault(require("../img/imagesForProductsMain/animals.jpg"));
 
 var _zodiac = _interopRequireDefault(require("../img/imagesForProductsMain/zodiac.jpg"));
+
+require("./globalJs/sidebar-main");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -201,34 +229,15 @@ var AllExternalLinks = [{
 }]; // end of arrays
 // variables
 
-var sectionCenter = document.querySelector(".section-center");
 var productArticle = document.querySelector(".article");
-var btns = document.querySelectorAll(".fas-js");
-var sidebar = document.querySelector(".sidebar");
 var sidebarBtns = document.querySelector(".sidebar-btns");
-var sidebarHeader = document.querySelector(".sec-center"); // end of variables
+var sidebar = document.querySelector(".sidebar"); // end of variables
 // addEventListers
 
 window.addEventListener("DOMContentLoaded", function () {
   return Products();
 }); // end of addEventListeners
 // functions
-
-function sidebartoggle() {
-  btns.forEach(function (btn) {
-    btn.addEventListener("click", function (e) {
-      if (e.currentTarget.classList.contains("fa-bars")) {
-        sidebar.classList.toggle("show-sidebar");
-        sidebarHeader.style.visibility = "hidden";
-      } else if (e.currentTarget.classList.contains("fa-times")) {
-        sidebar.classList.remove("show-sidebar");
-        sidebarHeader.style.visibility = "visible";
-      }
-    });
-  });
-}
-
-sidebartoggle();
 
 function BtnDisplay() {
   var items = AllExternalLinks.map(function (item) {
@@ -256,7 +265,7 @@ function Products() {
   }).join("");
   productArticle.innerHTML = product;
 } // end of functions
-},{"../../img/imagesForProductsMain/ponpons.jpg":"../../img/imagesForProductsMain/ponpons.jpg","../img/imagesForProductsMain/headbands.jpg":"../img/imagesForProductsMain/headbands.jpg","../img/imagesForProductsMain/letters.jpg":"../img/imagesForProductsMain/letters.jpg","../img/imagesForProductsMain/animals.jpg":"../img/imagesForProductsMain/animals.jpg","../img/imagesForProductsMain/zodiac.jpg":"../img/imagesForProductsMain/zodiac.jpg"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"../../img/imagesForProductsMain/ponpons.jpg":"../../img/imagesForProductsMain/ponpons.jpg","../img/imagesForProductsMain/headbands.jpg":"../img/imagesForProductsMain/headbands.jpg","../img/imagesForProductsMain/letters.jpg":"../img/imagesForProductsMain/letters.jpg","../img/imagesForProductsMain/animals.jpg":"../img/imagesForProductsMain/animals.jpg","../img/imagesForProductsMain/zodiac.jpg":"../img/imagesForProductsMain/zodiac.jpg","./globalJs/sidebar-main":"../js/globalJs/sidebar-main.js"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -284,7 +293,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52116" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57272" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

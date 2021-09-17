@@ -1,9 +1,9 @@
 import PonPon from "../../img/imagesForProductsMain/ponpons.jpg";
-import Headbands from "../img/imagesForProductsMain/headbands.jpg";
-import Animals from "../img/imagesForProductsMain/letters.jpg";
-import Letters from "../img/imagesForProductsMain/animals.jpg";
-import ZodiacSigns from "../img/imagesForProductsMain/zodiac.jpg";
-
+import Headbands from "../../img/imagesForProductsMain/headbands.jpg";
+import Animals from "../../img/imagesForProductsMain/letters.jpg";
+import Letters from "../../img/imagesForProductsMain/animals.jpg";
+import ZodiacSigns from "../../img/imagesForProductsMain/zodiac.jpg";
+import '../globalJs/sidebar-main';
 // arrays
 const links = [
   "ponponetjes.html",
@@ -94,12 +94,10 @@ const AllExternalLinks = [
 // end of arrays
 
 // variables
-const sectionCenter = document.querySelector(".section-center");
 const productArticle = document.querySelector(".article");
-const btns = document.querySelectorAll(".fas-js");
-const sidebar = document.querySelector(".sidebar");
 const sidebarBtns = document.querySelector(".sidebar-btns");
-const sidebarHeader = document.querySelector(".sec-center");
+const sidebar = document.querySelector(".sidebar");
+
 // end of variables
 
 // addEventListers
@@ -107,20 +105,7 @@ window.addEventListener("DOMContentLoaded", () => Products());
 // end of addEventListeners
 
 // functions
-function sidebartoggle() {
-  btns.forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      if (e.currentTarget.classList.contains("fa-bars")) {
-        sidebar.classList.toggle("show-sidebar");
-        sidebarHeader.style.visibility = "hidden";
-      } else if (e.currentTarget.classList.contains("fa-times")) {
-        sidebar.classList.remove("show-sidebar");
-        sidebarHeader.style.visibility = "visible";
-      }
-    });
-  });
-}
-sidebartoggle();
+
 function BtnDisplay() {
   const items = AllExternalLinks.map(
     (item) =>

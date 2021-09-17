@@ -26,9 +26,34 @@ import ThirdName from "../../img/letters/3rd-name-letter.jpg";
 import FourthName from "../../img/letters/4th-name-letter.jpg";
 import FifthName from "../../img/letters/5th-name-letter.jpg";
 import SixthName from "../../img/letters/6th-name-letter.jpg";
-import SeventhNam from "../../img/letters/7th-name-letter.jpg";
+import SeventhName from "../../img/letters/7th-name-letter.jpg";
 import EightName from "../../img/letters/8th-name-letter.jpg";
-
+import "../globalJs/sidebar-subpage";
+const prices = [35, 37.5, 40, 45, 50];
+const priceText = [
+  `letter met glitter:<br><span>Srd ${prices[0]}</span>`,
+  `letter met bloemen:<br><span>Srd ${prices[1]}</span>`,
+  `letter met schelpen:<br><span>Srd ${prices[2]}</span>`,
+  `letter met steentjes:<br><span>Srd ${prices[3]}</span>`,
+  `letter met zilvere of goudkleurige foil:<br><span>Srd ${prices[4]}</span>`,
+];
+const priceArr = [
+  {
+    text: priceText[0],
+  },
+  {
+    text: priceText[1],
+  },
+  {
+    text: priceText[2],
+  },
+  {
+    text: priceText[3],
+  },
+  {
+    text: priceText[4],
+  },
+];
 const imagesArr = [
   E,
   F,
@@ -53,11 +78,26 @@ const imagesArr = [
   W,
   Z,
 ];
+const nameArr = [
+  FirstName,
+  SecondName,
+  ThirdName,
+  FourthName,
+  FifthName,
+  SixthName,
+  SeventhName,
+  EightName,
+];
 const LeftArrow = document.querySelector(".fa-angle-left");
 const RightArrow = document.querySelector(".fa-angle-right");
+const PriceCenter = document.querySelector(".price-center");
+const NamesArrowsRight = document.querySelector(".name-right");
+const NamesArrowsLeft = document.querySelector(".name-left");
+const imageNames = document.querySelector(".img-for-names");
 let img = document.querySelector(".img-for-E-D");
+
 // functions
-function Arrows(arrow) {
+function ArrowsLetters() {
   let counter = 0;
   RightArrow.addEventListener("click", (e) => {
     counter++;
@@ -81,4 +121,43 @@ function Arrows(arrow) {
     return counter;
   });
 }
-Arrows();
+ArrowsLetters();
+function ArrowsNames() {
+  let counter = 0;
+  imageNames.setAttribute("src", nameArr[counter]);
+
+  NamesArrowsRight.addEventListener("click", (e) => {
+    counter++;
+    imageNames.setAttribute("src", nameArr[counter]);
+    console.log(counter);
+    if (counter > nameArr.length - 1) {
+      counter = 0;
+      imageNames.setAttribute("src", nameArr[counter]);
+    }
+    return counter;
+  });
+  NamesArrowsLeft.addEventListener("click", (e) => {
+    counter--;
+    imageNames.setAttribute("src", nameArr[counter]);
+    console.log(counter);
+    if (counter < 0) {
+      counter = nameArr.length - 1;
+    imageNames.setAttribute("src", nameArr[counter]);
+
+    }
+    return counter;
+  });
+}
+ArrowsNames();
+function DisplayPrices() {
+  let Prices = priceArr
+    .map((price) => {
+      return `<ul class="prices">
+    <li class="price">${price.text}</li>
+  </ul>`;
+    })
+    .join("");
+  PriceCenter.innerHTML = Prices;
+}
+
+DisplayPrices();
