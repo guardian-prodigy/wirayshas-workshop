@@ -111,11 +111,13 @@
   letter-spacing: 1px;
   border-bottom: dotted 2px rgba(255, 255, 0, 0.521);
   text-align: center;
+  margin: 0 auto;
   justify-self: center;
   width: fit-content;
   span {
     color: $light-green;
     font-size: 1.8rem;
+    margin: inherit;
   }
 }
 // end of prices header
