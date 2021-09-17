@@ -29,7 +29,7 @@ import SixthName from "../../img/letters/6th-name-letter.jpg";
 import SeventhName from "../../img/letters/7th-name-letter.jpg";
 import EightName from "../../img/letters/8th-name-letter.jpg";
 import "../globalJs/sidebar-subpage";
-const prices = [35, 37.5, 40, 45, 50];
+const prices = [35, 37.50, 40, 45, 50];
 const priceText = [
   `letter met glitter:<br><span>Srd ${prices[0]}</span>`,
   `letter met bloemen:<br><span>Srd ${prices[1]}</span>`,
@@ -159,5 +159,4 @@ function DisplayPrices() {
     .join("");
   PriceCenter.innerHTML = Prices;
 }
-
 DisplayPrices();

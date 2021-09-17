@@ -287,7 +287,7 @@ require("../globalJs/sidebar-subpage");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var prices = [35, 37.5, 40, 45, 50];
+var prices = [35, 37.50, 40, 45, 50];
 var priceText = ["letter met glitter:<br><span>Srd ".concat(prices[0], "</span>"), "letter met bloemen:<br><span>Srd ".concat(prices[1], "</span>"), "letter met schelpen:<br><span>Srd ".concat(prices[2], "</span>"), "letter met steentjes:<br><span>Srd ".concat(prices[3], "</span>"), "letter met zilvere of goudkleurige foil:<br><span>Srd ".concat(prices[4], "</span>")];
 var priceArr = [{
   text: priceText[0]

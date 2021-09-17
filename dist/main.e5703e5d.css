@@ -413,7 +413,7 @@ body {
   color: #102a42;
   letter-spacing: 1px;
   border-bottom: dotted 2px rgba(255, 255, 0, 0.521);
-  text-align: center !important;
+  text-align: center;
   justify-self: center;
   width: fit-content;
 }
