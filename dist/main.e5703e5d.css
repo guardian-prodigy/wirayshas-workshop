@@ -403,6 +403,7 @@ body {
   text-transform: capitalize;
   letter-spacing: 0.1rem;
   font-size: 3rem;
+  display: grid;
 }
 
 .price {
@@ -412,7 +413,8 @@ body {
   color: #102a42;
   letter-spacing: 1px;
   border-bottom: dotted 2px rgba(255, 255, 0, 0.521);
-  text-align: center;
+  text-align: center !important;
+  justify-self: center;
   width: fit-content;
 }
 .price span {
