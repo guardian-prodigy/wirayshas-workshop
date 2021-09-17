@@ -175,12 +175,13 @@
   }
 }
 // end of main-center-subpage: zodiac,
+
 // letters main-center
 .main-center-letters {
   background: linear-gradient(
     to bottom,
     rgba($clr-grey-1, 0.3),
-    rgba($primary-aqua-1, 0.9) 90%
+    rgba($primary-aqua-1, 0.7) 90%
   );
   margin-top: 2rem;
   .letters-container {
@@ -198,15 +199,16 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 1rem;
+      max-width: $max-width;
       place-content: center;
       padding: 1rem;
       margin: 0 auto;
     }
     .static-letters {
-      padding: 1rem;
+      padding: 0.5rem;
       position: relative;
       border: rgba($primary-grey-1, 0.2) solid 0.15rem;
-      max-width: $max-width-300;
+      max-width: $fixed-width;
       margin: 0 auto;
       background: rgba($primary-grey-1, 0.3);
       .img-container-letter {
@@ -217,7 +219,8 @@
         img {
           width: 100%;
           height: 100%;
-          object-fit: cover;
+          -o-object-fit: cover;
+             object-fit: cover;
           border-radius: $border-radius;
         }
       }
@@ -236,8 +239,8 @@
         background: rgba($primary-grey-1, 0.2);
         inset: -0.5rem;
         margin: 0 auto;
-        filter: blur(2px);
-
+        -webkit-filter: blur(2px);
+                filter: blur(2px);
         z-index: -1;
       }
     }
@@ -248,7 +251,14 @@
       grid-template-columns: repeat(3, auto);
       align-items: center;
       justify-content: space-around;
+      max-width: $max-width;
+      margin: 0 auto;
       padding: 1rem;
+      .fa-angle-left, .fa-angle-right {
+        &:hover {
+          color: rgba($clr-grey-1, 0.8);
+        }
+      }
     }
   }
 }
@@ -261,7 +271,8 @@
   img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     border-radius: $border-radius;
   }
   &::after {
@@ -269,7 +280,8 @@
     z-index: -1;
     inset: -0.5rem;
     background: rgba($primary-grey-1, 0.2);
-    filter: blur(2px);
+    -webkit-filter: blur(2px);
+            filter: blur(2px);
   }
 }
 // end of letters main-center

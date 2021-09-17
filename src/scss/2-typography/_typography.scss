@@ -1,13 +1,18 @@
 @use '../0-abstracts/mixins' as *;
 @use '../0-abstracts/variables' as*;
 // social media icons
-.fab {
+.fab {  
   color: $primary-aqua-3;
-  font-size: large;
+  font-size: 1.3rem;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) all 2s;
+  &:hover {
+    color: rgba($primary-grey-1, 0.9);
+  }
 }
 .fa-angle-left, .fa-angle-right {
   font-size: 4rem;
   cursor: pointer;
+  transition: $transition;
   color: rgba($primary-grey-1, 0.9);
 }
 // end of social media icons

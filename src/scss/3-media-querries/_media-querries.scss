@@ -7,10 +7,10 @@
     .sidebar-btns {
       left: 50%;
       transform: translateX(-50%);
-      width: 10rem;
       .btn-sidebar {
         margin: 1rem auto;
-        &:hover {
+        width: 100%;
+         &:hover {
           margin-left: 1.2rem;
         }
       }
@@ -121,7 +121,6 @@
   }
   h2,
   h3,
-  a,
   li {
     font-size: 2rem;
   }
