@@ -252,12 +252,11 @@ body {
 
 .btn-sidebar-subpage {
   z-index: 1005;
-  padding: 0.2rem;
 }
 .btn-sidebar-subpage a {
   z-index: 1005;
   display: inline-block;
-  width: 10rem;
+  width: 9rem;
   cursor: pointer;
   text-align: center;
   padding: 0.3rem 1.5rem;
@@ -878,28 +877,31 @@ body {
 }
 .main-center-letters .letters-subpage {
   margin: 0 auto;
+  width: 100%;
 }
 .main-center-letters .letters-subpage .letters-A-D {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
+  width: 100%;
   max-width: 1170px;
-  place-content: center;
+  justify-content: space-between;
   padding: 1rem;
   margin: 0 auto;
 }
 .main-center-letters .letters-subpage .static-letters {
-  padding: 0.5rem;
   position: relative;
   border: rgba(242, 239, 239, 0.2) solid 0.15rem;
   max-width: 620px;
   margin: 0 auto;
+  width: 100%;
+  padding: 0 0.5rem;
   background: rgba(242, 239, 239, 0.3);
 }
 .main-center-letters .letters-subpage .static-letters .img-container-letter {
   height: 10rem;
   margin: 0.5rem auto;
-  width: 10rem;
+  width: 90%;
   position: relative;
 }
 .main-center-letters .letters-subpage .static-letters .img-container-letter img {
@@ -910,9 +912,9 @@ body {
   border-radius: 0.25rem;
 }
 .main-center-letters .letters-subpage .static-letters .price-info {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto;
   justify-content: space-between;
-  padding: 0 0.5rem;
   align-items: center;
 }
 .main-center-letters .letters-subpage .static-letters::after {
@@ -1032,6 +1034,48 @@ body {
   animation: PriceCenter 1.5s ease-in-out 0.5s 1 forwards;
 }
 
+@media screen and (max-width: 348px) {
+  .price {
+    font-size: 1.3rem;
+  }
+  .price span {
+    font-size: 1.3rem;
+  }
+
+  .btn-sidebar-subpage {
+    width: 5rem;
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    gap: 0.4rem;
+    position: relative;
+  }
+  .btn-sidebar-subpage a {
+    margin: 0;
+    width: 7rem;
+    transition: all 0.3s linear;
+    margin-left: 0.25rem;
+    font-size: 1rem;
+  }
+  .btn-sidebar-subpage a:hover {
+    margin-left: 0.5rem;
+  }
+
+  .img-container {
+    width: 12rem;
+    padding: 0;
+  }
+  .img-container img {
+    width: 100%;
+  }
+
+  .fab {
+    font-size: 1rem;
+  }
+
+  .footer-p {
+    font-size: 0.5rem;
+  }
+}
 @media screen and (min-width: 600px) {
   .sidebar .logo {
     display: none;
