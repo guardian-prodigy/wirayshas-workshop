@@ -438,6 +438,7 @@ body {
 .header-letters {
   background: linear-gradient(45deg, rgba(255, 255, 0, 0.788), #00f300);
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
 }
 
@@ -968,6 +969,7 @@ body {
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+  -webkit-animation: letterImgAnimation 500ms ease-out 1 forwards;
   animation: letterImgAnimation 500ms ease-out 1 forwards;
   border-radius: 0.25rem;
 }
