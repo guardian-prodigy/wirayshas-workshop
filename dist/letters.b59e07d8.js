@@ -188,7 +188,7 @@ exports.ListItemsSidebar = ListItemsSidebar;
 var btns = document.querySelectorAll(".btn-js");
 var sidebar = document.querySelector(".sidebar-subpage");
 var btnSidebar = document.querySelectorAll(".btn-sidebar-subpage");
-var priceCenter = document.querySelector('.prices-center');
+var priceCenter = document.querySelector(".prices-center");
 
 function sidebartoggle() {
   btns.forEach(function (btn) {
@@ -208,12 +208,13 @@ function ListItemsSidebar() {
   btnSidebar.forEach(function (btn) {
     btn.addEventListener("click", function (e) {
       if (e.target) {
-        if (e.target.classList.contains('prices-js')) {
-          sidebar.classList.remove("show-sidebar");
-          priceCenter.classList.toggle('price-center-toggled');
-        }
-
         sidebar.classList.remove("show-sidebar");
+      }
+
+      if (e.target.classList.contains("prices-js")) {
+        sidebar.classList.remove("show-sidebar");
+        console.log("hi");
+        priceCenter.classList.toggle("price-center-toggled");
       }
     });
   });
@@ -228,8 +229,9 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.DisplayLetterPrices = DisplayLetterPrices;
 var LettersCenter = document.querySelector(".prices-letters");
-var Lettersprices = ["35.00", "37.50", "40.00", "45.00", "50.00"];
-var LetterspriceText = ["letter met glitter:<br><span>Srd ".concat(Lettersprices[0], "</span>"), "letter met bloemen:<br><span>Srd ".concat(Lettersprices[1], "</span>"), "letter met schelpen:<br><span>Srd ".concat(Lettersprices[2], "</span>"), "letter met steentjes:<br><span>Srd ".concat(Lettersprices[3], "</span>"), "letter met zilvere of goudkleurige foil:<br><span>Srd ".concat(Lettersprices[4], "</span>")];
+var Lettersprices = ["35.00", "37.50", "40.00", "45.00", "50.00", '5.00'];
+var LetterSocialIcons = "<ul class=\"prices-social-icons-zodiac\">\n<li><i class=\"fas hand-pointing-right fa-hand-point-right\"></i></li>\n<li>\n  <a href=\"https://wa.me/+5978979639\">\n      <i class=\"fab fa-whatsapp price-icons-zodiac\"></i>\n  </a>\n  <a href=\"https://instagram.com/wiraysha_workshop?igshid=4byv5ud4kl4f\">\n      <i class=\"fab fa-instagram price-icons-zodiac\"></i>\n  </a>\n  </li>\n</ul>";
+var LetterspriceText = ["letter met glitter:<br><span>Srd ".concat(Lettersprices[0], "</span>"), "letter met bloemen:<br><span>Srd ".concat(Lettersprices[1], "</span>"), "letter met schelpen:<br><span>Srd ".concat(Lettersprices[2], "</span>"), "letter met steentjes:<br><span>Srd ".concat(Lettersprices[3], "</span>"), "letter met zilvere of goudkleurige foil:<br><span>Srd ".concat(Lettersprices[4], "</span>"), "per extra accessory: <span>".concat(Lettersprices[4], "</span><br>").concat(LetterSocialIcons)];
 var LetterspriceArr = [{
   text: LetterspriceText[0]
 }, {
@@ -240,6 +242,8 @@ var LetterspriceArr = [{
   text: LetterspriceText[3]
 }, {
   text: LetterspriceText[4]
+}, {
+  text: LetterspriceText[5]
 }];
 
 function DisplayLetterPrices() {
@@ -250,7 +254,58 @@ function DisplayLetterPrices() {
 }
 
 DisplayLetterPrices();
-},{}],"../js/letters/letters.js":[function(require,module,exports) {
+},{}],"../../img/letters/A.jpg":[function(require,module,exports) {
+module.exports = "/A.c01acb8b.jpg";
+},{}],"../../img/letters/B.jpeg":[function(require,module,exports) {
+module.exports = "/B.44583422.jpeg";
+},{}],"../../img/letters/C.jpeg":[function(require,module,exports) {
+module.exports = "/C.e3a848d2.jpeg";
+},{}],"../../img/letters/D.jpeg":[function(require,module,exports) {
+module.exports = "/D.1b3d05c3.jpeg";
+},{}],"../js/letters/img-A-D.js":[function(require,module,exports) {
+"use strict";
+
+var _A = _interopRequireDefault(require("../../../img/letters/A.jpg"));
+
+var _B = _interopRequireDefault(require("../../../img/letters/B.jpeg"));
+
+var _C = _interopRequireDefault(require("../../../img/letters/C.jpeg"));
+
+var _D = _interopRequireDefault(require("../../../img/letters/D.jpeg"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var ImgContainer_A_D = document.querySelector(".letters-A-D");
+var imagesA_D = [_A.default, _B.default, _C.default, _D.default];
+var prices = ["50.00"];
+var hrefs = ["https://instagram.com/wiraysha_workshop?igshid=4byv5ud4kl4f"];
+var ImageA_D_Arr = [{
+  img: imagesA_D[0],
+  price: prices[0],
+  href: hrefs[0]
+}, {
+  img: imagesA_D[1],
+  price: prices[0],
+  href: hrefs[0]
+}, {
+  img: imagesA_D[2],
+  price: prices[0],
+  href: hrefs[0]
+}, {
+  img: imagesA_D[3],
+  price: prices[0],
+  href: hrefs[0]
+}];
+
+function LettersDisplayA_D() {
+  var Letters = ImageA_D_Arr.map(function (item) {
+    return "<li class=\"static-letters\">\n    <div class=\"img-container-letter\">\n      <img src=".concat(item.img, " />\n    </div>\n    <div class=\"price-info\">\n      <p style=\"border: none\" class=\"price-letters header-price\">\n        <span>").concat(item.price, "</span>\n      </p>\n      <a\n        href=\"").concat(item.href, "\"\n        ><i class=\"fab fa-instagram\"></i\n      ></a>\n    </div>\n  </li>");
+  }).join('');
+  ImgContainer_A_D.innerHTML = Letters;
+}
+
+LettersDisplayA_D();
+},{"../../../img/letters/A.jpg":"../../img/letters/A.jpg","../../../img/letters/B.jpeg":"../../img/letters/B.jpeg","../../../img/letters/C.jpeg":"../../img/letters/C.jpeg","../../../img/letters/D.jpeg":"../../img/letters/D.jpeg"}],"../js/letters/letters.js":[function(require,module,exports) {
 "use strict";
 
 var _E = _interopRequireDefault(require("../../img/letters/E.jpg"));
@@ -316,6 +371,8 @@ var _thNameLetter5 = _interopRequireDefault(require("../../img/letters/8th-name-
 require("../globalJs/sidebar-subpage");
 
 require("./letterPrice");
+
+require("./img-A-D");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -388,7 +445,7 @@ function ArrowsNames() {
 }
 
 ArrowsNames();
-},{"../../img/letters/E.jpg":"../img/letters/E.jpg","../../img/letters/F.jpg":"../img/letters/F.jpg","../../img/letters/G.jpg":"../img/letters/G.jpg","../../img/letters/H.jpg":"../img/letters/H.jpg","../../img/letters/I.jpg":"../img/letters/I.jpg","../../img/letters/J.jpg":"../img/letters/J.jpg","../../img/letters/K.jpg":"../img/letters/K.jpg","../../img/letters/L.jpg":"../img/letters/L.jpg","../../img/letters/M.jpg":"../img/letters/M.jpg","../../img/letters/N.jpg":"../img/letters/N.jpg","../../img/letters/O.jpg":"../img/letters/O.jpg","../../img/letters/P.jpg":"../img/letters/P.jpg","../../img/letters/Q.jpg":"../img/letters/Q.jpg","../../img/letters/R.jpg":"../img/letters/R.jpg","../../img/letters/S.jpg":"../img/letters/S.jpg","../../img/letters/T.jpg":"../img/letters/T.jpg","../../img/letters/U.jpg":"../img/letters/U.jpg","../../img/letters/V.jpg":"../img/letters/V.jpg","../../img/letters/W.jpg":"../img/letters/W.jpg","../../img/letters/X.jpg":"../img/letters/X.jpg","../../img/letters/Y.jpg":"../img/letters/Y.jpg","../../img/letters/Z.jpg":"../img/letters/Z.jpg","../../img/letters/1st-name-letter.jpeg":"../img/letters/1st-name-letter.jpeg","../../img/letters/2nd-name-letter.jpeg":"../img/letters/2nd-name-letter.jpeg","../../img/letters/3rd-name-letter.jpg":"../img/letters/3rd-name-letter.jpg","../../img/letters/4th-name-letter.jpg":"../img/letters/4th-name-letter.jpg","../../img/letters/5th-name-letter.jpg":"../img/letters/5th-name-letter.jpg","../../img/letters/6th-name-letter.jpg":"../img/letters/6th-name-letter.jpg","../../img/letters/7th-name-letter.jpg":"../img/letters/7th-name-letter.jpg","../../img/letters/8th-name-letter.jpg":"../img/letters/8th-name-letter.jpg","../globalJs/sidebar-subpage":"../js/globalJs/sidebar-subpage.js","./letterPrice":"../js/letters/letterPrice.js"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"../../img/letters/E.jpg":"../img/letters/E.jpg","../../img/letters/F.jpg":"../img/letters/F.jpg","../../img/letters/G.jpg":"../img/letters/G.jpg","../../img/letters/H.jpg":"../img/letters/H.jpg","../../img/letters/I.jpg":"../img/letters/I.jpg","../../img/letters/J.jpg":"../img/letters/J.jpg","../../img/letters/K.jpg":"../img/letters/K.jpg","../../img/letters/L.jpg":"../img/letters/L.jpg","../../img/letters/M.jpg":"../img/letters/M.jpg","../../img/letters/N.jpg":"../img/letters/N.jpg","../../img/letters/O.jpg":"../img/letters/O.jpg","../../img/letters/P.jpg":"../img/letters/P.jpg","../../img/letters/Q.jpg":"../img/letters/Q.jpg","../../img/letters/R.jpg":"../img/letters/R.jpg","../../img/letters/S.jpg":"../img/letters/S.jpg","../../img/letters/T.jpg":"../img/letters/T.jpg","../../img/letters/U.jpg":"../img/letters/U.jpg","../../img/letters/V.jpg":"../img/letters/V.jpg","../../img/letters/W.jpg":"../img/letters/W.jpg","../../img/letters/X.jpg":"../img/letters/X.jpg","../../img/letters/Y.jpg":"../img/letters/Y.jpg","../../img/letters/Z.jpg":"../img/letters/Z.jpg","../../img/letters/1st-name-letter.jpeg":"../img/letters/1st-name-letter.jpeg","../../img/letters/2nd-name-letter.jpeg":"../img/letters/2nd-name-letter.jpeg","../../img/letters/3rd-name-letter.jpg":"../img/letters/3rd-name-letter.jpg","../../img/letters/4th-name-letter.jpg":"../img/letters/4th-name-letter.jpg","../../img/letters/5th-name-letter.jpg":"../img/letters/5th-name-letter.jpg","../../img/letters/6th-name-letter.jpg":"../img/letters/6th-name-letter.jpg","../../img/letters/7th-name-letter.jpg":"../img/letters/7th-name-letter.jpg","../../img/letters/8th-name-letter.jpg":"../img/letters/8th-name-letter.jpg","../globalJs/sidebar-subpage":"../js/globalJs/sidebar-subpage.js","./letterPrice":"../js/letters/letterPrice.js","./img-A-D":"../js/letters/img-A-D.js"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -416,7 +473,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49531" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58550" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

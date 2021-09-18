@@ -30,6 +30,7 @@ import SeventhName from "../../img/letters/7th-name-letter.jpg";
 import EightName from "../../img/letters/8th-name-letter.jpg";
 import "../globalJs/sidebar-subpage";
 import './letterPrice';
+import './img-A-D';
 const imagesArr = [
   E,
   F,

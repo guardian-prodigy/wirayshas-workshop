@@ -1,12 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../scss/main.scss" />
+    <link rel="stylesheet" href="../fontawesome-free-5.15.3-web/css/all.css" />
+    <title>Animals</title>
+  </head>
+  <body>
+    <!-- nav  -->
+    <nav class="navbar-subpage letters-nav">
+      <div class="nav-center">
+        <h1 class="logo">Animals</h1>
+        <i class="fas fa-bars btn-js"></i>
+        <ul class="nav-items">
+          <li class="nav-item"><a href="#products">products</a></li>
+          <li class="nav-item"><a href="#contact">contact</a></li>
+          <li class="nav-item">
+            <a href="./index.html"><i class="fas fa-home"></i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- end of nav -->
+    <!-- prices -->
+    <section class="prices-center AnimalsPrices-center">
+      <div class="header">
+        <h1 class="price-header">Prices</h1>
+      </div>
+      <div class="AnimalsPrice-center">
+        <ul class="prices-animals"></ul>
+      </div>
+    </section>
+    <!-- end of prices -->
+    <!-- sidebars -->
+    <section class="sidebar-subpage">
+      <i class="fas fa-times btn-js"> </i>
+      <ul class="sidebar-btns">
+        <li class="btn-sidebar-subpage"><a href="./index.html">Home</a></li>
+        <li class="btn-sidebar-subpage "><a class="prices-js" href="#prices">Prices</a></li>
+        <li class="btn-sidebar-subpage"><a href="#contact">Contact</a></li>
+      </ul>
+    </section>
+    <!-- end of sidebars -->
+    <!-- footer -->
+    <footer class="footer-subpage" id="contact">
+      <div class="footer-subpage-container">
+        <div class="footer-img">
+          <img src="../img/subpage-footer-profile.png" alt="" />
+        </div>
+        <div class="footer-text">
+          <ul class="icons">
+            <li>
+              <a href="https://wa.me/+5978979639"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/profile.php?id=100070475412876"
+                ><i class="fab fa-facebook"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://instagram.com/wiraysha_workshop?igshid=4byv5ud4kl4f"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </li>
+          </ul>
+          <p class="footer-p"><span>&copy;</span> all rights reserved</p>
+        </div>
+      </div>
+    </footer>
+    <!-- end of footer -->
+    <script src="../js/animals/animals.js"></script>
+  </body>
 </html>

@@ -109,7 +109,7 @@ window.addEventListener("DOMContentLoaded", () => Products());
 function BtnDisplay() {
   const items = AllExternalLinks.map(
     (item) =>
-      `<li class="btn-sidebar"><a href=${item.linkNumber}>${item.titleNumber}</a></li>`
+      `<a class="btn-sidebar" href=${item.linkNumber}>${item.titleNumber}</a>`
   ).join("");
   console.log(items);
   sidebarBtns.innerHTML = items;

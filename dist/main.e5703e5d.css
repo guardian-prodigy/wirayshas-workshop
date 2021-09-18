@@ -77,6 +77,15 @@
     transform: translateX(0);
   }
 }
+@keyframes handpointingright {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translateX(50%);
+    color: #988a8a;
+  }
+}
 html {
   scroll-behavior: smooth;
 }
@@ -232,6 +241,7 @@ body {
   z-index: 1005;
   width: 10rem;
   cursor: pointer;
+  display: block;
   text-align: center;
   padding: 0.25rem;
   text-transform: uppercase;
@@ -304,6 +314,12 @@ body {
 .prices-social-icons-zodiac .price-icons-zodiac:not(.fa-angle-right) {
   font-size: 1.5rem;
   margin: 0 0.2rem;
+}
+
+.hand-pointing-right {
+  color: #666666;
+  font-size: 2rem;
+  animation: handpointingright 500ms ease-in-out 1s infinite forwards alternate;
 }
 
 .logo,
@@ -418,7 +434,7 @@ body {
   display: grid;
 }
 
-.price-letters, .price-zodiac {
+.price-letters, .price-zodiac, .animals-price {
   font-family: "Namun";
   font-size: 1.5rem;
   text-transform: uppercase;
@@ -430,7 +446,7 @@ body {
   justify-self: center;
   width: fit-content;
 }
-.price-letters span, .price-zodiac span {
+.price-letters span, .price-zodiac span, .animals-price span {
   color: #00f300;
   font-size: 1.8rem;
   margin: inherit;
@@ -908,6 +924,7 @@ body {
   max-width: 620px;
   margin: 0 auto;
   width: 100%;
+  max-width: 200px;
   padding: 0 0.5rem;
   background: rgba(242, 239, 239, 0.3);
 }
@@ -976,14 +993,14 @@ body {
   width: 20rem;
 }
 
-.img-container {
+.img-container, .img-container-letter {
   height: 13rem;
   width: 13rem;
   position: relative;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
-.img-container img {
+.img-container img, .img-container-letter img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -992,7 +1009,7 @@ body {
   animation: letterImgAnimation 500ms ease-out 1 forwards;
   border-radius: 0.25rem;
 }
-.img-container::after {
+.img-container::after, .img-container-letter::after {
   content: "";
   position: absolute;
   top: 0;
@@ -1010,7 +1027,10 @@ body {
   filter: blur(2px);
 }
 
-.lettersPrices-center, .zodiacs-center {
+.prices-center,
+.lettersPrices-center,
+.zodiacs-center,
+.AnimalsPrices-center {
   background: linear-gradient(90deg, #00b3b3, #104e7a);
   display: grid;
   border-radius: 1rem;
@@ -1024,13 +1044,35 @@ body {
   -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
   clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 90%, 30% 75%, 0% 75%);
 }
-.lettersPrices-center .letterPrice-center, .lettersPrices-center .zodiac-center, .zodiacs-center .letterPrice-center, .zodiacs-center .zodiac-center {
-  margin-bottom: 10rem;
+.prices-center .letterPrice-center,
+.prices-center .zodiac-center,
+.prices-center .AnimalsPrice-center,
+.lettersPrices-center .letterPrice-center,
+.lettersPrices-center .zodiac-center,
+.lettersPrices-center .AnimalsPrice-center,
+.zodiacs-center .letterPrice-center,
+.zodiacs-center .zodiac-center,
+.zodiacs-center .AnimalsPrice-center,
+.AnimalsPrices-center .letterPrice-center,
+.AnimalsPrices-center .zodiac-center,
+.AnimalsPrices-center .AnimalsPrice-center {
+  margin-bottom: 12rem;
   position: relative;
-  width: 100%;
+  max-width: 620px;
   padding: 0.5rem;
 }
-.lettersPrices-center .letterPrice-center::after, .lettersPrices-center .zodiac-center::after, .zodiacs-center .letterPrice-center::after, .zodiacs-center .zodiac-center::after {
+.prices-center .letterPrice-center::after,
+.prices-center .zodiac-center::after,
+.prices-center .AnimalsPrice-center::after,
+.lettersPrices-center .letterPrice-center::after,
+.lettersPrices-center .zodiac-center::after,
+.lettersPrices-center .AnimalsPrice-center::after,
+.zodiacs-center .letterPrice-center::after,
+.zodiacs-center .zodiac-center::after,
+.zodiacs-center .AnimalsPrice-center::after,
+.AnimalsPrices-center .letterPrice-center::after,
+.AnimalsPrices-center .zodiac-center::after,
+.AnimalsPrices-center .AnimalsPrice-center::after {
   content: "";
   position: absolute;
   top: 0;

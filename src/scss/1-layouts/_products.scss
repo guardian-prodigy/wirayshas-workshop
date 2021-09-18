@@ -213,6 +213,7 @@
       max-width: $fixed-width;
       margin: 0 auto;
       width: 100%;
+      max-width: 200px;
       padding: 0 0.5rem;
       background: rgba($primary-grey-1, 0.3);
       .img-container-letter {
@@ -279,7 +280,7 @@
     
   }
 }
-.img-container {
+.img-container, .img-container-letter {
   height: 13rem;
   width: 13rem;
   position: relative;

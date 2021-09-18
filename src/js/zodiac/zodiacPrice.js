@@ -2,7 +2,7 @@
 // zodiac prices
 const ZodiacCenter = document.querySelector(".prices-zodiac");
 const ZodiacPriceSocial = ` <ul class="prices-social-icons-zodiac">
-<li><i class="fas fa-angle-right price-icons-zodiac"></i></li>
+<li><i class="fas hand-pointing-right fa-hand-point-right"></i></li>
 <li>
   <a href="https://wa.me/+5978979639">
       <i class="fab fa-whatsapp price-icons-zodiac"></i>

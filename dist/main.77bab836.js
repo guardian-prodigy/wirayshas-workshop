@@ -241,7 +241,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
 function BtnDisplay() {
   var items = AllExternalLinks.map(function (item) {
-    return "<li class=\"btn-sidebar\"><a href=".concat(item.linkNumber, ">").concat(item.titleNumber, "</a></li>");
+    return "<a class=\"btn-sidebar\" href=".concat(item.linkNumber, ">").concat(item.titleNumber, "</a>");
   }).join("");
   console.log(items);
   sidebarBtns.innerHTML = items;
@@ -293,7 +293,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49531" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58550" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -28,6 +28,11 @@
     margin: 0 0.2rem;
   }
 }
+.hand-pointing-right  {
+  color: $primary-grey-5;
+  font-size: 2rem;
+  animation: handpointingright  500ms ease-in-out 1s infinite forwards alternate;
+}
 // end of social media icons
 ////////////////// section-center logo
 .logo,
@@ -115,7 +120,7 @@
   font-size: 3rem;
   display: grid;
 }
-.price-letters, .price-zodiac {
+.price-letters, .price-zodiac, .animals-price {
   font-family: $font-family-2;
   font-size: 1.5rem;
   text-transform: uppercase;

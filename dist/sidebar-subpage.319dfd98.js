@@ -117,9 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../img/zodiac-pics/images.jpg":[function(require,module,exports) {
-module.exports = "/images.0a2663eb.jpg";
-},{}],"../js/globalJs/sidebar-subpage.js":[function(require,module,exports) {
+})({"../js/globalJs/sidebar-subpage.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -130,7 +128,7 @@ exports.ListItemsSidebar = ListItemsSidebar;
 var btns = document.querySelectorAll(".btn-js");
 var sidebar = document.querySelector(".sidebar-subpage");
 var btnSidebar = document.querySelectorAll(".btn-sidebar-subpage");
-var priceCenter = document.querySelector(".prices-center");
+var priceCenter = document.querySelector('.prices-center');
 
 function sidebartoggle() {
   btns.forEach(function (btn) {
@@ -150,152 +148,19 @@ function ListItemsSidebar() {
   btnSidebar.forEach(function (btn) {
     btn.addEventListener("click", function (e) {
       if (e.target) {
-        sidebar.classList.remove("show-sidebar");
-      }
+        if (e.target.classList.contains('prices-js')) {
+          sidebar.classList.remove("show-sidebar");
+          priceCenter.classList.toggle('price-center-toggled');
+        }
 
-      if (e.target.classList.contains("prices-js")) {
         sidebar.classList.remove("show-sidebar");
-        console.log("hi");
-        priceCenter.classList.toggle("price-center-toggled");
       }
     });
   });
 }
 
 ListItemsSidebar();
-},{}],"../js/zodiac/zodiacPrice.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.ZodiacDisplayPrices = ZodiacDisplayPrices;
-// zodiac prices
-var ZodiacCenter = document.querySelector(".prices-zodiac");
-var ZodiacPriceSocial = " <ul class=\"prices-social-icons-zodiac\">\n<li><i class=\"fas hand-pointing-right fa-hand-point-right\"></i></li>\n<li>\n  <a href=\"https://wa.me/+5978979639\">\n      <i class=\"fab fa-whatsapp price-icons-zodiac\"></i>\n  </a>\n  <a href=\"https://instagram.com/wiraysha_workshop?igshid=4byv5ud4kl4f\">\n      <i class=\"fab fa-instagram price-icons-zodiac\"></i>\n  </a>\n  </li>\n</ul>";
-var ZodiacPrices = ["50.00", "52.50", "60.00", "70.00"];
-var ZodiacTexts = ["doorzichtige zodiac sign:<br><span>srd ".concat(ZodiacPrices[0], "</span>"), "zodiac sign met glitter:<br><span>srd ".concat(ZodiacPrices[1], "</span>"), "zodiac sign met steentjes:<br><span>srd ".concat(ZodiacPrices[2], "</span>"), "zodiac sign met foil:<br><span>srd ".concat(ZodiacPrices[3], "</span>"), "combinations of more than one accesory is possible<br>".concat(ZodiacPriceSocial)];
-var ZodiacArr = [{
-  text: ZodiacTexts[0]
-}, {
-  text: ZodiacTexts[1]
-}, {
-  text: ZodiacTexts[2]
-}, {
-  text: ZodiacTexts[3]
-}, {
-  text: ZodiacTexts[4]
-}];
-
-function ZodiacDisplayPrices() {
-  var PriceItems = ZodiacArr.map(function (item) {
-    return "<li class=\"price-zodiac\">".concat(item.text, "</li>");
-  }).join("");
-  ZodiacCenter.innerHTML = PriceItems;
-}
-
-ZodiacDisplayPrices(); // end of zodiac prices
-},{}],"../js/zodiac/zodiac.js":[function(require,module,exports) {
-"use strict";
-
-var _images = _interopRequireDefault(require("../../img/zodiac-pics/images.jpg"));
-
-require("../globalJs/sidebar-subpage");
-
-require("./zodiacPrice");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var zodiacNames = ["aquarius", "pisces", "aries", "taurus", "gemini", "cancer", "leo", "scorpio", "virgo", "libra", "sagittarius ", "capricorn"];
-var prices = [50];
-var ZodiacImages = [_images.default];
-var ZodiacText = ["Aquarius energy helps us innovate and unite for social justice"];
-var zodiacs = [{
-  title: zodiacNames[0],
-  category: zodiacNames[0],
-  img: ZodiacImages[0],
-  price: prices[0],
-  text: ZodiacText[0]
-}, {
-  title: zodiacNames[1],
-  category: zodiacNames[1],
-  img: ZodiacImages[0],
-  price: prices[0],
-  text: ZodiacText[0]
-}, {
-  title: zodiacNames[2],
-  category: zodiacNames[2],
-  img: ZodiacImages[0],
-  price: prices[0],
-  text: ZodiacText[0]
-}, {
-  title: zodiacNames[3],
-  category: zodiacNames[3],
-  img: ZodiacImages[0],
-  price: prices[0],
-  text: ZodiacText[0]
-}, {
-  title: zodiacNames[4],
-  category: zodiacNames[4],
-  img: ZodiacImages[0],
-  price: prices[0],
-  text: ZodiacText[0]
-}, {
-  title: zodiacNames[5],
-  category: zodiacNames[5],
-  img: ZodiacImages[0],
-  price: prices[0],
-  text: ZodiacText[0]
-}, {
-  title: zodiacNames[6],
-  category: zodiacNames[6],
-  img: ZodiacImages[0],
-  price: prices[0],
-  text: ZodiacText[0]
-}, {
-  title: zodiacNames[7],
-  category: zodiacNames[7],
-  img: ZodiacImages[0],
-  price: prices[0],
-  text: ZodiacText[0]
-}, {
-  title: zodiacNames[8],
-  category: zodiacNames[8],
-  img: ZodiacImages[0],
-  price: prices[0],
-  text: ZodiacText[0]
-}, {
-  title: zodiacNames[9],
-  category: zodiacNames[9],
-  img: ZodiacImages[0],
-  price: prices[0],
-  text: ZodiacText[0]
-}, {
-  title: zodiacNames[10],
-  category: zodiacNames[10],
-  img: ZodiacImages[0],
-  price: prices[0],
-  text: ZodiacText[0]
-}, {
-  title: zodiacNames[11],
-  category: zodiacNames[11],
-  img: ZodiacImages[0],
-  price: prices[0],
-  text: ZodiacText[0]
-}];
-var mainSection = document.querySelector(".main-center-subpage"); // event listeners
-
-window.addEventListener("DOMContentLoaded", function () {
-  return zodiacDisplay(zodiacs);
-}); // functions
-
-function zodiacDisplay(par) {
-  var items = par.map(function (item) {
-    return "<article class=\"article\">\n        <div class=\"header\">\n          <h4 class=\"logo\">".concat(item.title, "</h4>\n          <div class=\"underline\"></div>\n        </div>\n        <div class=\"img-container\">\n          <img src=").concat(item.img, " alt=\"\" />\n        </div>\n        <div class=\"price\">\n          <div>\n            <p>").concat(item.price, "Srd</p>\n            <a href=\"aquarius.html\"><i class=\"fas fa-info\"></i></a>\n          </div>\n          <div class=\"underline\"></div>\n        </div>\n        <p class=\"text\">\n          ").concat(item.text, "\n        </p>\n      </article>");
-  }).join("");
-  mainSection.innerHTML = items;
-}
-},{"../../img/zodiac-pics/images.jpg":"../img/zodiac-pics/images.jpg","../globalJs/sidebar-subpage":"../js/globalJs/sidebar-subpage.js","./zodiacPrice":"../js/zodiac/zodiacPrice.js"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -323,7 +188,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58550" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57673" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -499,5 +364,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","../js/zodiac/zodiac.js"], null)
-//# sourceMappingURL=/zodiac.c4db105d.js.map
+},{}]},{},["../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","../js/globalJs/sidebar-subpage.js"], null)
+//# sourceMappingURL=/sidebar-subpage.319dfd98.js.map

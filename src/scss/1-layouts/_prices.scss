@@ -1,30 +1,40 @@
 @use '../0-abstracts/0-abstracts' as *;
 @use '../2-typography/2-typography' as *;
-.lettersPrices-center, .zodiacs-center {
-    background: linear-gradient(90deg, $primary-aqua-5, $clr-primary-2);
-    display: grid;
-    border-radius: 1rem;
-    width: 90%;
-    max-width: $max-width;
-    margin: 2rem auto;
-    margin-bottom: 0;
-    box-shadow: $light-shadow;
-    place-items: center;
-    padding: 2rem;
-    @include message();
-    .letterPrice-center, .zodiac-center {
-        margin-bottom: 10rem;
-        position: relative;
-        width: 100%;
-        padding: 0.5rem;
-        &::after {
-            @include BeforeAfter();
-            z-index: -2;
-            background: linear-gradient(45deg, rgba($primary-aqua-3, 0.4), rgba(0,0,0,0.1));
-            filter: blur(2px);
-        }
+.prices-center,
+.lettersPrices-center,
+.zodiacs-center,
+.AnimalsPrices-center {
+  background: linear-gradient(90deg, $primary-aqua-5, $clr-primary-2);
+  display: grid;
+  border-radius: 1rem;
+  width: 90%;
+  // height: calc(100% + 5rem);
+  max-width: $max-width;
+  margin: 2rem auto;
+  margin-bottom: 0;
+  box-shadow: $light-shadow;
+  place-items: center;
+  padding: 2rem;
+  @include message();
+  .letterPrice-center,
+  .zodiac-center,
+  .AnimalsPrice-center {
+    margin-bottom: 12rem;
+    position: relative;
+    max-width: $fixed-width;
+    padding: 0.5rem;
+    &::after {
+      @include BeforeAfter();
+      z-index: -2;
+      background: linear-gradient(
+        45deg,
+        rgba($primary-aqua-3, 0.4),
+        rgba(0, 0, 0, 0.1)
+      );
+      filter: blur(2px);
     }
+  }
 }
 .price-center-toggled {
-    animation: PriceCenter 1.5s ease-in-out 0.5s 1 forwards;
+  animation: PriceCenter 1.5s ease-in-out 0.5s 1 forwards;
 }
