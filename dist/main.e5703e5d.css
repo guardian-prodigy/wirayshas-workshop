@@ -1014,7 +1014,8 @@ body {
   background: linear-gradient(90deg, #00b3b3, #104e7a);
   display: grid;
   border-radius: 1rem;
-  width: min(90%, 400px);
+  width: 90%;
+  max-width: 1170px;
   margin: 2rem auto;
   margin-bottom: 0;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -1026,6 +1027,7 @@ body {
 .lettersPrices-center .letterPrice-center, .lettersPrices-center .zodiac-center, .zodiacs-center .letterPrice-center, .zodiacs-center .zodiac-center {
   margin-bottom: 10rem;
   position: relative;
+  width: 100%;
   padding: 0.5rem;
 }
 .lettersPrices-center .letterPrice-center::after, .lettersPrices-center .zodiac-center::after, .zodiacs-center .letterPrice-center::after, .zodiacs-center .zodiac-center::after {
@@ -1049,10 +1051,10 @@ body {
 }
 
 @media screen and (max-width: 348px) {
-  .price {
-    font-size: 1.3rem;
+  .price-letters, .price-zodiac {
+    font-size: 1.2rem;
   }
-  .price span {
+  .price-letters span, .price-zodiac span {
     font-size: 1.3rem;
   }
 
