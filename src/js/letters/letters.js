@@ -29,31 +29,7 @@ import SixthName from "../../img/letters/6th-name-letter.jpg";
 import SeventhName from "../../img/letters/7th-name-letter.jpg";
 import EightName from "../../img/letters/8th-name-letter.jpg";
 import "../globalJs/sidebar-subpage";
-const prices = ['35.00', '37.50', '40.00', '45.00', '50.00'];
-const priceText = [
-  `letter met glitter:<br><span>Srd ${prices[0]}</span>`,
-  `letter met bloemen:<br><span>Srd ${prices[1]}</span>`,
-  `letter met schelpen:<br><span>Srd ${prices[2]}</span>`,
-  `letter met steentjes:<br><span>Srd ${prices[3]}</span>`,
-  `letter met zilvere of goudkleurige foil:<br><span>Srd ${prices[4]}</span>`,
-];
-const priceArr = [
-  {
-    text: priceText[0],
-  },
-  {
-    text: priceText[1],
-  },
-  {
-    text: priceText[2],
-  },
-  {
-    text: priceText[3],
-  },
-  {
-    text: priceText[4],
-  },
-];
+import './letterPrice';
 const imagesArr = [
   E,
   F,
@@ -90,7 +66,6 @@ const nameArr = [
 ];
 const LeftArrow = document.querySelector(".fa-angle-left");
 const RightArrow = document.querySelector(".fa-angle-right");
-const PriceCenter = document.querySelector(".price-center");
 const NamesArrowsRight = document.querySelector(".name-right");
 const NamesArrowsLeft = document.querySelector(".name-left");
 const imageNames = document.querySelector(".img-for-names");
@@ -149,14 +124,3 @@ function ArrowsNames() {
   });
 }
 ArrowsNames();
-function DisplayPrices() {
-  let Prices = priceArr
-    .map((price) => {
-      return `<ul class="prices">
-    <li class="price">${price.text}</li>
-  </ul>`;
-    })
-    .join("");
-  PriceCenter.innerHTML = Prices;
-}
-DisplayPrices();

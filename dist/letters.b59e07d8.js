@@ -220,6 +220,36 @@ function ListItemsSidebar() {
 }
 
 ListItemsSidebar();
+},{}],"../js/letters/letterPrice.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.DisplayLetterPrices = DisplayLetterPrices;
+var LettersCenter = document.querySelector(".prices-letters");
+var Lettersprices = ["35.00", "37.50", "40.00", "45.00", "50.00"];
+var LetterspriceText = ["letter met glitter:<br><span>Srd ".concat(Lettersprices[0], "</span>"), "letter met bloemen:<br><span>Srd ".concat(Lettersprices[1], "</span>"), "letter met schelpen:<br><span>Srd ".concat(Lettersprices[2], "</span>"), "letter met steentjes:<br><span>Srd ".concat(Lettersprices[3], "</span>"), "letter met zilvere of goudkleurige foil:<br><span>Srd ".concat(Lettersprices[4], "</span>")];
+var LetterspriceArr = [{
+  text: LetterspriceText[0]
+}, {
+  text: LetterspriceText[1]
+}, {
+  text: LetterspriceText[2]
+}, {
+  text: LetterspriceText[3]
+}, {
+  text: LetterspriceText[4]
+}];
+
+function DisplayLetterPrices() {
+  var Prices = LetterspriceArr.map(function (price) {
+    return "<li class=\"price-letters\">".concat(price.text, "</li>");
+  }).join("");
+  LettersCenter.innerHTML = Prices;
+}
+
+DisplayLetterPrices();
 },{}],"../js/letters/letters.js":[function(require,module,exports) {
 "use strict";
 
@@ -285,26 +315,14 @@ var _thNameLetter5 = _interopRequireDefault(require("../../img/letters/8th-name-
 
 require("../globalJs/sidebar-subpage");
 
+require("./letterPrice");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var prices = ['35.00', '37.50', '40.00', '45.00', '50.00'];
-var priceText = ["letter met glitter:<br><span>Srd ".concat(prices[0], "</span>"), "letter met bloemen:<br><span>Srd ".concat(prices[1], "</span>"), "letter met schelpen:<br><span>Srd ".concat(prices[2], "</span>"), "letter met steentjes:<br><span>Srd ".concat(prices[3], "</span>"), "letter met zilvere of goudkleurige foil:<br><span>Srd ".concat(prices[4], "</span>")];
-var priceArr = [{
-  text: priceText[0]
-}, {
-  text: priceText[1]
-}, {
-  text: priceText[2]
-}, {
-  text: priceText[3]
-}, {
-  text: priceText[4]
-}];
 var imagesArr = [_E.default, _F.default, _G.default, _H.default, _I.default, _J.default, _K.default, _L.default, _M.default, _N.default, _O.default, _P.default, _Q.default, _R.default, _S.default, _T.default, _U.default, _V.default, _X.default, _Y.default, _W.default, _Z.default];
 var nameArr = [_stNameLetter.default, _ndNameLetter.default, _rdNameLetter.default, _thNameLetter.default, _thNameLetter2.default, _thNameLetter3.default, _thNameLetter4.default, _thNameLetter5.default];
 var LeftArrow = document.querySelector(".fa-angle-left");
 var RightArrow = document.querySelector(".fa-angle-right");
-var PriceCenter = document.querySelector(".price-center");
 var NamesArrowsRight = document.querySelector(".name-right");
 var NamesArrowsLeft = document.querySelector(".name-left");
 var imageNames = document.querySelector(".img-for-names");
@@ -370,16 +388,7 @@ function ArrowsNames() {
 }
 
 ArrowsNames();
-
-function DisplayPrices() {
-  var Prices = priceArr.map(function (price) {
-    return "<ul class=\"prices\">\n    <li class=\"price\">".concat(price.text, "</li>\n  </ul>");
-  }).join("");
-  PriceCenter.innerHTML = Prices;
-}
-
-DisplayPrices();
-},{"../../img/letters/E.jpg":"../img/letters/E.jpg","../../img/letters/F.jpg":"../img/letters/F.jpg","../../img/letters/G.jpg":"../img/letters/G.jpg","../../img/letters/H.jpg":"../img/letters/H.jpg","../../img/letters/I.jpg":"../img/letters/I.jpg","../../img/letters/J.jpg":"../img/letters/J.jpg","../../img/letters/K.jpg":"../img/letters/K.jpg","../../img/letters/L.jpg":"../img/letters/L.jpg","../../img/letters/M.jpg":"../img/letters/M.jpg","../../img/letters/N.jpg":"../img/letters/N.jpg","../../img/letters/O.jpg":"../img/letters/O.jpg","../../img/letters/P.jpg":"../img/letters/P.jpg","../../img/letters/Q.jpg":"../img/letters/Q.jpg","../../img/letters/R.jpg":"../img/letters/R.jpg","../../img/letters/S.jpg":"../img/letters/S.jpg","../../img/letters/T.jpg":"../img/letters/T.jpg","../../img/letters/U.jpg":"../img/letters/U.jpg","../../img/letters/V.jpg":"../img/letters/V.jpg","../../img/letters/W.jpg":"../img/letters/W.jpg","../../img/letters/X.jpg":"../img/letters/X.jpg","../../img/letters/Y.jpg":"../img/letters/Y.jpg","../../img/letters/Z.jpg":"../img/letters/Z.jpg","../../img/letters/1st-name-letter.jpeg":"../img/letters/1st-name-letter.jpeg","../../img/letters/2nd-name-letter.jpeg":"../img/letters/2nd-name-letter.jpeg","../../img/letters/3rd-name-letter.jpg":"../img/letters/3rd-name-letter.jpg","../../img/letters/4th-name-letter.jpg":"../img/letters/4th-name-letter.jpg","../../img/letters/5th-name-letter.jpg":"../img/letters/5th-name-letter.jpg","../../img/letters/6th-name-letter.jpg":"../img/letters/6th-name-letter.jpg","../../img/letters/7th-name-letter.jpg":"../img/letters/7th-name-letter.jpg","../../img/letters/8th-name-letter.jpg":"../img/letters/8th-name-letter.jpg","../globalJs/sidebar-subpage":"../js/globalJs/sidebar-subpage.js"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"../../img/letters/E.jpg":"../img/letters/E.jpg","../../img/letters/F.jpg":"../img/letters/F.jpg","../../img/letters/G.jpg":"../img/letters/G.jpg","../../img/letters/H.jpg":"../img/letters/H.jpg","../../img/letters/I.jpg":"../img/letters/I.jpg","../../img/letters/J.jpg":"../img/letters/J.jpg","../../img/letters/K.jpg":"../img/letters/K.jpg","../../img/letters/L.jpg":"../img/letters/L.jpg","../../img/letters/M.jpg":"../img/letters/M.jpg","../../img/letters/N.jpg":"../img/letters/N.jpg","../../img/letters/O.jpg":"../img/letters/O.jpg","../../img/letters/P.jpg":"../img/letters/P.jpg","../../img/letters/Q.jpg":"../img/letters/Q.jpg","../../img/letters/R.jpg":"../img/letters/R.jpg","../../img/letters/S.jpg":"../img/letters/S.jpg","../../img/letters/T.jpg":"../img/letters/T.jpg","../../img/letters/U.jpg":"../img/letters/U.jpg","../../img/letters/V.jpg":"../img/letters/V.jpg","../../img/letters/W.jpg":"../img/letters/W.jpg","../../img/letters/X.jpg":"../img/letters/X.jpg","../../img/letters/Y.jpg":"../img/letters/Y.jpg","../../img/letters/Z.jpg":"../img/letters/Z.jpg","../../img/letters/1st-name-letter.jpeg":"../img/letters/1st-name-letter.jpeg","../../img/letters/2nd-name-letter.jpeg":"../img/letters/2nd-name-letter.jpeg","../../img/letters/3rd-name-letter.jpg":"../img/letters/3rd-name-letter.jpg","../../img/letters/4th-name-letter.jpg":"../img/letters/4th-name-letter.jpg","../../img/letters/5th-name-letter.jpg":"../img/letters/5th-name-letter.jpg","../../img/letters/6th-name-letter.jpg":"../img/letters/6th-name-letter.jpg","../../img/letters/7th-name-letter.jpg":"../img/letters/7th-name-letter.jpg","../../img/letters/8th-name-letter.jpg":"../img/letters/8th-name-letter.jpg","../globalJs/sidebar-subpage":"../js/globalJs/sidebar-subpage.js","./letterPrice":"../js/letters/letterPrice.js"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -407,7 +416,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57433" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51780" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -16,6 +16,18 @@
   transition: $transition;
   color: rgba($primary-grey-1, 0.9);
 }
+.prices-social-icons-zodiac {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  .price-icons-zodiac:not(.fa-whatsapp, .fa-instagram) {
+    font-size: 2.5rem;
+  }
+  .price-icons-zodiac:not(.fa-angle-right) {
+    font-size: 1.5rem;
+    margin: 0 0.2rem;
+  }
+}
 // end of social media icons
 ////////////////// section-center logo
 .logo,
@@ -103,7 +115,7 @@
   font-size: 3rem;
   display: grid;
 }
-.price {
+.price-letters, .price-zodiac {
   font-family: $font-family-2;
   font-size: 1.5rem;
   text-transform: uppercase;

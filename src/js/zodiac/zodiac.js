@@ -1,5 +1,6 @@
 import aquarius from '../../img/zodiac-pics/images.jpg';
 import '../globalJs/sidebar-subpage';
+import './zodiacPrice';
 const zodiacNames = [
   "aquarius",
   "pisces",

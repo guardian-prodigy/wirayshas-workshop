@@ -293,6 +293,19 @@ body {
   color: rgba(242, 239, 239, 0.9);
 }
 
+.prices-social-icons-zodiac {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+}
+.prices-social-icons-zodiac .price-icons-zodiac:not(.fa-whatsapp, .fa-instagram) {
+  font-size: 2.5rem;
+}
+.prices-social-icons-zodiac .price-icons-zodiac:not(.fa-angle-right) {
+  font-size: 1.5rem;
+  margin: 0 0.2rem;
+}
+
 .logo,
 .article-logo {
   background: linear-gradient(45deg, #99ffff 30%, rgba(0, 255, 0, 0.822));
@@ -405,7 +418,7 @@ body {
   display: grid;
 }
 
-.price {
+.price-letters, .price-zodiac {
   font-family: "Namun";
   font-size: 1.5rem;
   text-transform: uppercase;
@@ -417,7 +430,7 @@ body {
   justify-self: center;
   width: fit-content;
 }
-.price span {
+.price-letters span, .price-zodiac span {
   color: #00f300;
   font-size: 1.8rem;
   margin: inherit;
@@ -997,7 +1010,7 @@ body {
   filter: blur(2px);
 }
 
-.prices-center {
+.lettersPrices-center, .zodiacs-center {
   background: linear-gradient(90deg, #00b3b3, #104e7a);
   display: grid;
   border-radius: 1rem;
@@ -1010,12 +1023,12 @@ body {
   -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
   clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 90%, 30% 75%, 0% 75%);
 }
-.prices-center .price-center {
+.lettersPrices-center .letterPrice-center, .lettersPrices-center .zodiac-center, .zodiacs-center .letterPrice-center, .zodiacs-center .zodiac-center {
   margin-bottom: 10rem;
   position: relative;
   padding: 0.5rem;
 }
-.prices-center .price-center::after {
+.lettersPrices-center .letterPrice-center::after, .lettersPrices-center .zodiac-center::after, .zodiacs-center .letterPrice-center::after, .zodiacs-center .zodiac-center::after {
   content: "";
   position: absolute;
   top: 0;
@@ -1026,6 +1039,7 @@ body {
   height: 100%;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   border-radius: 0.25rem;
+  z-index: -2;
   background: linear-gradient(45deg, rgba(51, 255, 255, 0.4), rgba(0, 0, 0, 0.1));
   filter: blur(2px);
 }

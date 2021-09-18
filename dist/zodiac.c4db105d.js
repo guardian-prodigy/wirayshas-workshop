@@ -162,12 +162,46 @@ function ListItemsSidebar() {
 }
 
 ListItemsSidebar();
+},{}],"../js/zodiac/zodiacPrice.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.ZodiacDisplayPrices = ZodiacDisplayPrices;
+// zodiac prices
+var ZodiacCenter = document.querySelector(".prices-zodiac");
+var ZodiacPriceSocial = " <ul class=\"prices-social-icons-zodiac\">\n<li><i class=\"fas fa-angle-right price-icons-zodiac\"></i></li>\n<li>\n  <a href=\"https://wa.me/+5978979639\">\n      <i class=\"fab fa-whatsapp price-icons-zodiac\"></i>\n  </a>\n  <a href=\"https://instagram.com/wiraysha_workshop?igshid=4byv5ud4kl4f\">\n      <i class=\"fab fa-instagram price-icons-zodiac\"></i>\n  </a>\n  </li>\n</ul>";
+var ZodiacPrices = ["50.00", "52.50", "60.00", "70.00"];
+var ZodiacTexts = ["doorzichtige zodiac sign:<br><span>srd ".concat(ZodiacPrices[0], "</span>"), "zodiac sign met glitter:<br><span>srd ".concat(ZodiacPrices[1], "</span>"), "zodiac sign met steentjes:<br><span>srd ".concat(ZodiacPrices[2], "</span>"), "zodiac sign met foil:<br><span>srd ".concat(ZodiacPrices[3], "</span>"), "combinations of more than one accesory is possible<br>".concat(ZodiacPriceSocial)];
+var ZodiacArr = [{
+  text: ZodiacTexts[0]
+}, {
+  text: ZodiacTexts[1]
+}, {
+  text: ZodiacTexts[2]
+}, {
+  text: ZodiacTexts[3]
+}, {
+  text: ZodiacTexts[4]
+}];
+
+function ZodiacDisplayPrices() {
+  var PriceItems = ZodiacArr.map(function (item) {
+    return "<li class=\"price-zodiac\">".concat(item.text, "</li>");
+  }).join("");
+  ZodiacCenter.innerHTML = PriceItems;
+}
+
+ZodiacDisplayPrices(); // end of zodiac prices
 },{}],"../js/zodiac/zodiac.js":[function(require,module,exports) {
 "use strict";
 
 var _images = _interopRequireDefault(require("../../img/zodiac-pics/images.jpg"));
 
 require("../globalJs/sidebar-subpage");
+
+require("./zodiacPrice");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -260,7 +294,7 @@ function zodiacDisplay(par) {
   }).join("");
   mainSection.innerHTML = items;
 }
-},{"../../img/zodiac-pics/images.jpg":"../img/zodiac-pics/images.jpg","../globalJs/sidebar-subpage":"../js/globalJs/sidebar-subpage.js"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"../../img/zodiac-pics/images.jpg":"../img/zodiac-pics/images.jpg","../globalJs/sidebar-subpage":"../js/globalJs/sidebar-subpage.js","./zodiacPrice":"../js/zodiac/zodiacPrice.js"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -288,7 +322,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57433" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51780" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
