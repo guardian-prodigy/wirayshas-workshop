@@ -625,7 +625,8 @@ body {
 .navbar-subpage {
   padding: 1rem;
   overflow: visible;
-  background: url("/wave-haikei(2).7e4e03a9.svg") center/cover no-repeat;
+  background: url("/wave-haikei(2).7e4e03a9.svg");
+  background-position: center;
 }
 .navbar-subpage .nav-center {
   display: flex;
