@@ -68,6 +68,9 @@
   }
 }
 // end of about text
+.text {
+  color: rgba($primary-aqua-1, 0.9);
+}
 // article header
 .article-header {
   margin-bottom: 1rem;
@@ -120,7 +123,7 @@
   font-size: 3rem;
   display: grid;
 }
-.price-letters, .price-zodiac, .animals-price {
+.price-letters, .price-zodiac, .animals-price, .price-PonPonetjes {
   font-family: $font-family-2;
   font-size: 1.5rem;
   text-transform: uppercase;
@@ -159,3 +162,5 @@
   -webkit-background-clip: text;
   color: transparent;
 }
+
+

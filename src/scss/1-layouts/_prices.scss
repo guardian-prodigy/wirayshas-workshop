@@ -1,9 +1,6 @@
 @use '../0-abstracts/0-abstracts' as *;
 @use '../2-typography/2-typography' as *;
-.prices-center,
-.lettersPrices-center,
-.zodiacs-center,
-.AnimalsPrices-center{
+.prices-center{
   background: linear-gradient(90deg, $primary-aqua-5, $clr-primary-2);
   display: grid;
   border-radius: 1rem;
@@ -18,7 +15,7 @@
   @include message();
   .letterPrice-center,
   .zodiac-center,
-  .AnimalsPrice-center, .headband-center {
+  .AnimalsPrice-center, .headband-center, .PonponetjesPrice-center {
     margin-bottom: 12rem;
     position: relative;
     max-width: $fixed-width;

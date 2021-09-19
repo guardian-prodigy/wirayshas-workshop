@@ -331,7 +331,8 @@
     background: rgba($clr-grey-4, 0.9);
     border: rgba($clr-grey-1, 0.4) 0.2rem dotted;
     @include article-text();
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       background: rgba($color: #000000, $alpha: 0.15);
     }
   }
@@ -340,7 +341,8 @@
     font-size: 1.5rem;
   }
 }
-.animals-center, .headbands-center{
+.animals-center,
+.headbands-center, .Ponponetje-center {
   position: relative;
   width: 90%;
   margin: 0 auto;
@@ -351,12 +353,14 @@
       180deg,
       rgba($primary-aqua-1, 0.3),
       rgba($primary-aqua-1, 0.4),
-      rgba(0, 0, 0, 0.4) 
+      rgba(0, 0, 0, 0.4)
     );
     filter: blur(2px);
   }
 }
-.animal-img-text, .headbands-img-text {
+.animal-img-text,
+.headbands-img-text,
+.Ponponetjes-img-text {
   display: grid;
   max-width: $fixed-width;
   margin: 1rem auto 0 auto;
@@ -364,7 +368,14 @@
   align-items: center;
   padding: 0.5rem;
 }
-.img-container-animal, .img-container-headbands {
+.Ponponetjes-img-text {
+  grid-template-columns: 1fr;
+  place-items: center;
+}
+
+.img-container-animal,
+.img-container-headbands,
+.img-container-Ponponetjes {
   width: 90%;
   max-width: 15rem;
   height: 80%;
@@ -375,6 +386,10 @@
   }
 }
 .img-container-headbands {
+  max-height: 15rem;
+}
+.img-container-Ponponetjes {
+  height: 15rem;
   max-height: 15rem;
 }
 // end of main-center-subpage: animals
