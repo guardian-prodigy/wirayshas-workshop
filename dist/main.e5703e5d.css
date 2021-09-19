@@ -626,7 +626,6 @@ body {
   padding: 1rem;
   overflow: visible;
   background: url("/wave-haikei(2).7e4e03a9.svg") center/cover no-repeat;
-  -webkit-background: url("/wave-haikei(2).7e4e03a9.svg") center/cover no-repeat;
 }
 .navbar-subpage .nav-center {
   display: flex;
