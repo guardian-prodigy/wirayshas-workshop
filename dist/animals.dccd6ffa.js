@@ -184,13 +184,88 @@ function AnimalsDisplayPrices() {
 }
 
 AnimalsDisplayPrices();
-},{}],"../js/animals/animals.js":[function(require,module,exports) {
+},{}],"../../img/zodiac-pics/images.jpg":[function(require,module,exports) {
+module.exports = "/images.f91fdcb8.jpg";
+},{}],"../../img/zodiac-pics/person-1.jpeg":[function(require,module,exports) {
+module.exports = "/person-1.1da6e2b2.jpeg";
+},{}],"../js/animals/products.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.AnimalsDisplay1 = AnimalsDisplay1;
+exports.AnimalsDisplay2 = AnimalsDisplay2;
+exports.Btns = Btns;
+
+var _images = _interopRequireDefault(require("../../../img/zodiac-pics/images.jpg"));
+
+var _person = _interopRequireDefault(require("../../../img/zodiac-pics/person-1.jpeg"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var AnimalCenterProducts = document.querySelector(".animals-center");
+var OneColoredBtn = document.querySelector(".one-colored");
+var TwoColoredBtn = document.querySelector(".two-colored");
+var AnimalImages1 = [_images.default];
+var AnimalImages2 = [_person.default];
+var AnimalTexts1 = ["Lorem ipsum, dolor sit amet consectetur adipisicing facere,\n    inventore atque, neque dolorem?"];
+var AnimalTexts2 = ["Lorem ipsum, dolor sit amet consectetur adipisicing facere,\n    inventore atque, neque dolorem?"];
+var AnimalArr1 = [{
+  img: AnimalImages1[0],
+  text: AnimalTexts1[0]
+}, {
+  img: AnimalImages1[0],
+  text: AnimalTexts1[0]
+}, {
+  img: AnimalImages1[0],
+  text: AnimalTexts1[0]
+}];
+var AnimalArr2 = [{
+  img: AnimalImages2[0],
+  text: AnimalTexts2[0]
+}, {
+  img: AnimalImages2[0],
+  text: AnimalTexts2[0]
+}, {
+  img: AnimalImages2[0],
+  text: AnimalTexts2[0]
+}];
+window.addEventListener("DOMContentLoaded", function () {
+  AnimalsDisplay1(), Btns();
+});
+
+function AnimalsDisplay1() {
+  var items = AnimalArr1.map(function (item) {
+    return "<div class=\"animal-img-text\">\n    <div class=\"img-container img-container-animal\">\n      <img src=".concat(item.img, " alt=\"\" />\n    </div>\n    <p class=\"text\">\n      ").concat(item.text, "\n    </p>\n  </div>");
+  }).join("");
+  AnimalCenterProducts.innerHTML = items;
+}
+
+function AnimalsDisplay2() {
+  var items = AnimalArr2.map(function (item) {
+    return "<div class=\"animal-img-text\">\n    <div class=\"img-container img-container-animal\">\n      <img src=".concat(item.img, " alt=\"\" />\n    </div>\n    <p class=\"text\">\n      ").concat(item.text, "\n    </p>\n  </div>");
+  }).join("");
+  AnimalCenterProducts.innerHTML = items;
+}
+
+function Btns() {
+  OneColoredBtn.addEventListener("click", function (e) {
+    return AnimalsDisplay1();
+  });
+  TwoColoredBtn.addEventListener("click", function (e) {
+    return AnimalsDisplay2();
+  });
+}
+},{"../../../img/zodiac-pics/images.jpg":"../../img/zodiac-pics/images.jpg","../../../img/zodiac-pics/person-1.jpeg":"../../img/zodiac-pics/person-1.jpeg"}],"../js/animals/animals.js":[function(require,module,exports) {
 "use strict";
 
 require("../globalJs/sidebar-subpage");
 
 require("./animalsPrice");
-},{"../globalJs/sidebar-subpage":"../js/globalJs/sidebar-subpage.js","./animalsPrice":"../js/animals/animalsPrice.js"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+
+require("./products");
+},{"../globalJs/sidebar-subpage":"../js/globalJs/sidebar-subpage.js","./animalsPrice":"../js/animals/animalsPrice.js","./products":"../js/animals/products.js"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -218,7 +293,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58550" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58657" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

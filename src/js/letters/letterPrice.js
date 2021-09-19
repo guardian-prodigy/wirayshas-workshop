@@ -17,7 +17,7 @@ const LetterspriceText = [
   `letter met schelpen:<br><span>Srd ${Lettersprices[2]}</span>`,
   `letter met steentjes:<br><span>Srd ${Lettersprices[3]}</span>`,
   `letter met zilvere of goudkleurige foil:<br><span>Srd ${Lettersprices[4]}</span>`,
-  `per extra accessory: <span>${Lettersprices[4]}</span><br>${LetterSocialIcons}`
+  `per extra accessory: <span>srd ${Lettersprices[5]}</span><br>${LetterSocialIcons}`
 ];
 const LetterspriceArr = [
   {

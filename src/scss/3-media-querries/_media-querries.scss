@@ -1,11 +1,21 @@
 @use '../0-abstracts/variables' as *;
+$breakpoints: (
+  small-1: 348px,
+  small-2: 410px,
+  medium-1: 600px,
+  medium-2: 768px,
+  large-1: 992px,
+  large-2: 1200px,
+);
 @media screen and (max-width: 348px) {
-  .price-letters, .price-zodiac {
+  .price-letters,
+  .price-zodiac {
     font-size: 1.2rem;
     span {
       font-size: 1.3rem;
     }
   }
+
   .btn-sidebar-subpage {
     width: 5rem;
     display: grid;
@@ -30,11 +40,22 @@
       width: 100%;
     }
   }
+  .img-container-animal {
+    width: 90%;
+  }
   .fab {
     font-size: 1rem;
   }
   .footer-p {
     font-size: 0.5rem;
+  }
+}
+@media screen and (max-width: 410px) {
+  .one-colored,
+  .two-colored {
+    p {
+      font-size: 1rem;
+    }
   }
 }
 @media screen and (min-width: 600px) {

@@ -231,7 +231,7 @@ exports.DisplayLetterPrices = DisplayLetterPrices;
 var LettersCenter = document.querySelector(".prices-letters");
 var Lettersprices = ["35.00", "37.50", "40.00", "45.00", "50.00", '5.00'];
 var LetterSocialIcons = "<ul class=\"prices-social-icons-zodiac\">\n<li><i class=\"fas hand-pointing-right fa-hand-point-right\"></i></li>\n<li>\n  <a href=\"https://wa.me/+5978979639\">\n      <i class=\"fab fa-whatsapp price-icons-zodiac\"></i>\n  </a>\n  <a href=\"https://instagram.com/wiraysha_workshop?igshid=4byv5ud4kl4f\">\n      <i class=\"fab fa-instagram price-icons-zodiac\"></i>\n  </a>\n  </li>\n</ul>";
-var LetterspriceText = ["letter met glitter:<br><span>Srd ".concat(Lettersprices[0], "</span>"), "letter met bloemen:<br><span>Srd ".concat(Lettersprices[1], "</span>"), "letter met schelpen:<br><span>Srd ".concat(Lettersprices[2], "</span>"), "letter met steentjes:<br><span>Srd ".concat(Lettersprices[3], "</span>"), "letter met zilvere of goudkleurige foil:<br><span>Srd ".concat(Lettersprices[4], "</span>"), "per extra accessory: <span>".concat(Lettersprices[4], "</span><br>").concat(LetterSocialIcons)];
+var LetterspriceText = ["letter met glitter:<br><span>Srd ".concat(Lettersprices[0], "</span>"), "letter met bloemen:<br><span>Srd ".concat(Lettersprices[1], "</span>"), "letter met schelpen:<br><span>Srd ".concat(Lettersprices[2], "</span>"), "letter met steentjes:<br><span>Srd ".concat(Lettersprices[3], "</span>"), "letter met zilvere of goudkleurige foil:<br><span>Srd ".concat(Lettersprices[4], "</span>"), "per extra accessory: <span>srd ".concat(Lettersprices[5], "</span><br>").concat(LetterSocialIcons)];
 var LetterspriceArr = [{
   text: LetterspriceText[0]
 }, {
@@ -473,7 +473,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58550" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58657" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

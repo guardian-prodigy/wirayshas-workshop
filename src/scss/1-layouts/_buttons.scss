@@ -127,3 +127,12 @@
   }
 }
 // end of sidebar btns 
+// Bears buttons
+.one-colored,
+.two-colored {
+  &:hover {
+    background: rgba(0, 0, 0, 0.9);
+  }
+  
+}
+// end of Bears buttons

@@ -3,7 +3,7 @@
 .prices-center,
 .lettersPrices-center,
 .zodiacs-center,
-.AnimalsPrices-center {
+.AnimalsPrices-center{
   background: linear-gradient(90deg, $primary-aqua-5, $clr-primary-2);
   display: grid;
   border-radius: 1rem;
@@ -18,7 +18,7 @@
   @include message();
   .letterPrice-center,
   .zodiac-center,
-  .AnimalsPrice-center {
+  .AnimalsPrice-center, .headband-center {
     margin-bottom: 12rem;
     position: relative;
     max-width: $fixed-width;
