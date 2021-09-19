@@ -624,7 +624,6 @@ body {
 
 .navbar-subpage {
   padding: 1rem;
-  overflow: visible;
   background: url("/wave-haikei.4d9d26a3.svg") center/cover no-repeat;
 }
 .navbar-subpage .nav-center {
