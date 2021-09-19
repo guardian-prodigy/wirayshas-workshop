@@ -356,7 +356,7 @@
     filter: blur(2px);
   }
 }
-.headbands-img-text {
+.animal-img-text, .headbands-img-text {
   display: grid;
   max-width: $fixed-width;
   margin: 1rem auto 0 auto;
@@ -364,7 +364,7 @@
   align-items: center;
   padding: 0.5rem;
 }
-.img-container-headbands {
+.img-container-animal, .img-container-headbands {
   width: 90%;
   max-width: 15rem;
   height: 80%;
