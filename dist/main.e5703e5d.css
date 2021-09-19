@@ -624,8 +624,8 @@ body {
 
 .navbar-subpage {
   padding: 1rem;
-  background: rgba(0, 179, 179, 0.3);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  overflow: visible;
+  background: url("/wave-haikei(2).7e4e03a9.svg") center/cover no-repeat;
 }
 .navbar-subpage .nav-center {
   display: flex;
@@ -1117,6 +1117,10 @@ body {
 .img-container-animal img, .img-container-headbands img {
   width: 100%;
   height: 100%;
+}
+
+.img-container-headbands {
+  max-height: 15rem;
 }
 
 .prices-center,

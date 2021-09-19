@@ -9,8 +9,8 @@
 // navbar subpage zodiac, letters
 .navbar-subpage {
   padding: 1rem;
-  background: rgba($primary-aqua-5, 0.3);
-  box-shadow: $light-shadow;
+  overflow: visible;
+  background: url('../../svgs/wave-haikei(2).svg') center/cover no-repeat ;
   .nav-center {
     display: flex;
     max-width: 1120px;
@@ -22,4 +22,5 @@
     display: none;
   }
 }
+
 // letters nav 
