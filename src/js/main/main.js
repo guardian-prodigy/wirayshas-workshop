@@ -19,6 +19,7 @@ const titles = [
   "letters",
   "zodiac signs",
 ];
+const faders = ['fade-left', 'fade-right'];
 const images = [PonPon, Headbands, Animals, Letters, ZodiacSigns];
 const texts = [
   `ponponetjes kunt uw gebruiken als decoratie voor uw hand-tas, lamp, kast, en nog veel meer! druk <span><a href=${links[0]}>hier</a></span> om meer ponponetjes te zien :)`,
@@ -33,7 +34,8 @@ const products = [
     title: titles[0],
     img: images[0],
     text: texts[0],
-    link: links[0]
+    link: links[0],
+    class: faders[0]
   },
   {
     id: 1,
@@ -41,6 +43,7 @@ const products = [
     img: images[1],
     text: texts[1],
     link: links[1],
+    class: faders[1]
   },
   {
     id: 1,
@@ -48,6 +51,7 @@ const products = [
     img: images[2],
     text: texts[2],
     link: links[2],
+    class: faders[0]
   },
   {
     id: 1,
@@ -55,6 +59,7 @@ const products = [
     img: images[3],
     text: texts[3],
     link: links[3],
+    class: faders[1]
   },
   {
     id: 1,
@@ -62,6 +67,7 @@ const products = [
     img: images[4],
     text: texts[4],
     link: links[4],
+    class: faders[0]
   },
 ];
 const AllExternalLinks = [
@@ -127,7 +133,7 @@ BtnDisplay();
 function Products() {
   let product = products
     .map(
-      (item) => `<div class="article-added">
+      (item) => `<div class="article-added" data-aos=${item.class}>
       <div class="article-header">
         <h3>${item.title}</h3>
       </div>

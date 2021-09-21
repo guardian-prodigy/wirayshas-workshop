@@ -12,6 +12,7 @@
     max-width: $max-width;
     margin: 0 auto;
     justify-content: center;
+    overflow-x: hidden;
     .article-added {
       width: 90%;
       margin: 0 auto;
@@ -229,6 +230,7 @@
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   max-width: 1120px;
   margin: 0 auto;
+  overflow: hidden;
   .article {
     width: 90%;
     max-width: 350px;

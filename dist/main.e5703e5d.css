@@ -746,6 +746,7 @@ body {
   max-width: 1170px;
   margin: 0 auto;
   justify-content: center;
+  overflow-x: hidden;
 }
 .products-center .article .article-added {
   width: 90%;
@@ -956,6 +957,7 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   max-width: 1120px;
   margin: 0 auto;
+  overflow: hidden;
 }
 .main-center-subpage .article {
   width: 90%;

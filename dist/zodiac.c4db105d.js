@@ -206,6 +206,7 @@ require("./zodiacPrice");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var faders = ['fade-left', 'fade-right'];
 var zodiacNames = ["aquarius", "pisces", "aries", "taurus", "gemini", "cancer", "leo", "scorpio", "virgo", "libra", "sagittarius ", "capricorn"];
 var prices = [50];
 var ZodiacImages = [_images.default];
@@ -215,73 +216,85 @@ var zodiacs = [{
   category: zodiacNames[0],
   img: ZodiacImages[0],
   price: prices[0],
-  text: ZodiacText[0]
+  text: ZodiacText[0],
+  class: faders[0]
 }, {
   title: zodiacNames[1],
   category: zodiacNames[1],
   img: ZodiacImages[0],
   price: prices[0],
-  text: ZodiacText[0]
+  text: ZodiacText[0],
+  class: faders[1]
 }, {
   title: zodiacNames[2],
   category: zodiacNames[2],
   img: ZodiacImages[0],
   price: prices[0],
-  text: ZodiacText[0]
+  text: ZodiacText[0],
+  class: faders[0]
 }, {
   title: zodiacNames[3],
   category: zodiacNames[3],
   img: ZodiacImages[0],
   price: prices[0],
-  text: ZodiacText[0]
+  text: ZodiacText[0],
+  class: faders[1]
 }, {
   title: zodiacNames[4],
   category: zodiacNames[4],
   img: ZodiacImages[0],
   price: prices[0],
-  text: ZodiacText[0]
+  text: ZodiacText[0],
+  class: faders[0]
 }, {
   title: zodiacNames[5],
   category: zodiacNames[5],
   img: ZodiacImages[0],
   price: prices[0],
-  text: ZodiacText[0]
+  text: ZodiacText[0],
+  class: faders[1]
 }, {
   title: zodiacNames[6],
   category: zodiacNames[6],
   img: ZodiacImages[0],
   price: prices[0],
-  text: ZodiacText[0]
+  text: ZodiacText[0],
+  class: faders[0]
 }, {
   title: zodiacNames[7],
   category: zodiacNames[7],
   img: ZodiacImages[0],
   price: prices[0],
-  text: ZodiacText[0]
+  text: ZodiacText[0],
+  class: faders[1]
 }, {
   title: zodiacNames[8],
   category: zodiacNames[8],
   img: ZodiacImages[0],
   price: prices[0],
-  text: ZodiacText[0]
+  text: ZodiacText[0],
+  class: faders[0]
 }, {
   title: zodiacNames[9],
   category: zodiacNames[9],
   img: ZodiacImages[0],
   price: prices[0],
-  text: ZodiacText[0]
+  text: ZodiacText[0],
+  class: faders[1]
 }, {
   title: zodiacNames[10],
   category: zodiacNames[10],
   img: ZodiacImages[0],
   price: prices[0],
-  text: ZodiacText[0]
+  text: ZodiacText[0],
+  class: faders[0]
 }, {
   title: zodiacNames[11],
   category: zodiacNames[11],
   img: ZodiacImages[0],
   price: prices[0],
-  text: ZodiacText[0]
+  text: ZodiacText[0],
+  class: faders[1]
 }];
 var mainSection = document.querySelector(".main-center-subpage"); // event listeners
 
@@ -291,7 +304,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
 function zodiacDisplay(par) {
   var items = par.map(function (item) {
-    return "<article class=\"article\">\n        <div class=\"header\">\n          <h4 class=\"logo\">".concat(item.title, "</h4>\n          <div class=\"underline\"></div>\n        </div>\n        <div class=\"img-container\">\n          <img src=").concat(item.img, " alt=\"\" />\n        </div>\n        <div class=\"price\">\n          <div>\n            <p>").concat(item.price, "Srd</p>\n            <a href=\"aquarius.html\"><i class=\"fas fa-info\"></i></a>\n          </div>\n          <div class=\"underline\"></div>\n        </div>\n        <p class=\"text\">\n          ").concat(item.text, "\n        </p>\n      </article>");
+    return "<article class=\"article\" data-aos=".concat(item.class, ">\n        <div class=\"header\">\n          <h4 class=\"logo\">").concat(item.title, "</h4>\n          <div class=\"underline\"></div>\n        </div>\n        <div class=\"img-container\">\n          <img src=").concat(item.img, " alt=\"\" />\n        </div>\n        <div class=\"price\">\n          <div>\n            <p>").concat(item.price, "Srd</p>\n            <a href=\"aquarius.html\"><i class=\"fas fa-info\"></i></a>\n          </div>\n          <div class=\"underline\"></div>\n        </div>\n        <p class=\"text\">\n          ").concat(item.text, "\n        </p>\n      </article>");
   }).join("");
   mainSection.innerHTML = items;
 }
@@ -323,7 +336,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57996" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54866" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

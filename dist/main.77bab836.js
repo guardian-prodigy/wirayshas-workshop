@@ -173,6 +173,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // arrays
 var links = ["ponponetjes.html", "headbands.html", "animals.html", "letters.html", "zodiac.html"];
 var titles = ["ponponetjes", "headbands", "animals", "letters", "zodiac signs"];
+var faders = ['fade-left', 'fade-right'];
 var images = [_ponpons.default, _headbands.default, _letters.default, _animals.default, _zodiac.default];
 var texts = ["ponponetjes kunt uw gebruiken als decoratie voor uw hand-tas, lamp, kast, en nog veel meer! druk <span><a href=".concat(links[0], ">hier</a></span> om meer ponponetjes te zien :)"), "ponponetjes kunt uw gebruiken als decoratie voor uw hand-tas, lamp, kast, en nog veel meer! druk <span><a href=".concat(links[1], ">hier</a></span> om meer ponponetjes te zien :)"), "ponponetjes kunt uw gebruiken als decoratie voor uw hand-tas, lamp, kast, en nog veel meer! druk <span><a href=".concat(links[2], ">hier</a></span> om meer ponponetjes te zien :)"), "ponponetjes kunt uw gebruiken als decoratie voor uw hand-tas, lamp, kast, en nog veel meer! druk <span><a href=".concat(links[3], ">hier</a></span> om meer ponponetjes te zien :)"), "ponponetjes kunt uw gebruiken als decoratie voor uw hand-tas, lamp, kast, en nog veel meer! druk <span><a href=".concat(links[4], ">hier</a></span> om meer ponponetjes te zien :)")];
 var products = [{
@@ -180,31 +181,36 @@ var products = [{
   title: titles[0],
   img: images[0],
   text: texts[0],
-  link: links[0]
+  link: links[0],
+  class: faders[0]
 }, {
   id: 1,
   title: titles[1],
   img: images[1],
   text: texts[1],
-  link: links[1]
+  link: links[1],
+  class: faders[1]
 }, {
   id: 1,
   title: titles[2],
   img: images[2],
   text: texts[2],
-  link: links[2]
+  link: links[2],
+  class: faders[0]
 }, {
   id: 1,
   title: titles[3],
   img: images[3],
   text: texts[3],
-  link: links[3]
+  link: links[3],
+  class: faders[1]
 }, {
   id: 1,
   title: titles[4],
   img: images[4],
   text: texts[4],
-  link: links[4]
+  link: links[4],
+  class: faders[0]
 }];
 var AllExternalLinks = [{
   id: 1,
@@ -261,7 +267,7 @@ BtnDisplay();
 
 function Products() {
   var product = products.map(function (item) {
-    return "<div class=\"article-added\">\n      <div class=\"article-header\">\n        <h3>".concat(item.title, "</h3>\n      </div>\n      <div class=\"img-container\">\n        <img src=").concat(item.img, " />\n        <i class=\"fas fa-home fa-home-img-product\"></i>\n      </div>\n      <div class=\"article-info\">\n        <p>").concat(item.text, "</p>\n      </div>\n    </div>");
+    return "<div class=\"article-added\" data-aos=".concat(item.class, ">\n      <div class=\"article-header\">\n        <h3>").concat(item.title, "</h3>\n      </div>\n      <div class=\"img-container\">\n        <img src=").concat(item.img, " />\n        <i class=\"fas fa-home fa-home-img-product\"></i>\n      </div>\n      <div class=\"article-info\">\n        <p>").concat(item.text, "</p>\n      </div>\n    </div>");
   }).join("");
   productArticle.innerHTML = product;
 } // end of functions
@@ -293,7 +299,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57996" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54866" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

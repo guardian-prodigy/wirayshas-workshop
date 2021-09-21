@@ -1,6 +1,7 @@
 import aquarius from '../../img/zodiac-pics/images.jpg';
 import '../globalJs/sidebar-subpage';
 import './zodiacPrice';
+const faders = ['fade-left', 'fade-right'];
 const zodiacNames = [
   "aquarius",
   "pisces",
@@ -27,6 +28,7 @@ const zodiacs = [
     img: ZodiacImages[0],
     price: prices[0],
     text: ZodiacText[0],
+    class: faders[0],
   },
   {
     title: zodiacNames[1],
@@ -34,6 +36,7 @@ const zodiacs = [
     img: ZodiacImages[0],
     price: prices[0],
     text: ZodiacText[0],
+    class: faders[1],
   },
   {
     title: zodiacNames[2],
@@ -41,6 +44,7 @@ const zodiacs = [
     img: ZodiacImages[0],
     price: prices[0],
     text: ZodiacText[0],
+    class: faders[0],
   },
   {
     title: zodiacNames[3],
@@ -48,6 +52,7 @@ const zodiacs = [
     img: ZodiacImages[0],
     price: prices[0],
     text: ZodiacText[0],
+    class: faders[1],
   },
   {
     title: zodiacNames[4],
@@ -55,6 +60,7 @@ const zodiacs = [
     img: ZodiacImages[0],
     price: prices[0],
     text: ZodiacText[0],
+    class: faders[0],
   },
   {
     title: zodiacNames[5],
@@ -62,6 +68,7 @@ const zodiacs = [
     img: ZodiacImages[0],
     price: prices[0],
     text: ZodiacText[0],
+    class: faders[1],
   },
   {
     title: zodiacNames[6],
@@ -69,6 +76,7 @@ const zodiacs = [
     img: ZodiacImages[0],
     price: prices[0],
     text: ZodiacText[0],
+    class: faders[0],
   },
   {
     title: zodiacNames[7],
@@ -76,6 +84,7 @@ const zodiacs = [
     img: ZodiacImages[0],
     price: prices[0],
     text: ZodiacText[0],
+    class: faders[1],
   },
   {
     title: zodiacNames[8],
@@ -83,6 +92,7 @@ const zodiacs = [
     img: ZodiacImages[0],
     price: prices[0],
     text: ZodiacText[0],
+    class: faders[0],
   },
   {
     title: zodiacNames[9],
@@ -90,6 +100,7 @@ const zodiacs = [
     img: ZodiacImages[0],
     price: prices[0],
     text: ZodiacText[0],
+    class: faders[1],
   },
   {
     title: zodiacNames[10],
@@ -97,6 +108,7 @@ const zodiacs = [
     img: ZodiacImages[0],
     price: prices[0],
     text: ZodiacText[0],
+    class: faders[0],
   },
   {
     title: zodiacNames[11],
@@ -104,6 +116,7 @@ const zodiacs = [
     img: ZodiacImages[0],
     price: prices[0],
     text: ZodiacText[0],
+    class: faders[1],
   },
 ];
 const mainSection = document.querySelector(".main-center-subpage");
@@ -118,7 +131,7 @@ function zodiacDisplay(par) {
   const items = par
     .map(
       (item) =>
-        `<article class="article">
+        `<article class="article" data-aos=${item.class}>
         <div class="header">
           <h4 class="logo">${item.title}</h4>
           <div class="underline"></div>
