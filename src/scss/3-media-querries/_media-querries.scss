@@ -15,6 +15,13 @@ $breakpoints: (
       font-size: 1.3rem;
     }
   }
+  .sidebar {
+    .sidebar-header {
+      .sidebar-logo-main {
+        font-size: 1.3rem;
+      }
+    }
+  }
 
   .btn-sidebar-subpage {
     width: 5rem;
@@ -56,6 +63,12 @@ $breakpoints: (
     p {
       font-size: 1rem;
     }
+  }
+}
+@media screen and (min-width: 450px) {
+  .navbar-subpage {
+    background: url('../../svgs/wave-haikei-2.svg') center/cover no-repeat;
+    overflow: visible;
   }
 }
 @media screen and (min-width: 600px) {

@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./..\\..\\img\\pexels-leah-kelley-6480701.jpg":[["pexels-leah-kelley-6480701.b6b94b07.jpg","../../img/pexels-leah-kelley-6480701.jpg"],"../../img/pexels-leah-kelley-6480701.jpg"],"./..\\..\\fonts\\Grenze-Italic.ttf":[["Grenze-Italic.3998fa2e.ttf","../../fonts/Grenze-Italic.ttf"],"../../fonts/Grenze-Italic.ttf"],"./..\\..\\fonts\\NanumPenScript-Regular.ttf":[["NanumPenScript-Regular.11082527.ttf","../../fonts/NanumPenScript-Regular.ttf"],"../../fonts/NanumPenScript-Regular.ttf"],"./..\\..\\fonts\\Texturina-Italic-VariableFont_opsz,wght.ttf":[["Texturina-Italic-VariableFont_opsz,wght.71039abd.ttf","../../fonts/Texturina-Italic-VariableFont_opsz,wght.ttf"],"../../fonts/Texturina-Italic-VariableFont_opsz,wght.ttf"],"./..\\..\\svgs\\waves.svg":[["waves.b818d5fc.svg","../../svgs/waves.svg"],"../../svgs/waves.svg"],"./..\\..\\svgs\\wave-haikei.svg":[["wave-haikei.4d9d26a3.svg","../../svgs/wave-haikei.svg"],"../../svgs/wave-haikei.svg"],"_css_loader":"../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./..\\..\\img\\pexels-leah-kelley-6480701.jpg":[["pexels-leah-kelley-6480701.b6b94b07.jpg","../../img/pexels-leah-kelley-6480701.jpg"],"../../img/pexels-leah-kelley-6480701.jpg"],"./..\\..\\fonts\\Grenze-Italic.ttf":[["Grenze-Italic.3998fa2e.ttf","../../fonts/Grenze-Italic.ttf"],"../../fonts/Grenze-Italic.ttf"],"./..\\..\\fonts\\NanumPenScript-Regular.ttf":[["NanumPenScript-Regular.11082527.ttf","../../fonts/NanumPenScript-Regular.ttf"],"../../fonts/NanumPenScript-Regular.ttf"],"./..\\..\\fonts\\Texturina-Italic-VariableFont_opsz,wght.ttf":[["Texturina-Italic-VariableFont_opsz,wght.71039abd.ttf","../../fonts/Texturina-Italic-VariableFont_opsz,wght.ttf"],"../../fonts/Texturina-Italic-VariableFont_opsz,wght.ttf"],"./..\\..\\svgs\\waves.svg":[["waves.b818d5fc.svg","../../svgs/waves.svg"],"../../svgs/waves.svg"],"./..\\..\\svgs\\wave-haikei.svg":[["wave-haikei.4d9d26a3.svg","../../svgs/wave-haikei.svg"],"../../svgs/wave-haikei.svg"],"./..\\..\\svgs\\wave-haikei-2.svg":[["wave-haikei-2.70ea800a.svg","../../svgs/wave-haikei-2.svg"],"../../svgs/wave-haikei-2.svg"],"_css_loader":"../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -217,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59246" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52964" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

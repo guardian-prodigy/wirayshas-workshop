@@ -740,13 +740,13 @@ body {
 }
 .products-center .article {
   padding: 1rem;
-  margin: 0 auto;
-  width: 95%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 1rem;
+  justify-content: center;
 }
 .products-center .article .article-added {
+  width: 90%;
   margin: 0 auto;
   margin-bottom: 2rem;
   border-radius: 0.25rem;
@@ -757,12 +757,11 @@ body {
   max-width: 400px;
 }
 .products-center .article .article-added .img-container {
-  height: 13rem;
-  width: 15rem;
+  max-height: 13rem;
+  max-width: 15rem;
   position: relative;
   border-radius: 0.25rem;
   margin: 2rem auto;
-  margin-bottom: 3rem;
 }
 .products-center .article .article-added .img-container img {
   width: 100%;
@@ -951,6 +950,7 @@ body {
 
 .main-center-subpage {
   display: grid;
+  place-content: center;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   max-width: 1120px;
   margin: 0 auto;
@@ -1198,6 +1198,10 @@ body {
     font-size: 1.3rem;
   }
 
+  .sidebar .sidebar-header .sidebar-logo-main {
+    font-size: 1.3rem;
+  }
+
   .btn-sidebar-subpage {
     width: 5rem;
     display: grid;
@@ -1240,6 +1244,12 @@ body {
   .one-colored p,
 .two-colored p {
     font-size: 1rem;
+  }
+}
+@media screen and (min-width: 450px) {
+  .navbar-subpage {
+    background: url("/wave-haikei-2.70ea800a.svg") center/cover no-repeat;
+    overflow: visible;
   }
 }
 @media screen and (min-width: 600px) {
