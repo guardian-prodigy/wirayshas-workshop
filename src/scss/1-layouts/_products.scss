@@ -9,6 +9,8 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 1rem;
+    max-width: $max-width;
+    margin: 0 auto;
     justify-content: center;
     .article-added {
       width: 90%;
