@@ -275,6 +275,7 @@ var _D = _interopRequireDefault(require("../../../img/letters/D.jpeg"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var faders = ['fade-down-right', 'fade-down-left', 'fade-right', 'fade-left'];
 var ImgContainer_A_D = document.querySelector(".letters-A-D");
 var imagesA_D = [_A.default, _B.default, _C.default, _D.default];
 var prices = ["50.00"];
@@ -282,24 +283,28 @@ var hrefs = ["https://instagram.com/wiraysha_workshop?igshid=4byv5ud4kl4f"];
 var ImageA_D_Arr = [{
   img: imagesA_D[0],
   price: prices[0],
-  href: hrefs[0]
+  href: hrefs[0],
+  class: faders[0]
 }, {
   img: imagesA_D[1],
   price: prices[0],
-  href: hrefs[0]
+  href: hrefs[0],
+  class: faders[1]
 }, {
   img: imagesA_D[2],
   price: prices[0],
-  href: hrefs[0]
+  href: hrefs[0],
+  class: faders[2]
 }, {
   img: imagesA_D[3],
   price: prices[0],
-  href: hrefs[0]
+  href: hrefs[0],
+  class: faders[3]
 }];
 
 function LettersDisplayA_D() {
   var Letters = ImageA_D_Arr.map(function (item) {
-    return "<li class=\"static-letters\">\n    <div class=\"img-container-letter\">\n      <img src=".concat(item.img, " />\n    </div>\n    <div class=\"price-info\">\n      <p style=\"border: none\" class=\"price-letters header-price\">\n        <span>").concat(item.price, "</span>\n      </p>\n      <a\n        href=\"").concat(item.href, "\"\n        ><i class=\"fab fa-instagram\"></i\n      ></a>\n    </div>\n  </li>");
+    return "<li class=\"static-letters\" data-aos=".concat(item.class, ">\n    <div class=\"img-container-letter\">\n      <img src=").concat(item.img, " />\n    </div>\n    <div class=\"price-info\">\n      <p style=\"border: none\" class=\"price-letters header-price\">\n        <span>").concat(item.price, "</span>\n      </p>\n      <a\n        href=\"").concat(item.href, "\"\n        ><i class=\"fab fa-instagram\"></i\n      ></a>\n    </div>\n  </li>");
   }).join('');
   ImgContainer_A_D.innerHTML = Letters;
 }
@@ -473,7 +478,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54866" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58425" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

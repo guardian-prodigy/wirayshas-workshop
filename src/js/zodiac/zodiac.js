@@ -154,3 +154,4 @@ function zodiacDisplay(par) {
     .join("");
   mainSection.innerHTML = items;
 }
+

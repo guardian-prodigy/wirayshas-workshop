@@ -2,6 +2,7 @@ import A from "../../../img/letters/A.jpg";
 import B from "../../../img/letters/B.jpeg";
 import C from "../../../img/letters/C.jpeg";
 import D from "../../../img/letters/D.jpeg";
+const faders = ['fade-down-right', 'fade-down-left', 'fade-right', 'fade-left'];
 const ImgContainer_A_D = document.querySelector(".letters-A-D");
 const imagesA_D = [A, B, C, D];
 const prices = ["50.00"];
@@ -11,26 +12,30 @@ const ImageA_D_Arr = [
         img: imagesA_D[0],
         price: prices[0],
         href: hrefs[0],
+        class: faders[0]
     },
     {
         img: imagesA_D[1],
         price: prices[0],
         href: hrefs[0],
+        class: faders[1]
     },
     {
         img: imagesA_D[2],
         price: prices[0],
         href: hrefs[0],
+        class: faders[2]
     },
     {
         img: imagesA_D[3],
         price: prices[0],
         href: hrefs[0],
+        class: faders[3]
     },
 ]
 function LettersDisplayA_D() {
     const Letters = ImageA_D_Arr.map((item) => 
-    `<li class="static-letters">
+    `<li class="static-letters" data-aos=${item.class}>
     <div class="img-container-letter">
       <img src=${item.img} />
     </div>
