@@ -92,6 +92,7 @@ html {
 
 body {
   background: #102a42;
+  overflow-x: hidden;
 }
 
 *,
@@ -746,7 +747,6 @@ body {
   max-width: 1170px;
   margin: 0 auto;
   justify-content: center;
-  overflow-x: hidden;
 }
 .products-center .article .article-added {
   width: 90%;
