@@ -47,8 +47,8 @@ body {
   display: grid;
   z-index: 3;
   place-items: center;
-  background: linear-gradient(45deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)),
-    url("../../img/pexels-leah-kelley-6480701.jpg") center/cover no-repeat;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+    url("./../../img/leah.jpg") center/cover no-repeat;
   background-attachment: fixed;
   .sec-center {
     ul {

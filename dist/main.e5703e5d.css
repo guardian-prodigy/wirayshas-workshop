@@ -131,7 +131,7 @@ body {
   display: grid;
   z-index: 3;
   place-items: center;
-  background: linear-gradient(45deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)), url("/pexels-leah-kelley-6480701.b6b94b07.jpg") center/cover no-repeat;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url("/leah.4bfc64eb.jpg") center/cover no-repeat;
   background-attachment: fixed;
 }
 .section-center .sec-center ul {
@@ -340,8 +340,6 @@ body {
   text-align: center;
   -webkit-animation: SlideInLeft 1s ease-in 0.2s 1 forwards;
   animation: SlideInLeft 1s ease-in 0.2s 1 forwards;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
 }
 
 .header-text {
@@ -747,6 +745,7 @@ body {
   max-width: 1170px;
   margin: 0 auto;
   justify-content: center;
+  overflow-x: hidden;
 }
 .products-center .article .article-added {
   width: 90%;
@@ -1080,8 +1079,6 @@ body {
   text-align: center;
   -webkit-animation: SlideInLeft 1s ease-in 0.2s 1 forwards;
   animation: SlideInLeft 1s ease-in 0.2s 1 forwards;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
   font-size: 1.5rem;
 }
 
