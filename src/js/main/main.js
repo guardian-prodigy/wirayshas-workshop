@@ -1,7 +1,7 @@
 import PonPon from "../../img/imagesForProductsMain/ponpons.jpg";
 import Headbands from "../../img/imagesForProductsMain/headbands.jpg";
-import Animals from "../../img/imagesForProductsMain/letters.jpg";
-import Letters from "../../img/imagesForProductsMain/animals.jpg";
+import Animals from "../../img/imagesForProductsMain/animals.jpg";
+import Letters from "../../img/imagesForProductsMain/letters.jpg";
 import ZodiacSigns from "../../img/imagesForProductsMain/zodiac.jpg";
 import '../globalJs/sidebar-main';
 // arrays
@@ -61,14 +61,15 @@ const products = [
     link: links[3],
     class: faders[1]
   },
-  {
-    id: 1,
-    title: titles[4],
-    img: images[4],
-    text: texts[4],
-    link: links[4],
-    class: faders[0]
-  },
+  // zodiac
+  // {
+  //   id: 1,
+  //   title: titles[4],
+  //   img: images[4],
+  //   text: texts[4],
+  //   link: links[4],
+  //   class: faders[0]
+  // },
 ];
 const AllExternalLinks = [
   {

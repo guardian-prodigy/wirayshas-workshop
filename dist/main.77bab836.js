@@ -121,10 +121,10 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 module.exports = "/ponpons.e930ba6c.jpg";
 },{}],"../img/imagesForProductsMain/headbands.jpg":[function(require,module,exports) {
 module.exports = "/headbands.cabd8cfa.jpg";
-},{}],"../img/imagesForProductsMain/letters.jpg":[function(require,module,exports) {
-module.exports = "/letters.73a5ec5e.jpg";
 },{}],"../img/imagesForProductsMain/animals.jpg":[function(require,module,exports) {
 module.exports = "/animals.c016e7bf.jpg";
+},{}],"../img/imagesForProductsMain/letters.jpg":[function(require,module,exports) {
+module.exports = "/letters.73a5ec5e.jpg";
 },{}],"../img/imagesForProductsMain/zodiac.jpg":[function(require,module,exports) {
 module.exports = "/zodiac.d0e8e51b.jpg";
 },{}],"../js/globalJs/sidebar-main.js":[function(require,module,exports) {
@@ -160,9 +160,9 @@ var _ponpons = _interopRequireDefault(require("../../img/imagesForProductsMain/p
 
 var _headbands = _interopRequireDefault(require("../../img/imagesForProductsMain/headbands.jpg"));
 
-var _letters = _interopRequireDefault(require("../../img/imagesForProductsMain/letters.jpg"));
-
 var _animals = _interopRequireDefault(require("../../img/imagesForProductsMain/animals.jpg"));
+
+var _letters = _interopRequireDefault(require("../../img/imagesForProductsMain/letters.jpg"));
 
 var _zodiac = _interopRequireDefault(require("../../img/imagesForProductsMain/zodiac.jpg"));
 
@@ -174,7 +174,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var links = ["ponponetjes.html", "headbands.html", "animals.html", "letters.html", "zodiac.html"];
 var titles = ["ponponetjes", "headbands", "animals", "letters", "zodiac signs"];
 var faders = ['fade-left', 'fade-right'];
-var images = [_ponpons.default, _headbands.default, _letters.default, _animals.default, _zodiac.default];
+var images = [_ponpons.default, _headbands.default, _animals.default, _letters.default, _zodiac.default];
 var texts = ["ponponetjes kunt uw gebruiken als decoratie voor uw hand-tas, lamp, kast, en nog veel meer! druk <span><a href=".concat(links[0], ">hier</a></span> om meer ponponetjes te zien :)"), "ponponetjes kunt uw gebruiken als decoratie voor uw hand-tas, lamp, kast, en nog veel meer! druk <span><a href=".concat(links[1], ">hier</a></span> om meer ponponetjes te zien :)"), "ponponetjes kunt uw gebruiken als decoratie voor uw hand-tas, lamp, kast, en nog veel meer! druk <span><a href=".concat(links[2], ">hier</a></span> om meer ponponetjes te zien :)"), "ponponetjes kunt uw gebruiken als decoratie voor uw hand-tas, lamp, kast, en nog veel meer! druk <span><a href=".concat(links[3], ">hier</a></span> om meer ponponetjes te zien :)"), "ponponetjes kunt uw gebruiken als decoratie voor uw hand-tas, lamp, kast, en nog veel meer! druk <span><a href=".concat(links[4], ">hier</a></span> om meer ponponetjes te zien :)")];
 var products = [{
   id: 1,
@@ -204,14 +204,16 @@ var products = [{
   text: texts[3],
   link: links[3],
   class: faders[1]
-}, {
-  id: 1,
-  title: titles[4],
-  img: images[4],
-  text: texts[4],
-  link: links[4],
-  class: faders[0]
-}];
+} // zodiac
+// {
+//   id: 1,
+//   title: titles[4],
+//   img: images[4],
+//   text: texts[4],
+//   link: links[4],
+//   class: faders[0]
+// },
+];
 var AllExternalLinks = [{
   id: 1,
   linkNumber: links[0],
@@ -271,7 +273,7 @@ function Products() {
   }).join("");
   productArticle.innerHTML = product;
 } // end of functions
-},{"../../img/imagesForProductsMain/ponpons.jpg":"../img/imagesForProductsMain/ponpons.jpg","../../img/imagesForProductsMain/headbands.jpg":"../img/imagesForProductsMain/headbands.jpg","../../img/imagesForProductsMain/letters.jpg":"../img/imagesForProductsMain/letters.jpg","../../img/imagesForProductsMain/animals.jpg":"../img/imagesForProductsMain/animals.jpg","../../img/imagesForProductsMain/zodiac.jpg":"../img/imagesForProductsMain/zodiac.jpg","../globalJs/sidebar-main":"../js/globalJs/sidebar-main.js"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"../../img/imagesForProductsMain/ponpons.jpg":"../img/imagesForProductsMain/ponpons.jpg","../../img/imagesForProductsMain/headbands.jpg":"../img/imagesForProductsMain/headbands.jpg","../../img/imagesForProductsMain/animals.jpg":"../img/imagesForProductsMain/animals.jpg","../../img/imagesForProductsMain/letters.jpg":"../img/imagesForProductsMain/letters.jpg","../../img/imagesForProductsMain/zodiac.jpg":"../img/imagesForProductsMain/zodiac.jpg","../globalJs/sidebar-main":"../js/globalJs/sidebar-main.js"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -299,7 +301,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64769" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61636" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
