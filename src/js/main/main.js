@@ -13,7 +13,7 @@ const links = [
   "zodiac.html",
 ];
 const titles = [
-  "ponponetjes",
+  "ponponnetjes",
   "headbands",
   "animals",
   "letters",
@@ -22,10 +22,11 @@ const titles = [
 const faders = ['fade-left', 'fade-right'];
 const images = [PonPon, Headbands, Animals, Letters, ZodiacSigns];
 const texts = [
-  `ponponetjes kunt uw gebruiken als decoratie voor uw hand-tas, lamp, kast, en nog veel meer! druk <span><a href=${links[0]}>hier</a></span> om meer ponponetjes te zien :)`,
-  `ponponetjes kunt uw gebruiken als decoratie voor uw hand-tas, lamp, kast, en nog veel meer! druk <span><a href=${links[1]}>hier</a></span> om meer ponponetjes te zien :)`,
-  `ponponetjes kunt uw gebruiken als decoratie voor uw hand-tas, lamp, kast, en nog veel meer! druk <span><a href=${links[2]}>hier</a></span> om meer ponponetjes te zien :)`,
-  `ponponetjes kunt uw gebruiken als decoratie voor uw hand-tas, lamp, kast, en nog veel meer! druk <span><a href=${links[3]}>hier</a></span> om meer ponponetjes te zien :)`,
+  `ponponetjes kunt uw gebruiken als decoratie voor uw hand-tas, lamp, kast, en nog veel meer!<br>druk <span><a href=${links[0]}>hier</a></span> om meer ponponetjes te bekijken :)`,
+  `headbands kunt uw gebruiken om uw hoofd een nieuwe look te geven! P.S. ze zijn heel handig voor feestjes 
+  <br>druk <span><a href=${links[1]}>hier</a></span> om meer dieren te bekijken`,
+  `animals kunt uw gebruiken als decoratie voor uw tassen, lamp, kast, en nog veel meer!<br>druk <span><a href=${links[2]}>hier</a></span> om meer animals te bekijken :)`,
+  `letters kunt uw gebruiken om uw tas, lamp, en andere dingen te verzieren! uw kunt ze ook gebruiken om aan uw partner te geven;) <br>druk <span><a href=${links[3]}>hier</a></span> om meer letters te bekijken :)`,
   `ponponetjes kunt uw gebruiken als decoratie voor uw hand-tas, lamp, kast, en nog veel meer! druk <span><a href=${links[4]}>hier</a></span> om meer ponponetjes te zien :)`,
 ];
 const products = [
