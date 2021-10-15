@@ -92,11 +92,12 @@ const AllExternalLinks = [
     linkNumber: links[3],
     titleNumber: titles[3],
   },
-  {
-    id: 5,
-    linkNumber: links[4],
-    titleNumber: titles[4],
-  },
+  // zodiac tag
+  // {
+  //   id: 5,
+  //   linkNumber: links[4],
+  //   titleNumber: titles[4],
+  // },
 ];
 // end of arrays
 

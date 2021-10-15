@@ -1,11 +1,11 @@
-@use '../0-abstracts/variables' as *;
-@use '../0-abstracts/mixins' as *;
+@use "../0-abstracts/variables" as *;
+@use "../0-abstracts/mixins" as *;
 
 html {
   scroll-behavior: smooth;
 }
 body {
-  background: $clr-grey-1;
+  background: rgba($primary-aqua-1, 1);
   overflow-x: hidden;
 }
 *,
@@ -39,7 +39,6 @@ body {
   }
 }
 
-
 // section center
 .section-center {
   padding: 1rem;
@@ -66,7 +65,8 @@ body {
 #about {
   min-height: 100vh;
   overflow-y: hidden;
-  
+  position: relative;
+  z-index: 10;
   background: linear-gradient(
     45deg,
     $primary-aqua-2 20%,
@@ -105,5 +105,13 @@ body {
     filter: blur(5px) contrast(150%);
     opacity: 0.4;
   }
+  &::before {
+    content: "";
+    position: absolute;
+    display: grid;
+    top: -1rem;
+    left: -1rem;
+  }
 }
+
 // end of about

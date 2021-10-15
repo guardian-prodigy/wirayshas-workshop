@@ -69,7 +69,7 @@
 }
 // end of about text
 .text {
-  color: rgba($primary-aqua-1, 0.9);
+  color:inherit;
 }
 // article header
 .article-header {
@@ -83,6 +83,15 @@
     width: 80%;
     margin: 0 auto;
     text-transform: capitalize;
+    @include mq(400px) {
+      font-size: 3rem;
+    }
+    @include mq(768px) {
+      font-size: 3.2rem;
+    }
+    @include mq(1200px) {
+      font-size: 4rem;
+    }
   }
 }
 // end of article header
@@ -90,13 +99,21 @@
   p {
     @include article-text();
     padding: 0.5rem;
+    @include mq(300px) {
+      font-size: 1.2rem;
+    }
+    @include mq(340px) {
+      font-size: 1.4rem;
+    }
+    @include mq(500px) {
+      font-size: 1.6rem;
+    }
   }
   span a {
     @include article-text-a-link();
   }
 }
 .header {
-  width: 60%;
   margin: 0 auto;
   margin-bottom: 1rem;
 }
@@ -135,7 +152,8 @@
   justify-self: center;
   width: fit-content;
   span {
-    color: $light-green;
+    color: rgba($light-green, 1);
+    filter: brightness(300%);
     font-size: 1.8rem;
     margin: inherit;
   }
@@ -149,7 +167,6 @@
   font-family: $font-family-2;
   color: $clr-primary-5;
   width: 100%;
-  overflow: hidden;
   text-align: center;
 }
 .products-header:not(:first-child) {

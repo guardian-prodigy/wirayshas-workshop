@@ -14,7 +14,7 @@ const LetterSocialIcons = `<ul class="prices-social-icons-zodiac">
 const LetterspriceText = [
   `one-colored headbands prices: <span>srd ${Lettersprices[0]}</span>`,
   `two-colored headbands prices: <span>srd ${Lettersprices[1]}</span>`,
-  `more than two colors are possible for: <span>srd ${Lettersprices[2]}</span><br>${LetterSocialIcons}`,
+  `more than two colors are possible for: <span><br>srd ${Lettersprices[2]}</span><br>${LetterSocialIcons}`,
 ];
 const LetterspriceArr = [
   {
@@ -32,5 +32,5 @@ export function DisplayLetterPrices() {
     (price) => `<li class="price-letters">${price.text}</li>`
   ).join("");
   LettersCenter.innerHTML = Prices;
-}
+};
 DisplayLetterPrices();

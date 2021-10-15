@@ -171,7 +171,7 @@ exports.DisplayLetterPrices = DisplayLetterPrices;
 var LettersCenter = document.querySelector(".prices-headbands");
 var Lettersprices = ["40.00", "50.00", "5.00"];
 var LetterSocialIcons = "<ul class=\"prices-social-icons-zodiac\">\n<li><i class=\"fas hand-pointing-right fa-hand-point-right\"></i></li>\n<li>\n  <a href=\"https://wa.me/+5978979639\">\n      <i class=\"fab fa-whatsapp price-icons-zodiac\"></i>\n  </a>\n  <a href=\"https://instagram.com/wiraysha_workshop?igshid=4byv5ud4kl4f\">\n      <i class=\"fab fa-instagram price-icons-zodiac\"></i>\n  </a>\n  </li>\n</ul>";
-var LetterspriceText = ["one-colored headbands prices: <span>srd ".concat(Lettersprices[0], "</span>"), "two-colored headbands prices: <span>srd ".concat(Lettersprices[1], "</span>"), "more than two colors are possible for: <span>srd ".concat(Lettersprices[2], "</span><br>").concat(LetterSocialIcons)];
+var LetterspriceText = ["one-colored headbands prices: <span>srd ".concat(Lettersprices[0], "</span>"), "two-colored headbands prices: <span>srd ".concat(Lettersprices[1], "</span>"), "more than two colors are possible for: <span><br>srd ".concat(Lettersprices[2], "</span><br>").concat(LetterSocialIcons)];
 var LetterspriceArr = [{
   text: LetterspriceText[0]
 }, {
@@ -187,6 +187,7 @@ function DisplayLetterPrices() {
   LettersCenter.innerHTML = Prices;
 }
 
+;
 DisplayLetterPrices();
 },{}],"../../img/headbands/1colored-1.jpg":[function(require,module,exports) {
 module.exports = "/1colored-1.622fc5e5.jpg";
@@ -224,47 +225,56 @@ var _colored6 = _interopRequireDefault(require("../../../img/headbands/2colored-
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 var headbandsCenterProducts = document.querySelector(".headbands-center");
 var OneColoredBtn = document.querySelector(".one-colored");
 var TwoColoredBtn = document.querySelector(".two-colored");
 var HeadbandsImages1 = [_colored.default, _colored2.default, _colored3.default];
 var HeadbandsImages2 = [_colored4.default, _colored5.default, _colored6.default];
-var HeadbandsTexts1 = ["Lorem ipsum, dolor sit amet consectetur adipisicing facere,\n    inventore atque, neque dolorem?"];
-var HeadbandsTexts2 = ["Lorem ipsum, dolor sit amet consectetur adipisicing facere,\n    inventore atque, neque dolorem?"];
-var HeadbandsArr1 = [{
+var HeadbandsTexts1 = ["40 srd"];
+var HeadbandsTexts2 = ["50 srd"];
+var purchaseBtns = ["Buy Now"];
+var HeadbandsArr1 = [_defineProperty({
   img: HeadbandsImages1[0],
-  text: HeadbandsTexts1[0]
-}, {
+  text: HeadbandsTexts1[0],
+  btn: purchaseBtns[0]
+}, "btn", purchaseBtns[0]), _defineProperty({
   img: HeadbandsImages1[1],
-  text: HeadbandsTexts1[0]
-}, {
+  text: HeadbandsTexts1[0],
+  btn: purchaseBtns[0]
+}, "btn", purchaseBtns[0]), _defineProperty({
   img: HeadbandsImages1[2],
-  text: HeadbandsTexts1[0]
-}];
-var HeadbandsArr2 = [{
+  text: HeadbandsTexts1[0],
+  btn: purchaseBtns[0]
+}, "btn", purchaseBtns[0])];
+var HeadbandsArr2 = [_defineProperty({
   img: HeadbandsImages2[0],
-  text: HeadbandsTexts2[0]
-}, {
+  text: HeadbandsTexts2[0],
+  btn: purchaseBtns[0]
+}, "btn", purchaseBtns[0]), _defineProperty({
   img: HeadbandsImages2[1],
-  text: HeadbandsTexts2[0]
-}, {
+  text: HeadbandsTexts2[0],
+  btn: purchaseBtns[0]
+}, "btn", purchaseBtns[0]), _defineProperty({
   img: HeadbandsImages2[2],
-  text: HeadbandsTexts2[0]
-}];
+  text: HeadbandsTexts2[0],
+  btn: purchaseBtns[0]
+}, "btn", purchaseBtns[0])];
 window.addEventListener("DOMContentLoaded", function () {
   headbandsDisplay1(), Btns();
 });
 
 function headbandsDisplay1() {
   var items = HeadbandsArr1.map(function (item) {
-    return "<div class=\"headbands-img-text\">\n    <div class=\"img-container img-container-headbands\">\n      <img src=".concat(item.img, " alt=\"\" />\n    </div>\n    <p class=\"text\">\n      ").concat(item.text, "\n    </p>\n  </div>");
+    return "<div class=\"headbands-img-text\">\n    <div class=\"img-container img-container-headbands\">\n      <img src=".concat(item.img, " alt=\"\" />\n    </div>\n    <div>\n    <div class=\"purchase-price-btn\">\n    <p class=\"about-text text\">\n      ").concat(item.text, "\n    </p>\n    <a href=\"https://wa.me/+5978979639\" class=\"purchase-btn-for-products\">").concat(item.btn, "</a>\n    </div>\n    </div>\n  </div>");
   }).join("");
   headbandsCenterProducts.innerHTML = items;
 }
 
 function headbandsDisplay2() {
   var items = HeadbandsArr2.map(function (item) {
-    return "<div class=\"headbands-img-text\">\n    <div class=\"img-container img-container-headbands\">\n      <img src=".concat(item.img, " alt=\"\" />\n    </div>\n    <p class=\"text\">\n      ").concat(item.text, "\n    </p>\n  </div>");
+    return "<div class=\"headbands-img-text\">\n    <div class=\"img-container img-container-headbands\">\n      <img src=".concat(item.img, " alt=\"\" />\n    </div>\n    <div class=\"purchase-price-btn\">\n    <p class=\"about-text text\">\n      ").concat(item.text, "\n    </p>\n    <a href=\"https://wa.me/+5978979639\" class=\"purchase-btn-for-products\">").concat(item.btn, "</a>\n    </div>\n  </div>");
   }).join("");
   headbandsCenterProducts.innerHTML = items;
 }
@@ -313,7 +323,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58336" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64855" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -91,7 +91,7 @@ html {
 }
 
 body {
-  background: #102a42;
+  background: #99ffff;
   overflow-x: hidden;
 }
 
@@ -146,6 +146,8 @@ body {
 #about {
   min-height: 100vh;
   overflow-y: hidden;
+  position: relative;
+  z-index: 10;
   background: linear-gradient(45deg, #66ffff 20%, rgba(0, 179, 179, 0.1));
   display: grid;
   place-content: center;
@@ -180,6 +182,13 @@ body {
   -webkit-filter: blur(5px) contrast(150%);
   filter: blur(5px) contrast(150%);
   opacity: 0.4;
+}
+#about::before {
+  content: "";
+  position: absolute;
+  display: grid;
+  top: -1rem;
+  left: -1rem;
 }
 
 .btn {
@@ -289,7 +298,18 @@ body {
 
 .one-colored:hover,
 .two-colored:hover {
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.purchase-btn-for-products {
+  padding: 0.5rem 0.2rem;
+  background: rgba(0, 255, 255, 0.9);
+  border-radius: 0.25rem;
+  font-family: "Namun";
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  max-width: 100px;
+  text-align: center;
 }
 
 .fab {
@@ -351,7 +371,7 @@ body {
 
 .about-text {
   font-family: "Grenze";
-  color: #063251;
+  color: #324d67;
   text-transform: capitalize;
   letter-spacing: 0.1rem;
   font-size: 1.5rem;
@@ -372,7 +392,7 @@ body {
 }
 
 .text {
-  color: rgba(153, 255, 255, 0.9);
+  color: inherit;
 }
 
 .article-header {
@@ -388,15 +408,45 @@ body {
   margin: 0 auto;
   text-transform: capitalize;
 }
+@media screen and (min-width: 400px) {
+  .article-header h3 {
+    font-size: 3rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .article-header h3 {
+    font-size: 3.2rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .article-header h3 {
+    font-size: 4rem;
+  }
+}
 
 .article-info p {
   font-family: "Grenze";
-  color: #063251;
+  color: #324d67;
   text-transform: capitalize;
   letter-spacing: 0.1rem;
   font-size: 1.5rem;
   font-weight: 400;
   padding: 0.5rem;
+}
+@media screen and (min-width: 300px) {
+  .article-info p {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 340px) {
+  .article-info p {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (min-width: 500px) {
+  .article-info p {
+    font-size: 1.6rem;
+  }
 }
 .article-info span a {
   color: #063251;
@@ -406,7 +456,6 @@ body {
 }
 
 .header {
-  width: 60%;
   margin: 0 auto;
   margin-bottom: 1rem;
 }
@@ -456,6 +505,7 @@ body {
 }
 .price-letters span, .price-zodiac span, .animals-price span, .price-PonPonetjes span {
   color: #00f300;
+  filter: brightness(300%);
   font-size: 1.8rem;
   margin: inherit;
 }
@@ -467,7 +517,6 @@ body {
   font-family: "Namun";
   color: #49a6e9;
   width: 100%;
-  overflow: hidden;
   text-align: center;
 }
 
@@ -642,9 +691,11 @@ body {
 
 .sidebar {
   min-height: 100vh;
+  opacity: 0;
+  visibility: hidden;
   position: fixed;
   max-width: 600px;
-  transform: translateY(-100%);
+  transform: translateY(-100%) scale(0.1);
   inset: 0;
   border-radius: 50%;
   transition: all 0.3s linear;
@@ -702,6 +753,8 @@ body {
   z-index: 999;
   width: 50vw;
   padding: 1rem;
+  opacity: 0;
+  visibility: hidden;
 }
 .sidebar-subpage .sidebar-btns {
   display: grid;
@@ -731,11 +784,13 @@ body {
 
 .show-sidebar {
   transform: translate(0);
+  visibility: visible;
+  opacity: 1;
 }
 
 .products-center {
   min-height: 100vh;
-  background: linear-gradient(180deg, #102a42 50%, #bcccdc 60%);
+  background: linear-gradient(-215deg, #99ffff 50%, #00ffff 60%);
 }
 .products-center .article {
   padding: 1rem;
@@ -754,7 +809,7 @@ body {
   border-radius: 0.25rem;
   position: relative;
   z-index: 1;
-  background: #829ab0;
+  background: rgba(0, 179, 179, 0.4);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
   max-width: 400px;
 }
@@ -801,7 +856,7 @@ body {
   left: 50%;
   z-index: -1;
   top: 50%;
-  background: rgba(130, 154, 176, 0.9);
+  background: rgba(51, 255, 255, 0.1);
   -webkit-filter: blur(5px);
   filter: blur(10px);
   width: 100%;
@@ -946,7 +1001,7 @@ body {
 }
 
 .products-subpage {
-  background: linear-gradient(180deg, rgba(16, 42, 66, 0.8), rgba(153, 255, 255, 0.5));
+  background: linear-gradient(180deg, rgba(0, 179, 179, 0.3), rgba(153, 255, 255, 0.5));
   min-height: 100vh;
 }
 
@@ -1042,6 +1097,10 @@ body {
   display: block;
 }
 
+.products-end-about-text {
+  margin: 2rem 0;
+}
+
 .button-for-options {
   width: 100%;
   max-width: 620px;
@@ -1056,10 +1115,10 @@ body {
   cursor: pointer;
   border-radius: 0.25rem;
   transition: all 0.3s linear;
-  background: rgba(72, 100, 127, 0.9);
+  background: rgba(130, 154, 176, 0.9);
   border: rgba(16, 42, 66, 0.4) 0.2rem dotted;
   font-family: "Grenze";
-  color: #063251;
+  color: #324d67;
   text-transform: capitalize;
   letter-spacing: 0.1rem;
   font-size: 1.5rem;
@@ -1101,7 +1160,7 @@ body {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   border-radius: 0.25rem;
   z-index: -2;
-  background: linear-gradient(180deg, rgba(153, 255, 255, 0.3), rgba(153, 255, 255, 0.4), rgba(0, 0, 0, 0.4));
+  background: linear-gradient(180deg, rgba(51, 255, 255, 0.1), rgba(0, 255, 255, 0.3));
   filter: blur(2px);
 }
 
@@ -1111,12 +1170,12 @@ body {
   display: grid;
   max-width: 620px;
   margin: 1rem auto 0 auto;
-  grid-template-columns: 1fr 1fr;
   align-items: center;
   padding: 0.5rem;
 }
 
-.Ponponetjes-img-text {
+.Ponponetjes-img-text,
+.headbands-img-text, .animal-img-text {
   grid-template-columns: 1fr;
   place-items: center;
 }
@@ -1136,6 +1195,14 @@ body {
   height: 100%;
 }
 
+.purchase-price-btn {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
 .img-container-headbands {
   max-height: 15rem;
 }
@@ -1146,7 +1213,7 @@ body {
 }
 
 .prices-center {
-  background: linear-gradient(90deg, #00b3b3, #104e7a);
+  background: linear-gradient(90deg, #66ffff, rgba(26, 106, 162, 0.5));
   display: grid;
   border-radius: 1rem;
   width: 90%;
@@ -1181,7 +1248,7 @@ body {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   border-radius: 0.25rem;
   z-index: -2;
-  background: linear-gradient(45deg, rgba(51, 255, 255, 0.4), rgba(0, 0, 0, 0.1));
+  background: linear-gradient(45deg, rgba(51, 255, 255, 0.2), rgba(0, 0, 0, 0.1));
   filter: blur(2px);
 }
 
@@ -1248,6 +1315,11 @@ body {
   }
 }
 @media screen and (min-width: 450px) {
+  .logo:not(.main-logo) {
+    color: #243a52;
+    font-weight: 900;
+  }
+
   .navbar-subpage {
     background: url("/wave-haikei-2.70ea800a.svg") center/cover no-repeat;
     overflow: visible;

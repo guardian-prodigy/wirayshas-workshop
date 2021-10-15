@@ -182,34 +182,48 @@ var _Large2 = _interopRequireDefault(require("../../../img/pon-balls/Large2.jpg"
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// imports 
+// imports
 // end of imports
 var PonponetjesCenterProducts = document.querySelector(".Ponponetje-center");
 var OneColoredBtn = document.querySelector(".one-colored");
 var TwoColoredBtn = document.querySelector(".two-colored");
 var PonponetjesImages1 = [_Small.default, _Medium.default, _Large.default];
 var PonponetjesImages2 = [_Small2.default, _Medium2.default, _Large2.default];
-var PonponetjesTexts1 = ["small: srd 10", "medium: srd 12.50", "large: srd 15.00"];
-var PonponetjesTexts2 = ["small: srd 12.50", "medium: srd 15.00", "large: srd 20.00"];
+var PonponetjesTexts1 = ["srd 10.00", "srd 12.50", "srd 15.00"];
+var PonponetjesTexts2 = ["srd 12.50", "srd 15.00", "srd 20.00"];
+var Sizes = ['small', 'medium', 'large'];
+var purchaseBtns = ["Buy Now"];
 var PonponetjesArr1 = [{
   img: PonponetjesImages1[0],
-  text: PonponetjesTexts1[0]
+  text: PonponetjesTexts1[0],
+  btn: purchaseBtns[0],
+  size: Sizes[0]
 }, {
   img: PonponetjesImages1[1],
-  text: PonponetjesTexts1[1]
+  text: PonponetjesTexts1[1],
+  btn: purchaseBtns[0],
+  size: Sizes[1]
 }, {
   img: PonponetjesImages1[2],
-  text: PonponetjesTexts1[2]
+  text: PonponetjesTexts1[2],
+  btn: purchaseBtns[0],
+  size: Sizes[2]
 }];
 var PonponetjesArr2 = [{
   img: PonponetjesImages2[0],
-  text: PonponetjesTexts2[0]
+  text: PonponetjesTexts2[0],
+  btn: purchaseBtns[0],
+  size: Sizes[0]
 }, {
   img: PonponetjesImages2[1],
-  text: PonponetjesTexts2[1]
+  text: PonponetjesTexts2[1],
+  btn: purchaseBtns[0],
+  size: Sizes[1]
 }, {
   img: PonponetjesImages2[2],
-  text: PonponetjesTexts2[2]
+  text: PonponetjesTexts2[2],
+  btn: purchaseBtns[0],
+  size: Sizes[2]
 }];
 window.addEventListener("DOMContentLoaded", function () {
   PonponetjesDisplay1(), Btns();
@@ -217,14 +231,14 @@ window.addEventListener("DOMContentLoaded", function () {
 
 function PonponetjesDisplay1() {
   var items = PonponetjesArr1.map(function (item) {
-    return "<div class=\"Ponponetjes-img-text\">\n    <div class=\"img-container img-container-Ponponetjes\">\n      <img src=".concat(item.img, " alt=\"\" />\n    </div>\n    <p class=\"about-text text\">\n      ").concat(item.text, "\n    </p>\n  </div>");
+    return "<div class=\"Ponponetjes-img-text\">\n    <div class=\"img-container img-container-Ponponetjes\">\n      <img src=".concat(item.img, " alt=\"\" />\n    </div>\n    <p class=\"about-text text\">").concat(item.size, "</p>\n    <div class=\"purchase-price-btn\">\n    <p class=\"about-text text\">\n      ").concat(item.text, "\n    </p>\n    <a href=\"https://wa.me/+5978979639\" class=\"purchase-btn-for-products\">").concat(item.btn, "</a>\n    </div>\n  </div>");
   }).join("");
   PonponetjesCenterProducts.innerHTML = items;
 }
 
 function PonponetjesDisplay2() {
   var items = PonponetjesArr2.map(function (item) {
-    return "<div class=\"Ponponetjes-img-text\">\n    <div class=\"img-container img-container-Ponponetjes\">\n      <img src=".concat(item.img, " alt=\"\" />\n    </div>\n    <p class=\"about-text text\">\n      ").concat(item.text, "\n    </p>\n  </div>");
+    return "<div class=\"Ponponetjes-img-text\">\n    <div class=\"img-container img-container-Ponponetjes\">\n      <img src=".concat(item.img, " alt=\"\" />\n    </div>\n    <p class=\"about-text text\">").concat(item.size, "</p>\n    <div class=\"purchase-price-btn\">\n    <p class=\"about-text text\">\n      ").concat(item.text, "\n    </p>\n    <a href=\"https://wa.me/+5978979639\" class=\"purchase-btn-for-products\">").concat(item.btn, "</a>\n    </div>\n  </div>");
   }).join("");
   PonponetjesCenterProducts.innerHTML = items;
 }
@@ -317,7 +331,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58336" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64855" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

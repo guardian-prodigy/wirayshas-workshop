@@ -3,7 +3,7 @@
 // products main
 .products-center {
   min-height: 100vh;
-  background: linear-gradient(180deg, $clr-grey-1 50%, $clr-grey-8 60%);
+  background: linear-gradient(-215deg, $primary-aqua-1 50%, $primary-aqua-4 60%);
   .article {
     padding: 1rem;
     display: grid;
@@ -20,7 +20,7 @@
       border-radius: $border-radius;
       position: relative;
       z-index: 1;
-      background: rgba($clr-grey-6, 1);
+      background: rgba($primary-aqua-5, 0.4);
       box-shadow: $dark-shadow;
       max-width: 400px;
       .img-container {
@@ -67,7 +67,7 @@
       left: 50%;
       z-index: -1;
       top: 50%;
-      background: rgba($clr-grey-6, 0.9);
+      background: (rgba($primary-aqua-3, 0.1));
       -webkit-filter: blur(5px);
       filter: blur(10px);
       width: 100%;
@@ -219,7 +219,7 @@
 .products-subpage {
   background: linear-gradient(
     180deg,
-    rgba($clr-grey-1, 0.8),
+    rgba($primary-aqua-5, 0.3),
     rgba($primary-aqua-1, 0.5)
   );
   min-height: 100vh;
@@ -315,6 +315,9 @@
     }
   }
 }
+.products-end-about-text {
+  margin: 2rem 0;
+}
 // end of main-center-subpage: zodiac,
 
 // main-center-subpage: animals
@@ -331,7 +334,7 @@
     cursor: pointer;
     border-radius: $border-radius;
     transition: $transition;
-    background: rgba($clr-grey-4, 0.9);
+    background: rgba($clr-grey-6, 0.9);
     border: rgba($clr-grey-1, 0.4) 0.2rem dotted;
     @include article-text();
     &:hover,
@@ -354,9 +357,8 @@
     z-index: -2;
     background: linear-gradient(
       180deg,
-      rgba($primary-aqua-1, 0.3),
-      rgba($primary-aqua-1, 0.4),
-      rgba(0, 0, 0, 0.4)
+      rgba($primary-aqua-3, 0.1),
+      rgba($primary-aqua-4, 0.3)
     );
     filter: blur(2px);
   }
@@ -367,11 +369,11 @@
   display: grid;
   max-width: $fixed-width;
   margin: 1rem auto 0 auto;
-  grid-template-columns: 1fr 1fr;
   align-items: center;
   padding: 0.5rem;
 }
-.Ponponetjes-img-text {
+.Ponponetjes-img-text,
+ .headbands-img-text, .animal-img-text{
   grid-template-columns: 1fr;
   place-items: center;
 }
@@ -387,6 +389,13 @@
     width: 100%;
     height: 100%;
   }
+}
+.purchase-price-btn {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
 }
 .img-container-headbands {
   max-height: 15rem;

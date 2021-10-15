@@ -230,11 +230,13 @@ var AllExternalLinks = [{
   id: 4,
   linkNumber: links[3],
   titleNumber: titles[3]
-}, {
-  id: 5,
-  linkNumber: links[4],
-  titleNumber: titles[4]
-}]; // end of arrays
+} // zodiac tag
+// {
+//   id: 5,
+//   linkNumber: links[4],
+//   titleNumber: titles[4],
+// },
+]; // end of arrays
 // variables
 
 var productArticle = document.querySelector(".article");
@@ -301,7 +303,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58336" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64855" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

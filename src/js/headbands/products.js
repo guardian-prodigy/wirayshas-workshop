@@ -9,40 +9,47 @@ const OneColoredBtn = document.querySelector(".one-colored");
 const TwoColoredBtn = document.querySelector(".two-colored");
 const HeadbandsImages1 = [FirstO1, SecondO1, ThirdO1];
 const HeadbandsImages2 = [FirstO2, SecondO2, ThirdO2];
-const HeadbandsTexts1 = [
-  `Lorem ipsum, dolor sit amet consectetur adipisicing facere,
-    inventore atque, neque dolorem?`,
-];
-const HeadbandsTexts2 = [
-  `Lorem ipsum, dolor sit amet consectetur adipisicing facere,
-    inventore atque, neque dolorem?`,
-];
+const HeadbandsTexts1 = [`40 srd`];
+const HeadbandsTexts2 = [`50 srd`];
+const purchaseBtns = ["Buy Now"];
 const HeadbandsArr1 = [
   {
     img: HeadbandsImages1[0],
     text: HeadbandsTexts1[0],
+    btn: purchaseBtns[0],
+    btn: purchaseBtns[0],
   },
   {
     img: HeadbandsImages1[1],
     text: HeadbandsTexts1[0],
+    btn: purchaseBtns[0],
+    btn: purchaseBtns[0],
   },
   {
     img: HeadbandsImages1[2],
     text: HeadbandsTexts1[0],
+    btn: purchaseBtns[0],
+    btn: purchaseBtns[0],
   },
 ];
 const HeadbandsArr2 = [
   {
     img: HeadbandsImages2[0],
     text: HeadbandsTexts2[0],
+    btn: purchaseBtns[0],
+    btn: purchaseBtns[0],
   },
   {
     img: HeadbandsImages2[1],
     text: HeadbandsTexts2[0],
+    btn: purchaseBtns[0],
+    btn: purchaseBtns[0],
   },
   {
     img: HeadbandsImages2[2],
     text: HeadbandsTexts2[0],
+    btn: purchaseBtns[0],
+    btn: purchaseBtns[0],
   },
 ];
 window.addEventListener("DOMContentLoaded", () => {
@@ -55,9 +62,14 @@ export function headbandsDisplay1() {
     <div class="img-container img-container-headbands">
       <img src=${item.img} alt="" />
     </div>
-    <p class="text">
+    <div>
+    <div class="purchase-price-btn">
+    <p class="about-text text">
       ${item.text}
     </p>
+    <a href="https://wa.me/+5978979639" class="purchase-btn-for-products">${item.btn}</a>
+    </div>
+    </div>
   </div>`
   ).join("");
   headbandsCenterProducts.innerHTML = items;
@@ -69,9 +81,12 @@ export function headbandsDisplay2() {
     <div class="img-container img-container-headbands">
       <img src=${item.img} alt="" />
     </div>
-    <p class="text">
+    <div class="purchase-price-btn">
+    <p class="about-text text">
       ${item.text}
     </p>
+    <a href="https://wa.me/+5978979639" class="purchase-btn-for-products">${item.btn}</a>
+    </div>
   </div>`
   ).join("");
   headbandsCenterProducts.innerHTML = items;

@@ -184,10 +184,16 @@ function AnimalsDisplayPrices() {
 }
 
 AnimalsDisplayPrices();
-},{}],"../../img/zodiac-pics/images.jpg":[function(require,module,exports) {
-module.exports = "/images.f91fdcb8.jpg";
-},{}],"../../img/zodiac-pics/person-1.jpeg":[function(require,module,exports) {
-module.exports = "/person-1.1da6e2b2.jpeg";
+},{}],"../img/Bears/onecolored-1.jpg":[function(require,module,exports) {
+module.exports = "/onecolored-1.cb751932.jpg";
+},{}],"../img/Bears/onecolored-2.jpg":[function(require,module,exports) {
+module.exports = "/onecolored-2.cec69e57.jpg";
+},{}],"../img/Bears/2colored-1.jpg":[function(require,module,exports) {
+module.exports = "/2colored-1.6fe0821b.jpg";
+},{}],"../img/Bears/2colored-2.jpg":[function(require,module,exports) {
+module.exports = "/2colored-2.94c5abaa.jpg";
+},{}],"../img/Bears/2colored-3.jpg":[function(require,module,exports) {
+module.exports = "/2colored-3.5524cb4b.jpg";
 },{}],"../js/animals/products.js":[function(require,module,exports) {
 "use strict";
 
@@ -198,38 +204,51 @@ exports.AnimalsDisplay1 = AnimalsDisplay1;
 exports.AnimalsDisplay2 = AnimalsDisplay2;
 exports.Btns = Btns;
 
-var _images = _interopRequireDefault(require("../../../img/zodiac-pics/images.jpg"));
+var _onecolored = _interopRequireDefault(require("../../img/Bears/onecolored-1.jpg"));
 
-var _person = _interopRequireDefault(require("../../../img/zodiac-pics/person-1.jpeg"));
+var _onecolored2 = _interopRequireDefault(require("../../img/Bears/onecolored-2.jpg"));
+
+var _colored = _interopRequireDefault(require("../../img/Bears/2colored-1.jpg"));
+
+var _colored2 = _interopRequireDefault(require("../../img/Bears/2colored-2.jpg"));
+
+var _colored3 = _interopRequireDefault(require("../../img/Bears/2colored-3.jpg"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var AnimalCenterProducts = document.querySelector(".animals-center");
 var OneColoredBtn = document.querySelector(".one-colored");
 var TwoColoredBtn = document.querySelector(".two-colored");
-var AnimalImages1 = [_images.default];
-var AnimalImages2 = [_person.default];
-var AnimalTexts1 = ["Lorem ipsum, dolor sit amet consectetur adipisicing facere,\n    inventore atque, neque dolorem?"];
-var AnimalTexts2 = ["Lorem ipsum, dolor sit amet consectetur adipisicing facere,\n    inventore atque, neque dolorem?"];
+var AnimalImages1 = [_onecolored.default, _onecolored2.default];
+var AnimalImages2 = [_colored.default, _colored2.default, _colored3.default];
+var AnimalTexts1 = ["40 srd "];
+var AnimalTexts2 = ["50 srd"];
+var btns = ["Buy Now"];
 var AnimalArr1 = [{
   img: AnimalImages1[0],
-  text: AnimalTexts1[0]
+  text: AnimalTexts1[0],
+  btn: btns[0]
 }, {
-  img: AnimalImages1[0],
-  text: AnimalTexts1[0]
-}, {
-  img: AnimalImages1[0],
-  text: AnimalTexts1[0]
-}];
+  img: AnimalImages1[1],
+  text: AnimalTexts1[0],
+  btn: btns[0]
+} // {
+//   img: AnimalImages1[0],
+//   text: AnimalTexts1[0],
+// },
+];
 var AnimalArr2 = [{
   img: AnimalImages2[0],
-  text: AnimalTexts2[0]
+  text: AnimalTexts2[0],
+  btn: btns[0]
 }, {
-  img: AnimalImages2[0],
-  text: AnimalTexts2[0]
+  img: AnimalImages2[1],
+  text: AnimalTexts2[0],
+  btn: btns[0]
 }, {
-  img: AnimalImages2[0],
-  text: AnimalTexts2[0]
+  img: AnimalImages2[2],
+  text: AnimalTexts2[0],
+  btn: btns[0]
 }];
 window.addEventListener("DOMContentLoaded", function () {
   AnimalsDisplay1(), Btns();
@@ -237,14 +256,14 @@ window.addEventListener("DOMContentLoaded", function () {
 
 function AnimalsDisplay1() {
   var items = AnimalArr1.map(function (item) {
-    return "<div class=\"animal-img-text\">\n    <div class=\"img-container img-container-animal\">\n      <img src=".concat(item.img, " alt=\"\" />\n    </div>\n    <p class=\"text\">\n      ").concat(item.text, "\n    </p>\n  </div>");
+    return "<div class=\"animal-img-text\">\n    <div class=\"img-container img-container-animal\">\n      <img src=".concat(item.img, " alt=\"\" />\n    </div>\n    <div class=\"purchase-price-btn\">\n    <p class=\"about-text text\">\n      ").concat(item.text, "\n    </p>\n    <a href=\"https://wa.me/+5978979639\" class=\"purchase-btn-for-products\">").concat(item.btn, "</a>\n    </div>\n  </div>");
   }).join("");
   AnimalCenterProducts.innerHTML = items;
 }
 
 function AnimalsDisplay2() {
   var items = AnimalArr2.map(function (item) {
-    return "<div class=\"animal-img-text\">\n    <div class=\"img-container img-container-animal\">\n      <img src=".concat(item.img, " alt=\"\" />\n    </div>\n    <p class=\"text\">\n      ").concat(item.text, "\n    </p>\n  </div>");
+    return "<div class=\"animal-img-text\">\n    <div class=\"img-container img-container-animal\">\n      <img src=".concat(item.img, " alt=\"\" />\n    </div>\n    <div class=\"purchase-price-btn\">\n    <p class=\"about-text text\">\n      ").concat(item.text, "\n    </p>\n    <a href=\"https://wa.me/+5978979639\" class=\"purchase-btn-for-products\">").concat(item.btn, "</a>\n    </div>\n  </div>");
   }).join("");
   AnimalCenterProducts.innerHTML = items;
 }
@@ -257,7 +276,7 @@ function Btns() {
     return AnimalsDisplay2();
   });
 }
-},{"../../../img/zodiac-pics/images.jpg":"../../img/zodiac-pics/images.jpg","../../../img/zodiac-pics/person-1.jpeg":"../../img/zodiac-pics/person-1.jpeg"}],"../js/animals/animals.js":[function(require,module,exports) {
+},{"../../img/Bears/onecolored-1.jpg":"../img/Bears/onecolored-1.jpg","../../img/Bears/onecolored-2.jpg":"../img/Bears/onecolored-2.jpg","../../img/Bears/2colored-1.jpg":"../img/Bears/2colored-1.jpg","../../img/Bears/2colored-2.jpg":"../img/Bears/2colored-2.jpg","../../img/Bears/2colored-3.jpg":"../img/Bears/2colored-3.jpg"}],"../js/animals/animals.js":[function(require,module,exports) {
 "use strict";
 
 require("../globalJs/sidebar-subpage");
@@ -293,7 +312,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58336" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64855" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

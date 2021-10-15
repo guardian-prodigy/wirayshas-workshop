@@ -33,7 +33,7 @@
 }
 @mixin article-text {
   font-family: $font-family-1;
-  color: $clr-primary-1;
+  color: $clr-grey-3;
   text-transform: capitalize;
   letter-spacing: $letter-spacing;
   font-size: 1.5rem;
@@ -113,3 +113,12 @@
   }
 }
 // end of footers
+//  media-querries
+@mixin mq($size) {
+  @media screen and (min-width: $size) {
+    @content;
+  }
+}
+//  end of media-querries
+//  each loops
+//  end of each loops

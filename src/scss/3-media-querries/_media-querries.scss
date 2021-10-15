@@ -9,7 +9,7 @@ $breakpoints: (
 );
 @media screen and (max-width: 348px) {
   .price-letters,
-  .price-zodiac {
+  .price-zodiac{
     font-size: 1.2rem;
     span {
       font-size: 1.3rem;
@@ -66,6 +66,10 @@ $breakpoints: (
   }
 }
 @media screen and (min-width: 450px) {
+  .logo:not(.main-logo) {
+    color: $clr-grey-2;
+    font-weight: 900;
+  }
   .navbar-subpage {
     background: url('../../svgs/wave-haikei-2.svg') center/cover no-repeat;
     overflow: visible;
