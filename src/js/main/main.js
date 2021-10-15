@@ -15,7 +15,7 @@ const links = [
 const titles = [
   "ponponnetjes",
   "headbands",
-  "animals",
+  "pon animals",
   "letters",
   "zodiac signs",
 ];

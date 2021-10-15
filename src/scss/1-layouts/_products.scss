@@ -7,9 +7,9 @@
   .article {
     padding: 1rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
     gap: 1rem;
-    max-width: $max-width;
+    max-width: 1300px;
     margin: 0 auto;
     justify-content: center;
     overflow-x: hidden;
@@ -22,7 +22,7 @@
       z-index: 1;
       background: rgba($primary-aqua-5, 0.4);
       box-shadow: $dark-shadow;
-      max-width: 400px;
+      max-width: 450px;
       .img-container {
         max-height: 13rem;
         max-width: 15rem;

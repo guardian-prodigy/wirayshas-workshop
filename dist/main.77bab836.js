@@ -172,7 +172,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 // arrays
 var links = ["ponponetjes.html", "headbands.html", "animals.html", "letters.html", "zodiac.html"];
-var titles = ["ponponnetjes", "headbands", "animals", "letters", "zodiac signs"];
+var titles = ["ponponnetjes", "headbands", "pon animals", "letters", "zodiac signs"];
 var faders = ['fade-left', 'fade-right'];
 var images = [_ponpons.default, _headbands.default, _animals.default, _letters.default, _zodiac.default];
 var texts = ["ponponetjes kunt uw gebruiken als decoratie voor uw hand-tas, lamp, kast, en nog veel meer!<br>druk <span><a href=".concat(links[0], ">hier</a></span> om meer ponponetjes te bekijken :)"), "headbands kunt uw gebruiken om uw hoofd een nieuwe look te geven! P.S. ze zijn heel handig voor feestjes \n  <br>druk <span><a href=".concat(links[1], ">hier</a></span> om meer dieren te bekijken"), "animals kunt uw gebruiken als decoratie voor uw tassen, lamp, kast, en nog veel meer!<br>druk <span><a href=".concat(links[2], ">hier</a></span> om meer animals te bekijken :)"), "letters kunt uw gebruiken om uw tas, lamp, en andere dingen te verzieren! uw kunt ze ook gebruiken om aan uw partner te geven;) <br>druk <span><a href=".concat(links[3], ">hier</a></span> om meer letters te bekijken :)"), "ponponetjes kunt uw gebruiken als decoratie voor uw hand-tas, lamp, kast, en nog veel meer! druk <span><a href=".concat(links[4], ">hier</a></span> om meer ponponetjes te zien :)")];
@@ -303,7 +303,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64855" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62641" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
