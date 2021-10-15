@@ -86,6 +86,17 @@
     color: #988a8a;
   }
 }
+@keyframes exploreBtn {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
 html {
   scroll-behavior: smooth;
 }
@@ -209,16 +220,19 @@ body {
   cursor: pointer;
   padding: 0.5rem 0.25rem;
   border: none;
-  -webkit-animation: SlideInRight 1s ease-in 0.2s 1 forwards;
-  animation: SlideInRight 1s ease-in 0.2s 1 forwards, FaBars 1.5s linear infinite forwards alternate;
+  background: linear-gradient(215deg, rgba(0, 255, 255, 0.9), #99ffff);
+  animation: exploreBtn 20s linear infinite forwards;
+  background-size: 400%;
+  background-blend-mode: saturation;
 }
 .explore-btn:hover {
   color: #99ffff;
-  background: #104e7a;
+  background: #9eb2c7;
 }
 .explore-btn a {
-  color: inherit;
+  color: #102a42;
   text-decoration: none;
+  font-size: 1.4rem;
 }
 
 .fa-bars {

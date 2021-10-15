@@ -23,15 +23,18 @@
   cursor: pointer;
   padding: 0.5rem 0.25rem;
   border: none;
-  -webkit-animation: SlideInRight 1s ease-in 0.2s 1 forwards;
-  animation: SlideInRight 1s ease-in 0.2s 1 forwards, FaBars 1.5s linear infinite forwards alternate;
+  background: linear-gradient(215deg, rgba($primary-aqua-4, 0.9), $primary-aqua-1);
+  animation: exploreBtn 20s linear infinite forwards;
+  background-size: 400%;
+  background-blend-mode:saturation;
   &:hover {
     color: $primary-aqua-1;
-    background: $clr-primary-2;
+    background: $clr-grey-7;
   }
   a {
-    color: inherit;
+    color: $clr-grey-1;
     text-decoration: none;
+    font-size: 1.4rem;
   }
 }
 // end of main html explore btn
