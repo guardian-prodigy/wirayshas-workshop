@@ -74,6 +74,7 @@
 .btn-sidebar  {
   z-index: 1005;
   width: 12rem;
+  opacity: 0;
   cursor: pointer;
   display: block;
   text-align: center;
@@ -93,9 +94,9 @@
   color: $primary-grey-4;
   font-size: 1.3rem;
   font-family: $font-family-3;
+  transform: translateY(-30px);
   &:hover {
     margin-left: 1rem;
-    
   }
 }
 .btn-sidebar-subpage {

@@ -3,7 +3,6 @@ import Headbands from "../../img/imagesForProductsMain/headbands.jpg";
 import Animals from "../../img/imagesForProductsMain/animals.jpg";
 import Letters from "../../img/imagesForProductsMain/letters.jpg";
 import ZodiacSigns from "../../img/imagesForProductsMain/zodiac.jpg";
-import '../globalJs/sidebar-main';
 // arrays
 const links = [
   "ponponetjes.html",
@@ -106,7 +105,6 @@ const AllExternalLinks = [
 const productArticle = document.querySelector(".article");
 const sidebarBtns = document.querySelector(".sidebar-btns");
 const sidebar = document.querySelector(".sidebar");
-
 // end of variables
 
 // addEventListers
@@ -120,7 +118,6 @@ function BtnDisplay() {
     (item) =>
       `<a class="btn-sidebar" href=${item.linkNumber}>${item.titleNumber}</a>`
   ).join("");
-  console.log(items);
   sidebarBtns.innerHTML = items;
   const sidebarBtn = document.querySelectorAll(".btn-sidebar");
   sidebarBtn.forEach((btn) => {

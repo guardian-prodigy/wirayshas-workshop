@@ -117,193 +117,47 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../js/ponponetjes/price.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.DisplayPonponetjesPrices = DisplayPonponetjesPrices;
-var PonPonetjesCenter = document.querySelector(".prices-Ponponetjes");
-var PonPonetjesprices = ['10.00, 12.50, 15.00', '12.50, 15.00, 17.50', '2.50'];
-var PonPonetjesocialIcons = "<ul class=\"prices-social-icons-zodiac\">\n<li><i class=\"fas hand-pointing-right fa-hand-point-right\"></i></li>\n<li>\n  <a href=\"https://wa.me/+5978979639\">\n      <i class=\"fab fa-whatsapp price-icons-zodiac\"></i>\n  </a>\n  <a href=\"https://instagram.com/wiraysha_workshop?igshid=4byv5ud4kl4f\">\n      <i class=\"fab fa-instagram price-icons-zodiac\"></i>\n  </a>\n  </li>\n</ul>";
-var PonPonetjespriceText = ["one colored ponpon:<br><span>srd: ".concat(PonPonetjesprices[0]), "two colored ponpon:<br><span>srd: ".concat(PonPonetjesprices[1]), "per extra color: <span>srd ".concat(PonPonetjesprices[2], "</span>"), "<strong>the prijzen zijn gelijst in volg orde van small, medium, en large!</strong><br>".concat(PonPonetjesocialIcons)];
-var PonPonetjespriceArr = [{
-  text: PonPonetjespriceText[0]
-}, {
-  text: PonPonetjespriceText[1]
-}, {
-  text: PonPonetjespriceText[2]
-}, {
-  text: PonPonetjespriceText[3]
-}];
-
-function DisplayPonponetjesPrices() {
-  var Prices = PonPonetjespriceArr.map(function (price) {
-    return "<li class=\"price-PonPonetjes\">".concat(price.text, "</li>");
-  }).join("");
-  PonPonetjesCenter.innerHTML = Prices;
-}
-
-DisplayPonponetjesPrices();
-},{}],"../../img/pon-balls/Small1.jpg":[function(require,module,exports) {
-module.exports = "/Small1.c365f19f.jpg";
-},{}],"../../img/pon-balls/Medium1.jpg":[function(require,module,exports) {
-module.exports = "/Medium1.f1ee3429.jpg";
-},{}],"../../img/pon-balls/Large1.jpg":[function(require,module,exports) {
-module.exports = "/Large1.066dcfab.jpg";
-},{}],"../../img/pon-balls/Small2.jpg":[function(require,module,exports) {
-module.exports = "/Small2.c7b3dbbb.jpg";
-},{}],"../../img/pon-balls/Medium2.jpg":[function(require,module,exports) {
-module.exports = "/Medium2.4417cec9.jpg";
-},{}],"../../img/pon-balls/Large2.jpg":[function(require,module,exports) {
-module.exports = "/Large2.14ca04ea.jpg";
-},{}],"../js/ponponetjes/products.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.PonponetjesDisplay1 = PonponetjesDisplay1;
-exports.PonponetjesDisplay2 = PonponetjesDisplay2;
-exports.Btns = Btns;
-
-var _Small = _interopRequireDefault(require("../../../img/pon-balls/Small1.jpg"));
-
-var _Medium = _interopRequireDefault(require("../../../img/pon-balls/Medium1.jpg"));
-
-var _Large = _interopRequireDefault(require("../../../img/pon-balls/Large1.jpg"));
-
-var _Small2 = _interopRequireDefault(require("../../../img/pon-balls/Small2.jpg"));
-
-var _Medium2 = _interopRequireDefault(require("../../../img/pon-balls/Medium2.jpg"));
-
-var _Large2 = _interopRequireDefault(require("../../../img/pon-balls/Large2.jpg"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// imports
-// end of imports
-var PonponetjesCenterProducts = document.querySelector(".Ponponetje-center");
-var OneColoredBtn = document.querySelector(".one-colored");
-var TwoColoredBtn = document.querySelector(".two-colored");
-var PonponetjesImages1 = [_Small.default, _Medium.default, _Large.default];
-var PonponetjesImages2 = [_Small2.default, _Medium2.default, _Large2.default];
-var PonponetjesTexts1 = ["srd 10.00", "srd 12.50", "srd 15.00"];
-var PonponetjesTexts2 = ["srd 12.50", "srd 15.00", "srd 20.00"];
-var Sizes = ['small', 'medium', 'large'];
-var purchaseBtns = ["Buy Now"];
-var PonponetjesArr1 = [{
-  img: PonponetjesImages1[0],
-  text: PonponetjesTexts1[0],
-  btn: purchaseBtns[0],
-  size: Sizes[0]
-}, {
-  img: PonponetjesImages1[1],
-  text: PonponetjesTexts1[1],
-  btn: purchaseBtns[0],
-  size: Sizes[1]
-}, {
-  img: PonponetjesImages1[2],
-  text: PonponetjesTexts1[2],
-  btn: purchaseBtns[0],
-  size: Sizes[2]
-}];
-var PonponetjesArr2 = [{
-  img: PonponetjesImages2[0],
-  text: PonponetjesTexts2[0],
-  btn: purchaseBtns[0],
-  size: Sizes[0]
-}, {
-  img: PonponetjesImages2[1],
-  text: PonponetjesTexts2[1],
-  btn: purchaseBtns[0],
-  size: Sizes[1]
-}, {
-  img: PonponetjesImages2[2],
-  text: PonponetjesTexts2[2],
-  btn: purchaseBtns[0],
-  size: Sizes[2]
-}];
-window.addEventListener("DOMContentLoaded", function () {
-  PonponetjesDisplay1(), Btns();
-});
-
-function PonponetjesDisplay1() {
-  var items = PonponetjesArr1.map(function (item) {
-    return "<div class=\"Ponponetjes-img-text\">\n    <div class=\"img-container img-container-Ponponetjes\">\n      <img src=".concat(item.img, " alt=\"\" />\n    </div>\n    <p class=\"about-text text\">").concat(item.size, "</p>\n    <div class=\"purchase-price-btn\">\n    <p class=\"about-text text\">\n      ").concat(item.text, "\n    </p>\n    <a href=\"https://wa.me/+5978979639\" class=\"purchase-btn-for-products\">").concat(item.btn, "</a>\n    </div>\n  </div>");
-  }).join("");
-  PonponetjesCenterProducts.innerHTML = items;
-}
-
-function PonponetjesDisplay2() {
-  var items = PonponetjesArr2.map(function (item) {
-    return "<div class=\"Ponponetjes-img-text\">\n    <div class=\"img-container img-container-Ponponetjes\">\n      <img src=".concat(item.img, " alt=\"\" />\n    </div>\n    <p class=\"about-text text\">").concat(item.size, "</p>\n    <div class=\"purchase-price-btn\">\n    <p class=\"about-text text\">\n      ").concat(item.text, "\n    </p>\n    <a href=\"https://wa.me/+5978979639\" class=\"purchase-btn-for-products\">").concat(item.btn, "</a>\n    </div>\n  </div>");
-  }).join("");
-  PonponetjesCenterProducts.innerHTML = items;
-}
-
-function Btns() {
-  OneColoredBtn.addEventListener("click", function (e) {
-    return PonponetjesDisplay1();
-  });
-  TwoColoredBtn.addEventListener("click", function (e) {
-    return PonponetjesDisplay2();
-  });
-}
-},{"../../../img/pon-balls/Small1.jpg":"../../img/pon-balls/Small1.jpg","../../../img/pon-balls/Medium1.jpg":"../../img/pon-balls/Medium1.jpg","../../../img/pon-balls/Large1.jpg":"../../img/pon-balls/Large1.jpg","../../../img/pon-balls/Small2.jpg":"../../img/pon-balls/Small2.jpg","../../../img/pon-balls/Medium2.jpg":"../../img/pon-balls/Medium2.jpg","../../../img/pon-balls/Large2.jpg":"../../img/pon-balls/Large2.jpg"}],"../js/globalJs/sidebar-subpage.js":[function(require,module,exports) {
+})({"../js/globalJs/sidebar-main.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.sidebartoggle = sidebartoggle;
-exports.ListItemsSidebar = ListItemsSidebar;
-var btns = document.querySelectorAll(".btn-js");
-var sidebar = document.querySelector(".sidebar-subpage");
-var btnSidebar = document.querySelectorAll(".btn-sidebar-subpage");
-var priceCenter = document.querySelector(".prices-center");
+var btns = document.querySelectorAll(".fas-js");
+var sidebar = document.querySelector(".sidebar");
+var sidebarHeader = document.querySelector(".sec-center");
+var tl = gsap.timeline({
+  defaults: {
+    duration: 0.3,
+    ease: "circ.in"
+  }
+});
+tl.paused(true);
+tl.to(sidebar, {
+  clipPath: " circle(100% at 0% 0%)",
+  opacity: 1
+}).to(".btn-sidebar", {
+  y: 0,
+  opacity: 1,
+  stagger: .3
+});
 
 function sidebartoggle() {
   btns.forEach(function (btn) {
     btn.addEventListener("click", function (e) {
       if (e.currentTarget.classList.contains("fa-bars")) {
-        sidebar.classList.toggle("show-sidebar");
+        tl.play();
       } else if (e.currentTarget.classList.contains("fa-times")) {
-        sidebar.classList.remove("show-sidebar");
+        tl.timeScale(3);
+        tl.reverse();
       }
     });
   });
 }
 
 sidebartoggle();
-
-function ListItemsSidebar() {
-  btnSidebar.forEach(function (btn) {
-    btn.addEventListener("click", function (e) {
-      if (e.target) {
-        sidebar.classList.remove("show-sidebar");
-      }
-
-      if (e.target.classList.contains("prices-js")) {
-        sidebar.classList.remove("show-sidebar");
-        console.log("hi");
-        priceCenter.classList.toggle("price-center-toggled");
-      }
-    });
-  });
-}
-
-ListItemsSidebar();
-},{}],"../js/ponponetjes/ponponetjes.js":[function(require,module,exports) {
-"use strict";
-
-require("./price");
-
-require("./products");
-
-require("../globalJs/sidebar-subpage");
-},{"./price":"../js/ponponetjes/price.js","./products":"../js/ponponetjes/products.js","../globalJs/sidebar-subpage":"../js/globalJs/sidebar-subpage.js"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -507,5 +361,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","../js/ponponetjes/ponponetjes.js"], null)
-//# sourceMappingURL=/ponponetjes.a5a30ca3.js.map
+},{}]},{},["../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","../js/globalJs/sidebar-main.js"], null)
+//# sourceMappingURL=/sidebar-main.a51229b0.js.map

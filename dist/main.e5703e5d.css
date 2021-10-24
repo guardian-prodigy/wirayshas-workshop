@@ -264,6 +264,7 @@ body {
 .btn-sidebar {
   z-index: 1005;
   width: 12rem;
+  opacity: 0;
   cursor: pointer;
   display: block;
   text-align: center;
@@ -279,6 +280,7 @@ body {
   color: #988a8a;
   font-size: 1.3rem;
   font-family: "Texturina";
+  transform: translateY(-30px);
 }
 .btn-sidebar:hover {
   margin-left: 1rem;
@@ -704,17 +706,16 @@ body {
 }
 
 .sidebar {
-  min-height: 100vh;
-  opacity: 0;
-  visibility: hidden;
+  height: 90%;
+  opacity: 0.5;
   position: fixed;
-  max-width: 600px;
-  transform: translateY(-100%) scale(0.1);
-  inset: 0;
-  border-radius: 50%;
+  max-width: 700px;
   transition: all 0.3s linear;
+  right: 0;
+  top: 0;
+  left: 0;
   z-index: 999;
-  width: 100%;
+  clip-path: circle(0% at 0% 0%);
   padding: 1rem;
 }
 .sidebar .logo {
@@ -726,7 +727,7 @@ body {
   width: 80%;
 }
 .sidebar .sidebar-btns {
-  position: absolute;
+  position: relative;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -743,16 +744,12 @@ body {
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 80%;
+  height: 100%;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   border-radius: 0.25rem;
-  overflow: hidden;
   max-width: 620px;
-  -webkit-clip-path: circle(100% at 0% 0%);
-  clip-path: circle(100% at 0% 0%);
+  clip-path: inherit;
   background: linear-gradient(45deg, #063251 30%, #49a6e9);
-  -webkit-filter: blur(5px);
-  filter: blur(5px);
   z-index: 997;
 }
 

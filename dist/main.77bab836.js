@@ -127,32 +127,6 @@ module.exports = "/animals.c016e7bf.jpg";
 module.exports = "/letters.73a5ec5e.jpg";
 },{}],"../img/imagesForProductsMain/zodiac.jpg":[function(require,module,exports) {
 module.exports = "/zodiac.d0e8e51b.jpg";
-},{}],"../js/globalJs/sidebar-main.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.sidebartoggle = sidebartoggle;
-var btns = document.querySelectorAll(".fas-js");
-var sidebar = document.querySelector(".sidebar");
-var sidebarHeader = document.querySelector(".sec-center");
-
-function sidebartoggle() {
-  btns.forEach(function (btn) {
-    btn.addEventListener("click", function (e) {
-      if (e.currentTarget.classList.contains("fa-bars")) {
-        sidebar.classList.toggle("show-sidebar");
-        sidebarHeader.style.visibility = "hidden";
-      } else if (e.currentTarget.classList.contains("fa-times")) {
-        sidebar.classList.remove("show-sidebar");
-        sidebarHeader.style.visibility = "visible";
-      }
-    });
-  });
-}
-
-sidebartoggle();
 },{}],"../js/main/main.js":[function(require,module,exports) {
 "use strict";
 
@@ -165,8 +139,6 @@ var _animals = _interopRequireDefault(require("../../img/imagesForProductsMain/a
 var _letters = _interopRequireDefault(require("../../img/imagesForProductsMain/letters.jpg"));
 
 var _zodiac = _interopRequireDefault(require("../../img/imagesForProductsMain/zodiac.jpg"));
-
-require("../globalJs/sidebar-main");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -253,7 +225,6 @@ function BtnDisplay() {
   var items = AllExternalLinks.map(function (item) {
     return "<a class=\"btn-sidebar\" href=".concat(item.linkNumber, ">").concat(item.titleNumber, "</a>");
   }).join("");
-  console.log(items);
   sidebarBtns.innerHTML = items;
   var sidebarBtn = document.querySelectorAll(".btn-sidebar");
   sidebarBtn.forEach(function (btn) {
@@ -275,7 +246,7 @@ function Products() {
   }).join("");
   productArticle.innerHTML = product;
 } // end of functions
-},{"../../img/imagesForProductsMain/ponpons.jpg":"../img/imagesForProductsMain/ponpons.jpg","../../img/imagesForProductsMain/headbands.jpg":"../img/imagesForProductsMain/headbands.jpg","../../img/imagesForProductsMain/animals.jpg":"../img/imagesForProductsMain/animals.jpg","../../img/imagesForProductsMain/letters.jpg":"../img/imagesForProductsMain/letters.jpg","../../img/imagesForProductsMain/zodiac.jpg":"../img/imagesForProductsMain/zodiac.jpg","../globalJs/sidebar-main":"../js/globalJs/sidebar-main.js"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"../../img/imagesForProductsMain/ponpons.jpg":"../img/imagesForProductsMain/ponpons.jpg","../../img/imagesForProductsMain/headbands.jpg":"../img/imagesForProductsMain/headbands.jpg","../../img/imagesForProductsMain/animals.jpg":"../img/imagesForProductsMain/animals.jpg","../../img/imagesForProductsMain/letters.jpg":"../img/imagesForProductsMain/letters.jpg","../../img/imagesForProductsMain/zodiac.jpg":"../img/imagesForProductsMain/zodiac.jpg"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -303,7 +274,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64471" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53022" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
