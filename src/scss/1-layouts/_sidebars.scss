@@ -1,9 +1,9 @@
-@use '../0-abstracts/0-abstracts' as *;
-@use '../2-typography/2-typography' as *;
+@use "../0-abstracts/0-abstracts" as *;
+@use "../2-typography/2-typography" as *;
 // sidebar
 .sidebar {
- height: 90%;
-  opacity: .5;
+  height: 90%;
+  opacity: 0.5;
   position: fixed;
   max-width: 700px;
   transition: $transition;
@@ -11,15 +11,22 @@
   top: 0;
   left: 0;
   z-index: 999;
-  clip-path: circle(0% at 0% 0%);
+  -webkit-clip-path: circle(0% at 0% 0%);
+          clip-path: circle(0% at 0% 0%);
   padding: 1rem;
   .logo {
     position: absolute;
     z-index: 1000;
+    display: inline-block;
     top: 1rem;
     left: 0;
     font-size: 2rem;
     width: 80%;
+    margin-bottom: 2rem;
+    transform: translate(-50%, -50%);
+    @media screen and (max-width: 290px) {
+      left: -2rem;
+    }
   }
   .sidebar-btns {
     position: relative;
@@ -30,15 +37,16 @@
     left: 0;
     z-index: 1001;
   }
+  &::after {
+    @include BeforeAfter();
+    max-width: $fixed-width;
+    -webkit-clip-path: inherit;
+            clip-path: inherit;
+    background: linear-gradient(45deg, $clr-primary-1 30%, $clr-primary-5);
+    z-index: 997;
+  }
 }
-.sidebar::after {
-  @include BeforeAfter();
-  max-width: $fixed-width;
-  clip-path: inherit;
-  background: linear-gradient(45deg, $clr-primary-1 30%, $clr-primary-5);
-  z-index: 997;
-  
-}
+
 // end of sidebar
 
 // subpage sidebar
@@ -76,7 +84,6 @@
     rgba($clr-primary-3, 0.99)
   );
   z-index: 997;
-  
 }
 // end of subpage sidebar
 .show-sidebar {

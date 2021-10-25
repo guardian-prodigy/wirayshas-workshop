@@ -126,7 +126,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.sidebartoggle = sidebartoggle;
 var btns = document.querySelectorAll(".fas-js");
 var sidebar = document.querySelector(".sidebar");
-var sidebarHeader = document.querySelector(".sec-center");
+var mainCenter = document.querySelector(".sec-center ul");
 var tl = gsap.timeline({
   defaults: {
     duration: 0.3,
@@ -148,6 +148,7 @@ function sidebartoggle() {
     btn.addEventListener("click", function (e) {
       if (e.currentTarget.classList.contains("fa-bars")) {
         tl.play();
+        mainCenter.toggle(".sec-center-hidden");
       } else if (e.currentTarget.classList.contains("fa-times")) {
         tl.timeScale(3);
         tl.reverse();
@@ -185,7 +186,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53022" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53232" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

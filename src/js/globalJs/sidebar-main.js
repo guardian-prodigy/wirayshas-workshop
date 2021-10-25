@@ -1,6 +1,6 @@
 const btns = document.querySelectorAll(".fas-js");
 const sidebar = document.querySelector(".sidebar");
-const sidebarHeader = document.querySelector(".sec-center");
+const mainCenter = document.querySelector(".sec-center ul");
 const tl = gsap.timeline({
   defaults: { duration: 0.3, ease: "circ.in" },
 });
@@ -20,6 +20,7 @@ export function sidebartoggle() {
     btn.addEventListener("click", (e) => {
       if (e.currentTarget.classList.contains("fa-bars")) {
         tl.play();
+        mainCenter.toggle(".sec-center-hidden");
       } else if (e.currentTarget.classList.contains("fa-times")) {
         tl.timeScale(3);
         tl.reverse();
