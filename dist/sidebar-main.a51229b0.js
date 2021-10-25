@@ -126,7 +126,8 @@ Object.defineProperty(exports, "__esModule", {
 exports.sidebartoggle = sidebartoggle;
 var btns = document.querySelectorAll(".fas-js");
 var sidebar = document.querySelector(".sidebar");
-var mainCenter = document.querySelector(".sec-center ul");
+var mainCenter = document.querySelector(".sec-center");
+var query = window.matchMedia("(max-width: 700px)");
 var tl = gsap.timeline({
   defaults: {
     duration: 0.3,
@@ -140,18 +141,29 @@ tl.to(sidebar, {
 }).to(".btn-sidebar", {
   y: 0,
   opacity: 1,
-  stagger: .3
+  stagger: 0.3
 });
 
 function sidebartoggle() {
   btns.forEach(function (btn) {
     btn.addEventListener("click", function (e) {
       if (e.currentTarget.classList.contains("fa-bars")) {
-        tl.play();
-        mainCenter.toggle(".sec-center-hidden");
+        if (query.matches) {
+          mainCenter.classList.toggle("sec-center-hidden");
+          tl.play();
+        } else {
+          sidebar.classList.toggle("show-sidebar");
+        }
       } else if (e.currentTarget.classList.contains("fa-times")) {
-        tl.timeScale(3);
-        tl.reverse();
+        "sec-center-hidden";
+
+        if (query.matches) {
+          tl.timeScale(3);
+          tl.reverse();
+          mainCenter.classList.remove;
+        } else {
+          sidebar.classList.remove("show-sidebar");
+        }
       }
     });
   });
@@ -186,7 +198,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53232" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50555" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

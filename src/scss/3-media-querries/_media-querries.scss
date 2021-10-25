@@ -1,4 +1,4 @@
-@use '../0-abstracts/variables' as *;
+@use "../0-abstracts/variables" as *;
 $breakpoints: (
   small-1: 348px,
   small-2: 410px,
@@ -9,7 +9,7 @@ $breakpoints: (
 );
 @media screen and (max-width: 348px) {
   .price-letters,
-  .price-zodiac{
+  .price-zodiac {
     font-size: 1.2rem;
     span {
       font-size: 1.3rem;
@@ -71,12 +71,19 @@ $breakpoints: (
     font-weight: 900;
   }
   .navbar-subpage {
-    background: url('../../svgs/wave-haikei-2.svg') center/cover no-repeat;
+    background: url("../../svgs/wave-haikei-2.svg") center/cover no-repeat;
     overflow: visible;
   }
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700px) {
   .sidebar {
+    -webkit-clip-path: none;
+            clip-path: none;
+    height: 100vh;
+    transform: translateX(-100%);
+    visibility: none;
+    position: fixed;
+    inset: 0;
     .logo {
       display: none;
     }
@@ -87,20 +94,24 @@ $breakpoints: (
       .btn-sidebar {
         margin-top: 0 auto;
         width: 15rem;
+        opacity: 1;
         &:hover {
           margin-right: 0;
-          transform: scale(1.05);
         }
       }
     }
+    &,
+    &::after {
+      max-width: 300px;
+      min-height: 100vh;
+      -webkit-clip-path: none;
+      clip-path: none;
+    }
   }
-  .sidebar,
-  .sidebar::after {
-    max-width: 300px;
-    min-height: 100vh;
-    width: 40vw;
-    -webkit-clip-path: none;
-    clip-path: none;
+  .show-sidebar{
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
   }
 }
 @media screen and (min-width: 768px) {
