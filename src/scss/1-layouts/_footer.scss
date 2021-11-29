@@ -1,9 +1,10 @@
-@use '../0-abstracts/0-abstracts' as *;
-@use '../2-typography/2-typography' as *;
+@use "../0-abstracts/0-abstracts" as *;
+@use "../2-typography/2-typography" as *;
 // footer main
 .footer {
   display: grid;
-    background: linear-gradient(45deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)),
+  overflow: hidden;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)),
     url("../../svgs/waves.svg") center/cover no-repeat;
   padding: 0.5rem;
   // position: fixed;
@@ -63,14 +64,15 @@
   background: rgb(31, 29, 29);
   padding: 0.5rem;
   place-items: center;
+  overflow: hidden;
   -webkit-animation: nav-load-div1 1300ms ease-out;
   animation: nav-load-div1 1300ms ease-out;
   .footer-subpage-container {
     display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: center;
-  max-width: $max-width;
-  margin: 0 auto;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    max-width: $max-width;
+    margin: 0 auto;
   }
   .footer-img {
     display: block;
@@ -110,7 +112,7 @@
           border-radius: inherit;
           .fab {
             color: white;
-            
+
             height: 1rem;
             width: 1rem;
             background: transparent;

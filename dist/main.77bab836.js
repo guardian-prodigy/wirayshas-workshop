@@ -145,6 +145,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // arrays
 var links = ["ponponetjes.html", "headbands.html", "animals.html", "letters.html", "zodiac.html"];
 var titles = ["ponponnetjes", "headbands", "pon animals", "letters", "zodiac signs"];
+var titlesExternalLinks = ['home', 'about', 'products', 'contact'];
+var titlesExternalLinksHref = ['index.html', '#about', '#products', '#contact'];
 var faders = ['fade-left', 'fade-right'];
 var images = [_ponpons.default, _headbands.default, _animals.default, _letters.default, _zodiac.default];
 var texts = ["ponponetjes kunt uw gebruiken als decoratie voor uw hand-tas, lamp, kast, en nog veel meer!<br>druk <span><a href=".concat(links[0], ">hier</a></span> om meer ponponetjes te bekijken :)"), "headbands kunt uw gebruiken om uw hoofd een nieuwe look te geven! P.S. ze zijn heel handig voor feestjes \n  <br>druk <span><a href=".concat(links[1], ">hier</a></span> om meer dieren te bekijken"), "animals kunt uw gebruiken als decoratie voor uw tassen, lamp, kast, en nog veel meer!<br>druk <span><a href=".concat(links[2], ">hier</a></span> om meer animals te bekijken :)"), "letters kunt uw gebruiken om uw tas, lamp, en andere dingen te verzieren! uw kunt ze ook gebruiken om aan uw partner te geven;) <br>druk <span><a href=".concat(links[3], ">hier</a></span> om meer letters te bekijken :)"), "ponponetjes kunt uw gebruiken als decoratie voor uw hand-tas, lamp, kast, en nog veel meer! druk <span><a href=".concat(links[4], ">hier</a></span> om meer ponponetjes te zien :)")];
@@ -176,8 +178,7 @@ var products = [{
   text: texts[3],
   link: links[3],
   class: faders[1]
-} // zodiac
-// {
+} // {
 //   id: 1,
 //   title: titles[4],
 //   img: images[4],
@@ -188,27 +189,21 @@ var products = [{
 ];
 var AllExternalLinks = [{
   id: 1,
-  linkNumber: links[0],
-  titleNumber: titles[0]
+  linkNumber: titlesExternalLinksHref[0],
+  titleNumber: titlesExternalLinks[0]
 }, {
   id: 2,
-  linkNumber: links[1],
-  titleNumber: titles[1]
+  linkNumber: titlesExternalLinksHref[1],
+  titleNumber: titlesExternalLinks[1]
 }, {
   id: 3,
-  linkNumber: links[2],
-  titleNumber: titles[2]
+  linkNumber: titlesExternalLinksHref[2],
+  titleNumber: titlesExternalLinks[2]
 }, {
   id: 4,
-  linkNumber: links[3],
-  titleNumber: titles[3]
-} // zodiac tag
-// {
-//   id: 5,
-//   linkNumber: links[4],
-//   titleNumber: titles[4],
-// },
-]; // end of arrays
+  linkNumber: titlesExternalLinksHref[3],
+  titleNumber: titlesExternalLinks[3]
+}]; // end of arrays
 // variables
 
 var productArticle = document.querySelector(".article");
@@ -274,7 +269,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50555" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52328" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

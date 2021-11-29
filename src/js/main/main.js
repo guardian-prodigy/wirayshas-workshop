@@ -18,6 +18,18 @@ const titles = [
   "letters",
   "zodiac signs",
 ];
+const titlesExternalLinks =[
+  'home',
+  'about',
+  'products',
+  'contact'
+]
+const titlesExternalLinksHref =[
+  'index.html',
+  '#about',
+  '#products',
+  '#contact'
+]
 const faders = ['fade-left', 'fade-right'];
 const images = [PonPon, Headbands, Animals, Letters, ZodiacSigns];
 const texts = [
@@ -61,7 +73,7 @@ const products = [
     link: links[3],
     class: faders[1]
   },
-  // zodiac
+  
   // {
   //   id: 1,
   //   title: titles[4],
@@ -74,30 +86,24 @@ const products = [
 const AllExternalLinks = [
   {
     id: 1,
-    linkNumber: links[0],
-    titleNumber: titles[0],
+    linkNumber: titlesExternalLinksHref[0],
+    titleNumber: titlesExternalLinks[0],
   },
   {
     id: 2,
-    linkNumber: links[1],
-    titleNumber: titles[1],
+    linkNumber: titlesExternalLinksHref[1],
+    titleNumber: titlesExternalLinks[1],
   },
   {
     id: 3,
-    linkNumber: links[2],
-    titleNumber: titles[2],
+    linkNumber: titlesExternalLinksHref[2],
+    titleNumber: titlesExternalLinks[2],
   },
   {
     id: 4,
-    linkNumber: links[3],
-    titleNumber: titles[3],
+    linkNumber: titlesExternalLinksHref[3],
+    titleNumber: titlesExternalLinks[3],
   },
-  // zodiac tag
-  // {
-  //   id: 5,
-  //   linkNumber: links[4],
-  //   titleNumber: titles[4],
-  // },
 ];
 // end of arrays
 
