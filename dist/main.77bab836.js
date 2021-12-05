@@ -208,7 +208,8 @@ var AllExternalLinks = [{
 
 var productArticle = document.querySelector(".article");
 var sidebarBtns = document.querySelector(".sidebar-btns");
-var sidebar = document.querySelector(".sidebar"); // end of variables
+var sidebar = document.querySelector(".sidebar");
+var aboutText = document.querySelector('.about-text'); // end of variables
 // addEventListers
 
 window.addEventListener("DOMContentLoaded", function () {
@@ -240,7 +241,17 @@ function Products() {
     return "<div class=\"article-added\" data-aos=".concat(item.class, ">\n      <div class=\"article-header\">\n        <h3>").concat(item.title, "</h3>\n      </div>\n      <div class=\"img-container\">\n        <img src=").concat(item.img, " />\n        <i class=\"fas fa-home fa-home-img-product\"></i>\n      </div>\n      <div class=\"article-info\">\n        <p>").concat(item.text, "</p>\n      </div>\n    </div>");
   }).join("");
   productArticle.innerHTML = product;
-} // end of functions
+}
+
+function AboutText() {
+  var text = "<p class=\"about-text-paragraph\">\n  ik maak hele leuke en schattige producten zoals\n  <span class=\"about-text-link\"\n    ><a href=\"".concat(links[0], "\">").concat(titles[0], "</a></span\n  >,\n  <span class=\"about-text-link\"\n    ><a href=\"").concat(links[1], "\">").concat(titles[1], "</a></span\n  >,\n  <span class=\"about-text-link\"\n    ><a href=\"").concat(links[2], "\">").concat(titles[2], "</a></span\n  >, en\n  <span class=\"about-text-link\"\n    ><a href=\"").concat(links[3], "\">").concat(titles[3], "</a></span\n  >\n  voor een paar simpele voorbeelden, druk <a href=\"#products\">hier</a>\n</p>");
+  aboutText.innerHTML = text;
+}
+
+AboutText(); // end of functions
+// <!-- , and
+//   <span class="about-text-link"
+//     ><a href="./zodiac.html">zodiac signs</a></span>
 },{"../../img/imagesForProductsMain/ponpons.jpg":"../img/imagesForProductsMain/ponpons.jpg","../../img/imagesForProductsMain/headbands.jpg":"../img/imagesForProductsMain/headbands.jpg","../../img/imagesForProductsMain/animals.jpg":"../img/imagesForProductsMain/animals.jpg","../../img/imagesForProductsMain/letters.jpg":"../img/imagesForProductsMain/letters.jpg","../../img/imagesForProductsMain/zodiac.jpg":"../img/imagesForProductsMain/zodiac.jpg"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -269,7 +280,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52328" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50806" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

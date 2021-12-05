@@ -111,6 +111,7 @@ const AllExternalLinks = [
 const productArticle = document.querySelector(".article");
 const sidebarBtns = document.querySelector(".sidebar-btns");
 const sidebar = document.querySelector(".sidebar");
+const aboutText = document.querySelector('.about-text')
 // end of variables
 
 // addEventListers
@@ -155,4 +156,32 @@ function Products() {
     .join("");
   productArticle.innerHTML = product;
 }
+
+
+
+function AboutText() {
+  let text = `<p class="about-text-paragraph">
+  ik maak hele leuke en schattige producten zoals
+  <span class="about-text-link"
+    ><a href="${links[0]}">${titles[0]}</a></span
+  >,
+  <span class="about-text-link"
+    ><a href="${links[1]}">${titles[1]}</a></span
+  >,
+  <span class="about-text-link"
+    ><a href="${links[2]}">${titles[2]}</a></span
+  >, en
+  <span class="about-text-link"
+    ><a href="${links[3]}">${titles[3]}</a></span
+  >
+  voor een paar simpele voorbeelden, druk <a href="#products">hier</a>
+</p>`
+aboutText.innerHTML = text;
+}
+AboutText();
+
+
 // end of functions
+// <!-- , and
+//   <span class="about-text-link"
+//     ><a href="./zodiac.html">zodiac signs</a></span>
