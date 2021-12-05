@@ -145,9 +145,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // arrays
 var links = ["ponponetjes.html", "headbands.html", "animals.html", "letters.html", "zodiac.html"];
 var titles = ["ponponnetjes", "headbands", "pon animals", "letters", "zodiac signs"];
-var titlesExternalLinks = ['home', 'about', 'products', 'contact'];
-var titlesExternalLinksHref = ['index.html', '#about', '#products', '#contact'];
-var faders = ['fade-left', 'fade-right'];
+var titlesExternalLinks = ["home", "about", "products", "contact"];
+var titlesExternalLinksHref = ["index.html", "#about", "#products", "#contact"];
+var faders = ["fade-left", "fade-right"];
 var images = [_ponpons.default, _headbands.default, _animals.default, _letters.default, _zodiac.default];
 var texts = ["ponponetjes kunt uw gebruiken als decoratie voor uw hand-tas, lamp, kast, en nog veel meer!<br>druk <span><a href=".concat(links[0], ">hier</a></span> om meer ponponetjes te bekijken :)"), "headbands kunt uw gebruiken om uw hoofd een nieuwe look te geven! P.S. ze zijn heel handig voor feestjes \n  <br>druk <span><a href=".concat(links[1], ">hier</a></span> om meer dieren te bekijken"), "animals kunt uw gebruiken als decoratie voor uw tassen, lamp, kast, en nog veel meer!<br>druk <span><a href=".concat(links[2], ">hier</a></span> om meer animals te bekijken :)"), "letters kunt uw gebruiken om uw tas, lamp, en andere dingen te verzieren! uw kunt ze ook gebruiken om aan uw partner te geven;) <br>druk <span><a href=".concat(links[3], ">hier</a></span> om meer letters te bekijken :)"), "ponponetjes kunt uw gebruiken als decoratie voor uw hand-tas, lamp, kast, en nog veel meer! druk <span><a href=".concat(links[4], ">hier</a></span> om meer ponponetjes te zien :)")];
 var products = [{
@@ -203,13 +203,39 @@ var AllExternalLinks = [{
   id: 4,
   linkNumber: titlesExternalLinksHref[3],
   titleNumber: titlesExternalLinks[3]
+}];
+var AboutTextArr = [{
+  title: titles[0],
+  link: links[0],
+  conj: "",
+  comma: ","
+}, {
+  title: titles[1],
+  link: links[1],
+  conj: "",
+  comma: ","
+}, {
+  title: titles[2],
+  link: links[2],
+  conj: "",
+  comma: ","
+}, {
+  title: titles[3],
+  link: links[3],
+  conj: "",
+  comma: ","
+}, {
+  title: titles[4],
+  link: links[4],
+  conj: "en",
+  comma: ""
 }]; // end of arrays
 // variables
 
 var productArticle = document.querySelector(".article");
 var sidebarBtns = document.querySelector(".sidebar-btns");
 var sidebar = document.querySelector(".sidebar");
-var aboutText = document.querySelector('.about-text'); // end of variables
+var aboutText = document.querySelector(".about-text"); // end of variables
 // addEventListers
 
 window.addEventListener("DOMContentLoaded", function () {
@@ -244,11 +270,18 @@ function Products() {
 }
 
 function AboutText() {
-  var text = "<p class=\"about-text-paragraph\">\n  ik maak hele leuke en schattige producten zoals\n  <span class=\"about-text-link\"\n    ><a href=\"".concat(links[0], "\">").concat(titles[0], "</a></span\n  >,\n  <span class=\"about-text-link\"\n    ><a href=\"").concat(links[1], "\">").concat(titles[1], "</a></span\n  >,\n  <span class=\"about-text-link\"\n    ><a href=\"").concat(links[2], "\">").concat(titles[2], "</a></span\n  >, en\n  <span class=\"about-text-link\"\n    ><a href=\"").concat(links[3], "\">").concat(titles[3], "</a></span\n  >\n  voor een paar simpele voorbeelden, druk <a href=\"#products\">hier</a>\n</p>");
+  var text = "<p class=\"about-text-paragraph\">\n  ik maak hele leuke en schattige producten zoals <span>".concat(CreateAboutText(), "</span>\n  voor een paar simpele voorbeelden, druk <a href=\"#products\">hier</a>\n</p>");
   aboutText.innerHTML = text;
 }
 
-AboutText(); // end of functions
+AboutText();
+
+function CreateAboutText() {
+  var span = AboutTextArr.map(function (item) {
+    return "<span class=\"about-text-link\"\n    ><span class=\"about-text-paragraph\">".concat(item.conj, "</span> <a href=\"").concat(item.link, "\"> ").concat(item.title, "</a></span\n  >").concat(item.comma, " ");
+  }).join('');
+  return span;
+} // end of functions
 // <!-- , and
 //   <span class="about-text-link"
 //     ><a href="./zodiac.html">zodiac signs</a></span>

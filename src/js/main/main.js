@@ -18,19 +18,14 @@ const titles = [
   "letters",
   "zodiac signs",
 ];
-const titlesExternalLinks =[
-  'home',
-  'about',
-  'products',
-  'contact'
-]
-const titlesExternalLinksHref =[
-  'index.html',
-  '#about',
-  '#products',
-  '#contact'
-]
-const faders = ['fade-left', 'fade-right'];
+const titlesExternalLinks = ["home", "about", "products", "contact"];
+const titlesExternalLinksHref = [
+  "index.html",
+  "#about",
+  "#products",
+  "#contact",
+];
+const faders = ["fade-left", "fade-right"];
 const images = [PonPon, Headbands, Animals, Letters, ZodiacSigns];
 const texts = [
   `ponponetjes kunt uw gebruiken als decoratie voor uw hand-tas, lamp, kast, en nog veel meer!<br>druk <span><a href=${links[0]}>hier</a></span> om meer ponponetjes te bekijken :)`,
@@ -47,7 +42,7 @@ const products = [
     img: images[0],
     text: texts[0],
     link: links[0],
-    class: faders[0]
+    class: faders[0],
   },
   {
     id: 1,
@@ -55,7 +50,7 @@ const products = [
     img: images[1],
     text: texts[1],
     link: links[1],
-    class: faders[1]
+    class: faders[1],
   },
   {
     id: 1,
@@ -63,7 +58,7 @@ const products = [
     img: images[2],
     text: texts[2],
     link: links[2],
-    class: faders[0]
+    class: faders[0],
   },
   {
     id: 1,
@@ -71,9 +66,9 @@ const products = [
     img: images[3],
     text: texts[3],
     link: links[3],
-    class: faders[1]
+    class: faders[1],
   },
-  
+
   // {
   //   id: 1,
   //   title: titles[4],
@@ -105,13 +100,45 @@ const AllExternalLinks = [
     titleNumber: titlesExternalLinks[3],
   },
 ];
+const AboutTextArr = [
+  {
+    title: titles[0],
+    link: links[0],
+    conj: "",
+    comma: ","
+  },
+  {
+    title: titles[1],
+    link: links[1],
+    conj: "",
+    comma: ","
+  },
+  {
+    title: titles[2],
+    link: links[2],
+    conj: "",
+    comma: ","
+  },
+  {
+    title: titles[3],
+    link: links[3],
+    conj: "",
+    comma: ","
+  },
+  {
+    title: titles[4],
+    link: links[4],
+    conj: "en",
+    comma: ""
+  },
+];
 // end of arrays
 
 // variables
 const productArticle = document.querySelector(".article");
 const sidebarBtns = document.querySelector(".sidebar-btns");
 const sidebar = document.querySelector(".sidebar");
-const aboutText = document.querySelector('.about-text')
+const aboutText = document.querySelector(".about-text");
 // end of variables
 
 // addEventListers
@@ -158,29 +185,22 @@ function Products() {
 }
 
 
-
 function AboutText() {
   let text = `<p class="about-text-paragraph">
-  ik maak hele leuke en schattige producten zoals
-  <span class="about-text-link"
-    ><a href="${links[0]}">${titles[0]}</a></span
-  >,
-  <span class="about-text-link"
-    ><a href="${links[1]}">${titles[1]}</a></span
-  >,
-  <span class="about-text-link"
-    ><a href="${links[2]}">${titles[2]}</a></span
-  >, en
-  <span class="about-text-link"
-    ><a href="${links[3]}">${titles[3]}</a></span
-  >
+  ik maak hele leuke en schattige producten zoals <span>${CreateAboutText()}</span>
   voor een paar simpele voorbeelden, druk <a href="#products">hier</a>
-</p>`
-aboutText.innerHTML = text;
+</p>`;
+  aboutText.innerHTML = text;
 }
 AboutText();
-
-
+function CreateAboutText() {
+  let span = AboutTextArr.map((item) => {
+    return `<span class="about-text-link"
+    ><span class="about-text-paragraph">${item.conj}</span> <a href="${item.link}"> ${item.title}</a></span
+  >${item.comma} `;
+  }).join('');
+  return span;
+}
 // end of functions
 // <!-- , and
 //   <span class="about-text-link"
