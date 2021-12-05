@@ -206,29 +206,22 @@ var AllExternalLinks = [{
 }];
 var AboutTextArr = [{
   title: titles[0],
-  link: links[0],
-  conj: "",
-  comma: ","
+  link: links[0]
 }, {
   title: titles[1],
-  link: links[1],
-  conj: "",
-  comma: ","
+  link: links[1]
 }, {
   title: titles[2],
-  link: links[2],
-  conj: "",
-  comma: ","
+  link: links[2]
 }, {
   title: titles[3],
-  link: links[3],
-  conj: "",
-  comma: ","
+  link: links[3]
 }, {
   title: titles[4],
   link: links[4],
   conj: "en",
-  comma: ""
+  comma: "",
+  endConj: "."
 }]; // end of arrays
 // variables
 
@@ -278,13 +271,10 @@ AboutText();
 
 function CreateAboutText() {
   var span = AboutTextArr.map(function (item) {
-    return "<span class=\"about-text-link\"\n    ><span class=\"about-text-paragraph\">".concat(item.conj, "</span> <a href=\"").concat(item.link, "\"> ").concat(item.title, "</a></span\n  >").concat(item.comma, " ");
-  }).join('');
+    return "<span class=\"about-text-link\"\n    ><span class=\"about-text-paragraph\">".concat(item.conj || "", "</span> <a href=\"").concat(item.link, "\"> ").concat(item.title, "</a></span\n  >").concat(item.comma == "" ? "" : ",").concat(item.endConj || "");
+  }).join("");
   return span;
 } // end of functions
-// <!-- , and
-//   <span class="about-text-link"
-//     ><a href="./zodiac.html">zodiac signs</a></span>
 },{"../../img/imagesForProductsMain/ponpons.jpg":"../img/imagesForProductsMain/ponpons.jpg","../../img/imagesForProductsMain/headbands.jpg":"../img/imagesForProductsMain/headbands.jpg","../../img/imagesForProductsMain/animals.jpg":"../img/imagesForProductsMain/animals.jpg","../../img/imagesForProductsMain/letters.jpg":"../img/imagesForProductsMain/letters.jpg","../../img/imagesForProductsMain/zodiac.jpg":"../img/imagesForProductsMain/zodiac.jpg"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -313,7 +303,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50806" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55273" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

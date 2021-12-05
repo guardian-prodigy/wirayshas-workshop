@@ -104,32 +104,25 @@ const AboutTextArr = [
   {
     title: titles[0],
     link: links[0],
-    conj: "",
-    comma: ","
   },
   {
     title: titles[1],
     link: links[1],
-    conj: "",
-    comma: ","
   },
   {
     title: titles[2],
     link: links[2],
-    conj: "",
-    comma: ","
   },
   {
     title: titles[3],
     link: links[3],
-    conj: "",
-    comma: ","
   },
   {
     title: titles[4],
     link: links[4],
     conj: "en",
-    comma: ""
+    comma: "",
+    endConj: ".",
   },
 ];
 // end of arrays
@@ -184,7 +177,6 @@ function Products() {
   productArticle.innerHTML = product;
 }
 
-
 function AboutText() {
   let text = `<p class="about-text-paragraph">
   ik maak hele leuke en schattige producten zoals <span>${CreateAboutText()}</span>
@@ -193,15 +185,15 @@ function AboutText() {
   aboutText.innerHTML = text;
 }
 AboutText();
+
 function CreateAboutText() {
   let span = AboutTextArr.map((item) => {
     return `<span class="about-text-link"
-    ><span class="about-text-paragraph">${item.conj}</span> <a href="${item.link}"> ${item.title}</a></span
-  >${item.comma} `;
-  }).join('');
+    ><span class="about-text-paragraph">${item.conj || ""}</span> <a href="${
+      item.link
+    }"> ${item.title}</a></span
+  >${item.comma == "" ? "" : ","}${item.endConj || ""}`;
+  }).join("");
   return span;
 }
 // end of functions
-// <!-- , and
-//   <span class="about-text-link"
-//     ><a href="./zodiac.html">zodiac signs</a></span>
