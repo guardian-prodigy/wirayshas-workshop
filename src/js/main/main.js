@@ -115,15 +115,15 @@ const AboutTextArr = [
   },
   {
     title: titles[3],
-    link: links[3],
-  },
-  {
-    title: titles[4],
-    link: links[4],
-    conj: "en",
+    link: links[3],conj: "en",
     comma: "",
     endConj: ".",
   },
+  // {
+  //   title: titles[4],
+  //   link: links[4],
+    
+  // },
 ];
 // end of arrays
 

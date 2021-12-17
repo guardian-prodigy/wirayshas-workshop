@@ -215,14 +215,15 @@ var AboutTextArr = [{
   link: links[2]
 }, {
   title: titles[3],
-  link: links[3]
-}, {
-  title: titles[4],
-  link: links[4],
+  link: links[3],
   conj: "en",
   comma: "",
   endConj: "."
-}]; // end of arrays
+} // {
+//   title: titles[4],
+//   link: links[4],
+// },
+]; // end of arrays
 // variables
 
 var productArticle = document.querySelector(".article");
@@ -303,7 +304,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55273" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55850" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
